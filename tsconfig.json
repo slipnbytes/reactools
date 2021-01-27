@@ -1,0 +1,33 @@
+{
+  "include": ["src/**/*", "__tests__/**/*"],
+  "exclude": ["node_modules", "dist", "typings"],
+  "compilerOptions": {
+    "jsx": "react",
+    "target": "ES6",
+    "baseUrl": ".",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "declarationDir": "typings",
+    "strict": true,
+    "allowJs": false,
+    "declaration": true,
+    "skipLibCheck": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "strictNullChecks": true,
+    "resolveJsonModule": true,
+    "noImplicitReturns": true,
+    "noUnusedParameters": true,
+    "downlevelIteration": true,
+    "allowSyntheticDefaultImports": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "forceConsistentCasingInFileNames": true,
+    "typeRoots": ["src/@types", "node_modules/@types"],
+    "lib": ["ES6", "DOM", "ES2016", "ES2019", "ES2020", "ESNext"],
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  }
+}
