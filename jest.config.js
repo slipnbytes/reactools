@@ -20,6 +20,7 @@ module.exports = {
   collectCoverageFrom: [
     '<rootDir>/src/**/*.{js,jsx,ts,tsx}',
     '!<rootDir>/src/index.ts',
+    '!<rootDir>/src/polyfills/**/*',
   ],
   setupFilesAfterEnv: [
     '<rootDir>/__tests__/setup.ts',
