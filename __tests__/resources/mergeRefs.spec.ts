@@ -8,7 +8,7 @@ const data = {} as const;
 type Data = typeof data;
 
 describe('mergeRefs', () => {
-  it('deve retornar o valor passado para o gancho', () => {
+  it('should return the value passed to the hook', () => {
     const { result: ref } = renderHook(() => useRef<Data>(null));
 
     act(() => {
@@ -18,7 +18,7 @@ describe('mergeRefs', () => {
     expect(ref.current.current).toEqual(data);
   });
 
-  it('deve retornar o valor passado para o gancho em todas as referências passadas', () => {
+  it('should return the value passed to the hook in all references passed', () => {
     const { result: ref1 } = renderHook(() => useRef<Data>(null));
     const { result: ref2 } = renderHook(() => useRef<Data>(null));
 
@@ -31,7 +31,7 @@ describe('mergeRefs', () => {
     expect(ref1.current.current).toEqual(ref2.current.current);
   });
 
-  it('deve retornar o valor passado para o gancho usando referência de função', () => {
+  it('should return the value passed to the hook using function reference', () => {
     const { result: ref } = renderHook(
       () => createRef<Data>() as MutableRefObject<Data>,
     );
@@ -46,7 +46,7 @@ describe('mergeRefs', () => {
     expect(ref.current.current).toEqual(data);
   });
 
-  it('não deve retornar o valor pois é uma referência inválida', () => {
+  it('should not return the value because it is an invalid reference', () => {
     const ref = Symbol('ref');
 
     act(() => {
@@ -56,7 +56,7 @@ describe('mergeRefs', () => {
     expect((ref as any).current).not.toEqual(data);
   });
 
-  it('deve retornar o valor passado para o gancho pois o objeto é editável', () => {
+  it('should return the value passed to the hook because the object is editable', () => {
     const ref = {} as MutableRefObject<Data>;
 
     act(() => {
