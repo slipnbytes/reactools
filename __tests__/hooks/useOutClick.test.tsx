@@ -8,7 +8,7 @@ import { useOutClick } from '@/hooks/useOutClick';
 import { Button } from '../components/Button';
 
 describe('useOutClick', () => {
-  it('deve receber valor verdadeiro pois o click foi fora do elemento escutado', () => {
+  it('should receive true value because the click was outside the element heard', () => {
     const { result: state } = renderHook(() => useState(false));
     const { result: outClick } = renderHook(() =>
       useOutClick<HTMLButtonElement>(),
@@ -33,7 +33,7 @@ describe('useOutClick', () => {
     expect(state.current[0]).toBe(true);
   });
 
-  it('deve receber valor falso pois o click foi no elemento escutado', () => {
+  it('should receive false value because the click was on the element heard', () => {
     const { result: state } = renderHook(() => useState(false));
     const { result: outClick } = renderHook(() =>
       useOutClick<HTMLButtonElement>(),
