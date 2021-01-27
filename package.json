@@ -1,0 +1,66 @@
+{
+  "name": "@hitechline/react",
+  "version": "0.0.1-b",
+  "license": "AGPL-3.0",
+  "main": "dist/cjs/index.js",
+  "module": "dist/es/index.js",
+  "types": "typings/index.d.ts",
+  "scripts": {
+    "clean": "rimraf dist typings",
+    "prepublishOnly": "yarn build",
+    "fix": "yarn lint:fix && yarn prettier:fix",
+    "test": "jest --passWithNoTests",
+    "test:watch": "yarn test --watchAll",
+    "build": "tsc --outDir dist/es && tsc --outDir dist/cjs --module CommonJS",
+    "prebuild": "yarn clean",
+    "build:watch": "tsc --outDir dist/es -w",
+    "lint": "eslint ./ --ext js,jsx,ts,tsx",
+    "lint:fix": "eslint ./ --ext js,jsx,ts,tsx --fix",
+    "prettier": "prettier --check ./**/*.{js,jsx,ts,tsx}",
+    "prettier:fix": "prettier --write ./**/*.{js,jsx,ts,tsx}"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hitechline/react.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "directories": {
+    "lib": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "dist",
+    "typings"
+  ],
+  "keywords": [
+    "react"
+  ],
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
+  },
+  "dependencies": {
+    "mout": "^2.0.0-alpha.1"
+  },
+  "devDependencies": {
+    "@hitechline/eslint-config-web": "^1.0.2",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.3",
+    "@testing-library/react-hooks": "^5.0.3",
+    "@types/jest": "^26.0.20",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "eslint": "^7.17.0",
+    "eslint-plugin-testing-library": "^3.10.1",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-test-renderer": "^17.0.1",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^26.4.4",
+    "typescript": "^4.1.3"
+  }
+}
