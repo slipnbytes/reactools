@@ -28,7 +28,7 @@ describe('mergeRefs', () => {
 
     expect(ref1.current.current).toEqual(data);
     expect(ref2.current.current).toEqual(data);
-    expect(ref1.current.current).toEqual(ref1.current.current);
+    expect(ref1.current.current).toEqual(ref2.current.current);
   });
 
   it('deve retornar o valor passado para o gancho usando referência de função', () => {
