@@ -41,9 +41,7 @@
     "react": "^16.8.0",
     "react-dom": "^16.8.0"
   },
-  "dependencies": {
-    "mout": "^2.0.0-alpha.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@hitechline/eslint-config-web": "^1.0.2",
     "@testing-library/jest-dom": "^5.11.9",
