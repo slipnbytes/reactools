@@ -7,7 +7,23 @@ describe('mergeClassNames', () => {
     expect(mergedClassNames).toBe('block');
   });
 
-  it('should receive the first paramter concatened with the truth keys of object', () => {
+  it('should be empty as the value entered is undefined', () => {
+    const mergedClassNames = mergeClassNames(undefined);
+
+    expect(mergedClassNames).toBe('');
+  });
+
+  it('should receive the value of the inserted string', () => {
+    let mergedClassNames = mergeClassNames(undefined, 'null');
+
+    expect(mergedClassNames).toBe('null');
+
+    mergedClassNames = mergeClassNames(null as any, 'undefined');
+
+    expect(mergedClassNames).toBe('undefined');
+  });
+
+  it('should receive the first parameter concatened with the truth keys of object', () => {
     let mergedClassNames!: string;
 
     mergedClassNames = mergeClassNames('block', {

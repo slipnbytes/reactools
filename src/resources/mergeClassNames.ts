@@ -3,7 +3,11 @@ import { pick, getKeys } from '@/utilities/internal/object';
 
 export type MergeClassNameObjectType = Record<string, boolean>;
 
-export type MergeClassNameType = string | MergeClassNameObjectType;
+export type MergeClassNameType =
+  | string
+  | number
+  | undefined
+  | MergeClassNameObjectType;
 
 export function mergeClassNames(...classNames: MergeClassNameType[]): string {
   const mergedClassNames = classNames.map((className): string => {
@@ -18,7 +22,11 @@ export function mergeClassNames(...classNames: MergeClassNameType[]): string {
       return classNamesKeysFiltered.join(' ');
     }
 
-    return String(className);
+    if (['number', 'string'].includes(typeof className)) {
+      return String(className);
+    }
+
+    return '';
   });
 
   return mergedClassNames.join(' ').trim();
