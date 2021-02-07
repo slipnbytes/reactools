@@ -15,7 +15,8 @@
     "build": "tsc --project build/tsconfig.cjs.json && tsc --project build/tsconfig.esm.json",
     "prebuild": "yarn clean",
     "postbuild": "tscpaths -p build/tsconfig.cjs.json -s ./src -o ./dist/cjs && tscpaths -p build/tsconfig.esm.json -s ./src -o ./dist/es",
-    "build:watch": "tsc --outDir dist/es -w",
+    "build:watch": "tsc-watch --project build/tsconfig.esm.json --onSuccess \"tscpaths -p build/tsconfig.esm.json -s ./src -o ./dist/es\"",
+    "prebuild:watch": "yarn clean",
     "lint": "eslint ./ --ext js,jsx,ts,tsx",
     "lint:fix": "eslint ./ --ext js,jsx,ts,tsx --fix",
     "prettier": "prettier --check ./**/*.{js,jsx,ts,tsx}",
@@ -63,6 +64,7 @@
     "rimraf": "^3.0.2",
     "semantic-release": "^17.3.7",
     "ts-jest": "^26.4.4",
+    "tsc-watch": "^4.2.9",
     "tscpaths": "^0.0.9",
     "typescript": "^4.1.3"
   }
