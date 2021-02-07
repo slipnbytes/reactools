@@ -1,4 +1,4 @@
-import { ObjectType } from '@/shared/types';
+import type { ObjectType } from '@/shared/types';
 
 export function isObject<T extends ObjectType = ObjectType>(
   value: any,

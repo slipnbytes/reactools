@@ -1,6 +1,6 @@
-import type { ObjectType } from '@/shared/types';
-
 import { isObject } from './isObject';
+
+import type { ObjectType } from '@/shared/types'; // eslint-disable-line import/order
 
 export function getKeys(object: ObjectType): string[] {
   require('@/polyfills/object#keys');

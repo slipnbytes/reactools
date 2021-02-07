@@ -18,7 +18,12 @@ module.exports = {
       {
         newlinesBetween: 'always',
         alphabetize: { order: 'asc', ignoreCase: true },
-        groups: ['module', '/^@//', ['parent', 'sibling', 'index']],
+        groups: [
+          'module',
+          '/^((?!@/shared/types))(@/.*)/',
+          ['parent', 'sibling', 'index'],
+          '/types$/',
+        ],
       },
     ],
   },
