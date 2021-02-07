@@ -57,4 +57,29 @@ describe('useOutClick', () => {
 
     expect(state.current[0]).toBe(false);
   });
+
+  it('should receive false value because the reference has not been implemented', () => {
+    const { result: state } = renderHook(() => useState(false));
+    const { result: outClick } = renderHook(() =>
+      useOutClick<HTMLButtonElement>(),
+    );
+
+    const { container } = render(
+      <div>
+        <Button />
+
+        <section id="content">Content</section>
+      </div>,
+    );
+
+    act(() => {
+      outClick.current.addListener(() => {
+        state.current[1](true);
+      });
+
+      fireEvent.click(container.querySelector('#content') as Node);
+    });
+
+    expect(state.current[0]).toBe(false);
+  });
 });

@@ -1,7 +1,10 @@
 import { useRef, useEffect, useCallback, RefObject } from 'react';
 
-import type { ListenerType } from '@/shared/types';
 import { hasNodeInDOM } from '@/utilities/hasNodeInDOM';
+import { logger } from '@/utilities/internal/logger';
+import { isElement } from '@/utilities/isElement';
+
+import type { ListenerType } from '@/shared/types';
 
 export interface UseOutClickManager<T> {
   ref: RefObject<T>;
@@ -31,10 +34,12 @@ export function useOutClick<T extends HTMLElement>(): UseOutClickManager<T> {
       const content = ref.current;
       const targetNode = event.target as Node;
 
-      if (
-        !content ||
-        (hasNodeInDOM(targetNode) && content.contains(targetNode))
-      ) {
+      if (!isElement(content)) {
+        logger.error('The referenced element is not valid.');
+        return;
+      }
+
+      if (!hasNodeInDOM(targetNode) || content.contains(targetNode)) {
         return;
       }
 
