@@ -1,4 +1,4 @@
-/* eslint-disable no-console, @typescript-eslint/no-use-before-define */
+/* eslint-disable no-console */
 
 import { LOGGER_DISABLED } from '@/constants/logger';
 
