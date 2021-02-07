@@ -1,4 +1,4 @@
-import { pick, hasOwnProperty } from './object';
+import { pick, hasOwnProperty } from '../object';
 
 describe('object', () => {
   test('pick()', () => {
