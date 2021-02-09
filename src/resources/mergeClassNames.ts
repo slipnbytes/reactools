@@ -1,3 +1,4 @@
+import { isEmptyValue } from '@/utilities/internal/isEmptyValue';
 import { isObject } from '@/utilities/internal/isObject';
 import { pick, getKeys } from '@/utilities/internal/object';
 
@@ -19,7 +20,7 @@ export function mergeClassNames(...classNames: MergeClassNameType[]): string {
         return Boolean(value);
       });
 
-      return classNamesKeysFiltered.join(' ');
+      return makeClassName(classNamesKeysFiltered);
     }
 
     if (['number', 'string'].includes(typeof className)) {
@@ -29,5 +30,13 @@ export function mergeClassNames(...classNames: MergeClassNameType[]): string {
     return '';
   });
 
-  return mergedClassNames.join(' ').trim();
+  return makeClassName(mergedClassNames);
+}
+
+function makeClassName(classNames: (number | string)[]): string {
+  return classNames
+    .filter(currentClassName => !isEmptyValue(currentClassName))
+    .map(currentClassName => String(currentClassName).trim())
+    .join(' ')
+    .trim();
 }
