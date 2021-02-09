@@ -13,7 +13,7 @@ export const logger = {
     console.log(message);
   }),
   error: middleware((message, stackTrace) => {
-    console.log(`Error: ${message}\n${stackTrace}`);
+    console.error(`Error: ${message}\n${stackTrace}`);
   }),
 };
 
