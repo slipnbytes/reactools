@@ -1,3 +1,6 @@
+import './polyfills/index.js';
+
+// Logger
 export * from './constants/logger';
 
 // Types
