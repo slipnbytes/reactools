@@ -10,8 +10,8 @@ export function useCurrentRef<T = any>(
   const [currentValue, setCurrentValue] = useState<RefValue<T>>(defaultValue);
 
   const setCurrentRefValue = useCallback<RefCallback<T>>(
-    (value: T | null): void => {
-      setCurrentValue(value);
+    (newValue: RefValue<T>): void => {
+      setCurrentValue(newValue);
     },
     [],
   );
