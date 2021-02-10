@@ -1,20 +1,20 @@
 import { isObject } from './isObject';
 
-import type { ObjectType } from '@/shared/types'; // eslint-disable-line import/order
+import type { AnyObject } from '@/shared/types'; // eslint-disable-line import/order
 
-export function getKeys(object: ObjectType): string[] {
+export function getKeys(object: AnyObject): string[] {
   require('@/polyfills/object#keys');
   return Object.keys(object);
 }
 
-export function cloneObject<T extends ObjectType>(
+export function cloneObject<T extends AnyObject>(
   object: T,
   createObject: any = object,
 ): T {
   return Object.assign(Object.create(createObject), object);
 }
 
-export function pick(object: ObjectType, path: string): any {
+export function pick(object: AnyObject, path: string): any {
   const properties = path.split('.');
 
   return properties.reduce((currentObject, currentProperty) => {
@@ -22,7 +22,7 @@ export function pick(object: ObjectType, path: string): any {
   }, cloneObject(object));
 }
 
-export function hasOwnProperty(object: ObjectType, property: string): boolean {
+export function hasOwnProperty(object: AnyObject, property: string): boolean {
   let currentObject = object;
   const properties = property.split('.');
 

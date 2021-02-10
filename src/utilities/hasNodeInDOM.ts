@@ -1,7 +1,7 @@
 import { document } from '@/constants/document';
 
-import type { NodeType } from '@/shared/types';
+import type { AcceptedNode } from '@/shared/types';
 
-export function hasNodeInDOM(node: NodeType): boolean {
+export function hasNodeInDOM(node: AcceptedNode): boolean {
   return Boolean(document?.contains(node));
 }
