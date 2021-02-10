@@ -44,7 +44,9 @@
     "react": "^16.8.0",
     "react-dom": "^16.8.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "abortcontroller-polyfill": "^1.7.1"
+  },
   "devDependencies": {
     "@hitechline/eslint-config-web": "1.1.0",
     "@testing-library/jest-dom": "5.11.9",
