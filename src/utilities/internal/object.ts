@@ -3,7 +3,6 @@ import { isObject } from './isObject';
 import type { AnyObject } from '@/shared/types'; // eslint-disable-line import/order
 
 export function getKeys(object: AnyObject): string[] {
-  require('@/polyfills/object#keys');
   return Object.keys(object);
 }
 
