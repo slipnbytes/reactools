@@ -1,11 +1,11 @@
 import { elementInstances } from '@/constants/elementInstances';
 import { isUndefinedOrNull } from '@/utilities/internal/isUndefinedOrNull';
 
-import type { NodeType } from '@/shared/types';
+import type { AcceptedNode } from '@/shared/types';
 
 // Adapted implementation
 // See -> https://stackoverflow.com/a/36894871
-export function isElement(element: NodeType): element is Element {
+export function isElement(element: AcceptedNode): element is Element {
   if (isUndefinedOrNull(element)) {
     return false;
   }

@@ -1,5 +1,5 @@
-export type ListenerType = () => void;
+export type Listener = () => void;
 
-export type ObjectType = Record<any, any>;
+export type AnyObject = Record<any, any>;
 
-export type NodeType = Node | null;
+export type AcceptedNode = Node | null;
