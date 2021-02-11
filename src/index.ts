@@ -8,8 +8,11 @@ export * from './shared/types';
 
 // Hooks
 
+export * from './hooks/useAsync';
+export * from './hooks/useLatest';
 export * from './hooks/usePosition';
 export * from './hooks/useOutClick';
+export * from './hooks/useCurrentRef';
 
 // Utilities
 
