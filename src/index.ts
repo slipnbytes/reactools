@@ -8,7 +8,6 @@ export * from './shared/types';
 
 // Hooks
 
-export * from './hooks/usePosition';
 export * from './hooks/useOutClick';
 
 // Utilities
