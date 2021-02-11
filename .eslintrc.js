@@ -6,6 +6,7 @@ module.exports = {
     'plugin:testing-library/recommended',
   ],
   rules: {
+    'camelcase': 'off',
     'global-require': 'off',
 
     'no-shadow': 'off',
