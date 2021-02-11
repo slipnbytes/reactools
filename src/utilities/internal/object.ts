@@ -1,5 +1,4 @@
 import { isObject } from './isObject';
-import { isUndefined } from './isUndefined';
 
 import type { AnyObject } from '@/shared/types'; // eslint-disable-line import/order
 
@@ -22,15 +21,6 @@ export function pick(object: AnyObject, path: string): any {
   }, cloneObject(object));
 }
 
-export function makeObjectByKey<K extends string, V>(
-  key: K,
-  value: V,
-): Record<K, V> {
-  return <Record<K, V>>{
-    [key]: value,
-  };
-}
-
 export function hasOwnProperty(object: AnyObject, property: string): boolean {
   let currentObject = object;
   const properties = property.split('.');
@@ -48,40 +38,8 @@ export function hasOwnProperty(object: AnyObject, property: string): boolean {
     }
 
     return false;
+    /* eslint-enable */
   }
 
   return true;
-}
-
-export function update<T extends AnyObject>(
-  object: T,
-  updateObject: Partial<T>,
-): T {
-  const updatedObject = getKeys(object).reduce((currentObject, key): T => {
-    if (!hasOwnProperty(updateObject, key)) {
-      return currentObject;
-    }
-
-    const givenValue = pick(updateObject, key);
-
-    if (isUndefined(givenValue)) {
-      return currentObject;
-    }
-
-    const value = pick(object, key);
-
-    if (isObject(value)) {
-      return Object.assign(
-        currentObject,
-        makeObjectByKey(
-          key,
-          isObject(givenValue) ? update(value, givenValue) : value,
-        ),
-      );
-    }
-
-    return Object.assign(currentObject, makeObjectByKey(key, givenValue));
-  }, cloneObject(object));
-
-  return updatedObject;
 }
