@@ -48,7 +48,7 @@
     "abortcontroller-polyfill": "^1.7.1"
   },
   "devDependencies": {
-    "@hitechline/eslint-config-web": "1.1.0",
+    "@hitechline/eslint-config-web": "1.1.4",
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/commit-analyzer": "^8.0.1",
     "@semantic-release/git": "^9.0.0",
