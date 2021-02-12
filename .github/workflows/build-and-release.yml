@@ -52,6 +52,9 @@ jobs:
       - name: Check Linting
         run: yarn lint
 
+      - name: Check Build
+        run: yarn build
+
       - name: Coveralls
         uses: coverallsapp/github-action@master
         with:
