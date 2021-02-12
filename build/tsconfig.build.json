@@ -4,6 +4,7 @@
   "exclude": ["node_modules", "dist", "typings", "__tests__"],
   "compilerOptions": {
     "baseUrl": "../",
-    "allowJs": true
+    "allowJs": true,
+    "sourceMap": true
   }
 }
