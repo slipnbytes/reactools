@@ -1,10 +1,9 @@
 import './polyfills/index.js';
 
-// Logger
-export * from './constants/logger';
+// Shared
 
-// Types
 export * from './shared/types';
+export * from './shared/logger';
 
 // Hooks
 

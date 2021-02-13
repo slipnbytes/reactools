@@ -20,7 +20,7 @@ module.exports = {
   collectCoverageFrom: [
     '<rootDir>/src/**/*.{js,jsx,ts,tsx}',
     '!<rootDir>/src/index.ts',
-    '!<rootDir>/src/utilities/internal/logger.ts',
+    '!<rootDir>/src/shared/logger.ts',
     '!<rootDir>/src/polyfills/**/*',
   ],
   setupFilesAfterEnv: [
