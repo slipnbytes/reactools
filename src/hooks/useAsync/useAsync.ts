@@ -1,7 +1,7 @@
 import { useRef, useMemo, useEffect, useReducer, useCallback } from 'react';
 
+import { logger } from '@/shared/logger';
 import { isFunction } from '@/utilities/internal/isFunction';
-import { logger } from '@/utilities/internal/logger';
 
 import { useLatest } from '../useLatest';
 import { CANCEL_SYMBOL, INITIAL_DATA } from './constants';
@@ -24,7 +24,7 @@ export function unstable_useAsync<T = any>(
 
   const cancel = useCallback((): void => {
     if (!state.loading) {
-      logger.info('[cancel] useAsync() - The promise is not being running.');
+      logger.warn('[cancel] useAsync() - The promise is not being running.');
       return;
     }
 

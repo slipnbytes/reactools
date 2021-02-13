@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect, useCallback, RefObject } from 'react';
 
-import { logger } from '@/utilities/internal/logger';
+import { logger } from '@/shared/logger';
 import { isElement } from '@/utilities/isElement';
 
 export interface UsePositionManager<T> extends UsePositionRect {

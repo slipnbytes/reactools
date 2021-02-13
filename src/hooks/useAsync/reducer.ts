@@ -1,4 +1,4 @@
-import { logger } from '@/utilities/internal/logger';
+import { logger } from '@/shared/logger';
 import { update } from '@/utilities/internal/object';
 
 import {
