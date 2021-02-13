@@ -1,3 +1,11 @@
+## [1.0.6](https://github.com/hitechline/react/compare/v1.0.5...v1.0.6) (2021-02-13)
+
+
+### Bug Fixes
+
+* build watch scripts ([720f106](https://github.com/hitechline/react/commit/720f10607d5cb81ee833702d9523225ba70a9243))
+* package build system ([5c4de9f](https://github.com/hitechline/react/commit/5c4de9ffd754387e81c739faf30819a68310de7f))
+
 ## [1.0.5](https://github.com/hitechline/react/compare/v1.0.4...v1.0.5) (2021-02-12)
 
 
