@@ -1,20 +1,29 @@
-/* eslint-disable no-console */
-
-import { LOGGER_DISABLED } from '@/constants/logger';
-
-import { isUndefinedOrNull } from './isUndefinedOrNull';
+import { isUndefinedOrNull } from '@/utilities/internal/isUndefinedOrNull';
 
 type LogMethod = (message: string) => void;
 
 type LogCallback = (message: string, stackTrace: string) => void;
 
+let LOGGER_DISABLED = false;
+
 export const logger = {
+  /* eslint-disable no-console */
+
   info: middleware(message => {
     console.log(message);
+  }),
+  warn: middleware(message => {
+    console.warn(message);
   }),
   error: middleware((message, stackTrace) => {
     console.error(`Error: ${message}\n${stackTrace}`);
   }),
+
+  /* eslint-enable no-console */
+
+  disable(): void {
+    LOGGER_DISABLED = true;
+  },
 };
 
 /**

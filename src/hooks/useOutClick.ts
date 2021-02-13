@@ -1,7 +1,7 @@
 import { useRef, useEffect, useCallback, RefObject } from 'react';
 
+import { logger } from '@/shared/logger';
 import { hasNodeInDOM } from '@/utilities/hasNodeInDOM';
-import { logger } from '@/utilities/internal/logger';
 import { isElement } from '@/utilities/isElement';
 
 import type { Listener } from '@/shared/types';
