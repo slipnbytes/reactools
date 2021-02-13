@@ -24,11 +24,11 @@
     "build:cjs": "tsc -p build/tsconfig.cjs.json",
     "build:esm": "tsc -p build/tsconfig.esm.json",
     "build:types": "tsc -p build/tsconfig.types.json",
-    "build:watch:cjs": "yarn tsc-watch -p build/tsconfig.cjs.json --onSuccess \"yarn compile-paths:cjs --silent\"",
-    "build:watch:esm": "yarn tsc-watch -p build/tsconfig.esm.json --onSuccess \"yarn compile-paths:esm --silent\"",
-    "compile-paths:cjs": "yarn tscpaths -p build/tsconfig.cjs.json -s ./src -o ./dist/cjs",
-    "compile-paths:esm": "yarn tscpaths -p build/tsconfig.esm.json -s ./src -o ./dist/es",
-    "compile-paths:types": "yarn tscpaths -p build/tsconfig.types.json -s ./src -o ./typings"
+    "build:watch:cjs": "tsc-watch -p build/tsconfig.cjs.json --onSuccess \"yarn compile-paths:cjs --silent\"",
+    "build:watch:esm": "tsc-watch -p build/tsconfig.esm.json --onSuccess \"yarn compile-paths:esm --silent\"",
+    "compile-paths:cjs": "tsc-alias -p build/tsconfig.cjs.json",
+    "compile-paths:esm": "tsc-alias -p build/tsconfig.esm.json",
+    "compile-paths:types": "tsc-alias -p build/tsconfig.types.json"
   },
   "repository": {
     "type": "git",
@@ -56,7 +56,6 @@
     "abortcontroller-polyfill": "^1.7.1"
   },
   "devDependencies": {
-    "@herbcaudill/tscpaths": "^0.0.17",
     "@hitechline/eslint-config-web": "1.1.0",
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/commit-analyzer": "^8.0.1",
@@ -81,6 +80,7 @@
     "rimraf": "3.0.2",
     "semantic-release": "17.3.8",
     "ts-jest": "26.4.4",
+    "tsc-alias": "^1.2.6",
     "tsc-watch": "4.2.9",
     "typescript": "4.1.5"
   }
