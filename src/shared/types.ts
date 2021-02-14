@@ -8,4 +8,4 @@ export type RefValue<T> = T | null;
 
 export type AnyThing<T> = T | Promise<T>;
 
-export type GetPromiseType<T> = T extends Promise<infer R> ? R : T;
+export type PromiseType<T> = T extends Promise<infer R> ? R : T;
