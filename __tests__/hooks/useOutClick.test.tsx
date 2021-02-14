@@ -1,4 +1,4 @@
-import { render, fireEvent } from '@testing-library/react';
+import { render, cleanup, fireEvent } from '@testing-library/react';
 import { renderHook } from '@testing-library/react-hooks';
 import React, { useState } from 'react';
 import { act } from 'react-test-renderer';
@@ -8,6 +8,10 @@ import { useOutClick } from '@/hooks/useOutClick';
 import { Button } from '../components/Button';
 
 describe('useOutClick', () => {
+  afterEach(() => {
+    cleanup();
+  });
+
   it('should receive true value because the click was outside the element heard', () => {
     const { result: state } = renderHook(() => useState(false));
     const { result: outClick } = renderHook(() =>

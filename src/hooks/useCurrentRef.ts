@@ -1,18 +1,28 @@
 import { useState, useCallback, RefCallback } from 'react';
 
-import type { RefValue } from '@/shared/types';
+import type { Nullable } from '@/shared/types';
 
-export type UseCurrentRefManager<T> = [RefValue<T>, RefCallback<T>];
+export type UseCurrentRefManager<T> = [T, RefCallback<T>];
+
+export function useCurrentRef<T = any>(): UseCurrentRefManager<Nullable<T>>;
 
 export function useCurrentRef<T = any>(
-  initialValue: RefValue<T> = null,
-): UseCurrentRefManager<T> {
-  const [currentValue, setCurrentValue] = useState<RefValue<T>>(
+  initialValue: T,
+): UseCurrentRefManager<T>;
+
+export function useCurrentRef<T = any>(
+  initialValue: Nullable<T>,
+): UseCurrentRefManager<Nullable<T>>;
+
+export function useCurrentRef<T = any>(
+  initialValue: Nullable<T> = null,
+): UseCurrentRefManager<Nullable<T>> {
+  const [currentValue, setCurrentValue] = useState<Nullable<T>>(
     () => initialValue,
   );
 
   const setCurrentRefValue = useCallback<RefCallback<T>>(
-    (newValue: RefValue<T>): void => {
+    (newValue: Nullable<T>): void => {
       setCurrentValue(newValue);
     },
     [],
