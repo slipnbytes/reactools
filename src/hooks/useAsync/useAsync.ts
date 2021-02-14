@@ -3,7 +3,6 @@ import { useRef, useMemo, useEffect, useReducer, useCallback } from 'react';
 import { logger } from '@/shared/logger';
 import { isFunction } from '@/utilities/internal/isFunction';
 
-import { useLatest } from '../useLatest';
 import { CANCEL_SYMBOL, INITIAL_DATA } from './constants';
 import { reducer } from './reducer';
 
@@ -17,7 +16,7 @@ import {
 export function unstable_useAsync<T = any>(
   callback: UseAsyncCallback<T>,
 ): UseAsyncManager<T> {
-  const myCallback = useLatest<UseAsyncCallback<T>>(callback);
+  const myCallback = useRef<UseAsyncCallback<T>>(callback);
   const abortController = useRef<AbortController>(new AbortController());
 
   const [state, dispath] = useReducer(reducer, INITIAL_DATA);
