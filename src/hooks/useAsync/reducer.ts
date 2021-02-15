@@ -29,6 +29,7 @@ export function reducer(
         error: action.payload.error,
       });
     }
+    /* istanbul ignore next */
     default: {
       logger.error('[reducer] useAsync() - The type used is invalid.');
       return state;
