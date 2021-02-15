@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect, useCallback, RefObject } from 'react';
 
 import { logger } from '@/shared/logger';
+import { update } from '@/utilities/internal/object';
 import { isElement } from '@/utilities/isElement';
 
 export interface UsePositionManager<T> extends UsePositionRect {
@@ -40,7 +41,7 @@ export function usePosition<T extends HTMLElement>(): UsePositionManager<T> {
       return;
     }
 
-    setRect(newRect.toJSON());
+    setRect(oldRect => update(oldRect, newRect));
   }, [getBoundingClientRect]);
 
   useEffect(() => {
@@ -54,6 +55,23 @@ export function usePosition<T extends HTMLElement>(): UsePositionManager<T> {
     return () => {
       window.removeEventListener('load', getAndSetRect);
       window.removeEventListener('resize', getAndSetRect);
+    };
+  }, [getAndSetRect]);
+
+  useEffect(() => {
+    const observer = new MutationObserver(getAndSetRect);
+
+    if (ref.current) {
+      observer.observe(ref.current, {
+        subtree: true,
+        childList: true,
+        attributes: true,
+        characterData: true,
+      });
+    }
+
+    return () => {
+      observer.disconnect();
     };
   }, [getAndSetRect]);
 
