@@ -32,7 +32,7 @@ export function unstable_useAsync<T = any>(
     dispath({
       type: UseAsyncReducerType.Cancel,
     });
-  }, []);
+  }, [state.loading]);
 
   const context = useMemo<UseAsyncCallbackContext>(
     () => ({
@@ -64,6 +64,10 @@ export function unstable_useAsync<T = any>(
 
   const handleCallback = useCallback(async (): Promise<void> => {
     if (!isFunction(myCallback.current)) {
+      // Set correct state
+      // With this the loading status will be updated
+      cancel();
+
       logger.error('useAsync() - The inserted callback is not a function.');
       return;
     }
