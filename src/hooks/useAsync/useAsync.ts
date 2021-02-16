@@ -3,6 +3,7 @@ import { useRef, useMemo, useEffect, useReducer, useCallback } from 'react';
 import { logger } from '@/shared/logger';
 import { isFunction } from '@/utilities/internal/isFunction';
 
+import { CancelController } from './CancelController';
 import { CANCEL_SYMBOL, INITIAL_DATA } from './constants';
 import { reducer } from './reducer';
 
@@ -17,7 +18,7 @@ export function useAsync<T = any>(
   callback: UseAsyncCallback<T>,
 ): UseAsyncManager<T> {
   const myCallback = useRef<UseAsyncCallback<T>>(callback);
-  const abortController = useRef<AbortController>(new AbortController());
+  const cancelController = useRef<CancelController>(new CancelController());
 
   const [state, dispath] = useReducer(reducer, INITIAL_DATA);
 
@@ -27,7 +28,7 @@ export function useAsync<T = any>(
       return;
     }
 
-    abortController.current.abort();
+    cancelController.current.cancel();
 
     dispath({
       type: UseAsyncReducerType.Cancel,
@@ -37,7 +38,7 @@ export function useAsync<T = any>(
   const context = useMemo<UseAsyncCallbackContext>(
     () => ({
       cancel,
-      signal: abortController.current.signal,
+      signal: cancelController.current.signal,
     }),
     [cancel],
   );
@@ -55,7 +56,7 @@ export function useAsync<T = any>(
           resolve(callbackCalled);
         }
 
-        abortController.current.signal.addEventListener('abort', () => {
+        cancelController.current.signal.on(() => {
           resolve(CANCEL_SYMBOL);
         });
       }),

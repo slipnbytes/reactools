@@ -52,9 +52,7 @@
     "react": "^16.8.0",
     "react-dom": "^16.8.0"
   },
-  "dependencies": {
-    "abortcontroller-polyfill": "^1.7.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@hitechline/eslint-config-web": "1.1.0",
     "@semantic-release/changelog": "5.0.1",
