@@ -13,7 +13,7 @@ import {
   UseAsyncCallbackContext,
 } from './types';
 
-export function unstable_useAsync<T = any>(
+export function useAsync<T = any>(
   callback: UseAsyncCallback<T>,
 ): UseAsyncManager<T> {
   const myCallback = useRef<UseAsyncCallback<T>>(callback);

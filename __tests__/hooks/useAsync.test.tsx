@@ -4,7 +4,7 @@ import {
 } from '@testing-library/react-hooks';
 import { act } from 'react-test-renderer';
 
-import { unstable_useAsync as useAsync } from '@/hooks/useAsync';
+import { useAsync } from '@/hooks/useAsync';
 import { waitDelay } from '@/utilities/internal/waitDelay';
 
 const WAIT_OPTIONS: WaitForNextUpdateOptions = {
