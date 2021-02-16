@@ -6,6 +6,7 @@ module.exports = {
     'plugin:testing-library/recommended',
   ],
   rules: {
+    'camelcase': 'off',
     'global-require': 'off',
 
     'no-shadow': 'off',
@@ -15,6 +16,12 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
 
     '@typescript-eslint/no-shadow': ['error'],
+    '@typescript-eslint/no-empty-interface': [
+      'error',
+      {
+        allowSingleExtends: true,
+      },
+    ],
     '@typescript-eslint/no-use-before-define': [
       'error',
       {

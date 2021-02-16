@@ -7,7 +7,12 @@ export * from './shared/logger';
 
 // Hooks
 
+export * from './hooks/useAsync';
+export * from './hooks/usePosition';
 export * from './hooks/useOutClick';
+export * from './hooks/useCurrentRef';
+export * from './hooks/useForceUpdate';
+export * from './hooks/useManageableRef';
 
 // Utilities
 
