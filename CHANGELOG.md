@@ -1,3 +1,11 @@
+## [1.0.8](https://github.com/hitechline/react/compare/v1.0.7...v1.0.8) (2021-02-16)
+
+
+### Reverts
+
+* Revert "Add .deepsource.toml" ([7fb5773](https://github.com/hitechline/react/commit/7fb5773549f0266d758a732c2c57a646d38e3e7f))
+* Revert "readme started" ([4665e6c](https://github.com/hitechline/react/commit/4665e6cd67233d7d96e19ebbbf016ed7cfa00a82))
+
 ## [1.0.7](https://github.com/hitechline/react/compare/v1.0.6...v1.0.7) (2021-02-16)
 
 
