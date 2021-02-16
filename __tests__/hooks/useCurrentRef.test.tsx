@@ -7,8 +7,10 @@ import { useCurrentRef } from '@/hooks/useCurrentRef';
 import { mergeRefs } from '@/resources/mergeRefs';
 
 import { cleanRenderAfterEach } from '../_utils/cleanRenderAfterEach';
+import { disableACTErrors } from '../_utils/disableACTErrors';
 
 describe('useCurrentRef', () => {
+  disableACTErrors();
   cleanRenderAfterEach();
 
   it('should value must always be updated', () => {
