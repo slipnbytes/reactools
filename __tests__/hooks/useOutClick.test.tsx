@@ -1,16 +1,15 @@
-import { render, cleanup, fireEvent } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
 import { renderHook } from '@testing-library/react-hooks';
 import React, { useState } from 'react';
 import { act } from 'react-test-renderer';
 
 import { useOutClick } from '@/hooks/useOutClick';
 
-import { Button } from '../components/Button';
+import { Button } from '../_components/Button';
+import { cleanRenderAfterEach } from '../_utils/cleanRenderAfterEach';
 
 describe('useOutClick', () => {
-  afterEach(() => {
-    cleanup();
-  });
+  cleanRenderAfterEach();
 
   it('should receive true value because the click was outside the element heard', () => {
     const { result: state } = renderHook(() => useState(false));
@@ -80,6 +79,34 @@ describe('useOutClick', () => {
       outClick.current.addListener(() => {
         state.current[1](true);
       });
+
+      fireEvent.click(container.querySelector('#content') as Node);
+    });
+
+    expect(state.current[0]).toBe(false);
+  });
+
+  it('should receive false value because the added listener was removed shortly thereafter', () => {
+    const { result: state } = renderHook(() => useState(false));
+    const { result: outClick } = renderHook(() =>
+      useOutClick<HTMLButtonElement>(),
+    );
+
+    const { container } = render(
+      <div>
+        <Button ref={outClick.current.ref} />
+
+        <section id="content">Content</section>
+      </div>,
+    );
+
+    act(() => {
+      const listener = () => {
+        state.current[1](true);
+      };
+
+      outClick.current.addListener(listener);
+      outClick.current.removeListener(listener);
 
       fireEvent.click(container.querySelector('#content') as Node);
     });
