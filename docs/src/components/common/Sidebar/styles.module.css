@@ -1,0 +1,46 @@
+.container {
+  @apply sticky top-0 h-screen overflow-y-scroll flex-shrink-0 w-full;
+
+  max-width: 280px;
+}
+
+.content {
+  @apply flex flex-col;
+
+  padding-top: var(--box-main-padding);
+  padding-bottom: var(--box-main-padding);
+
+  padding-left: calc(var(--box-spacing) - 8px);
+}
+
+.content > div > h4 {
+  padding-left: 8px;
+
+  margin-top: 25px;
+  margin-bottom: 15px;
+
+  text-transform: uppercase;
+}
+
+.content > div > section {
+  @apply flex flex-col;
+}
+
+.content > div > section a + a {
+  margin-top: 4px;
+}
+
+.content > div > section a {
+  @apply w-full;
+
+  padding: 8px;
+  border-radius: 4px;
+
+  color: color-mod(var(--color-black) a(0.6));
+}
+
+.content > div > section a.active,
+.content > div > section a:hover {
+  color: var(--color-black);
+  background-color: var(--color-grey-weak);
+}
