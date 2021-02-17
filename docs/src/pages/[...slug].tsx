@@ -1,46 +1,40 @@
-import { promises } from 'fs';
-import matter from 'gray-matter';
-// import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
-import { join } from 'path';
+import { GetStaticProps, GetStaticPaths, GetStaticPathsResult } from 'next';
 import React from 'react';
-import remark from 'remark';
-import html from 'remark-html';
-import prism from 'remark-prism';
 
-const Document = ({ content }) => {
-  return <div>{content}</div>;
-};
+import { getAllDocumentFiles } from '@utils/mdx/getAllDocumentFiles';
+import { getDocument } from '@utils/mdx/getDocument';
+import type { Document as DocumentType } from '@utils/mdx/types';
 
-export async function getStaticProps({ params }) {
-  const baseUrl = join(process.cwd(), 'src', 'markdown');
-  const documentPath = [].concat(params.slug).join('/');
+const Document = ({ content }) => (
+  <div>
+    <div dangerouslySetInnerHTML={{ __html: content }} />
+  </div>
+);
 
-  const documentFullPath = join(baseUrl, `${documentPath}.mdx`);
-  const fileContent = await promises.readFile(documentFullPath, 'utf8');
-
-  const { data, content: markdown } = matter(fileContent);
-  const content = await remark().use(html).use(prism).process(markdown);
+export const getStaticProps: GetStaticProps<
+  DocumentType,
+  {
+    slug: string[];
+  }
+> = async ({ params }) => {
+  const document = await getDocument(params.slug);
 
   return {
-    props: {
-      data,
-      content: content.toString(),
-    },
+    props: document,
   };
-}
+};
 
-export async function getStaticPaths() {
-  const baseUrl = join(process.cwd(), 'src', 'markdown');
+type Paths = GetStaticPathsResult['paths'];
 
-  const files = await promises.readdir(baseUrl);
-
-  const paths = files.map(path => ({
+export const getStaticPaths: GetStaticPaths = async () => {
+  const documents = await getAllDocumentFiles();
+  const paths: Paths = documents.map<Paths[number]>(({ slug }) => ({
     params: {
-      slug: [path.replace(/\.mdx/, '')],
+      slug,
     },
   }));
 
   return { paths, fallback: false };
-}
+};
 
 export default Document;
