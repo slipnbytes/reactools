@@ -7,7 +7,7 @@ export const helpers: Section = {
       title: 'mergeClassNames',
       href: '#',
     },
-      {
+    {
       title: 'mergeRefs',
       href: '#',
     },

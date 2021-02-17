@@ -1,7 +1,7 @@
-import { guides } from './guides';
 import { contributing } from './contributing';
-import { hooks } from './hooks';
+import { guides } from './guides';
 import { helpers } from './helpers';
+import { hooks } from './hooks';
 import { start } from './start';
 import type { Section } from './types';
 

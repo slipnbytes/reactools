@@ -1,3 +1,4 @@
+import { MDXProvider } from '@mdx-js/react';
 import App from 'next/app';
 import React from 'react';
 
@@ -11,10 +12,12 @@ class MyApp extends App {
     const { Component, pageProps } = this.props;
 
     return (
-      <UIProvider>
-        <Head />
-        <Component {...pageProps} />
-      </UIProvider>
+      <MDXProvider>
+        <UIProvider>
+          <Head />
+          <Component {...pageProps} />
+        </UIProvider>
+      </MDXProvider>
     );
   }
 }
