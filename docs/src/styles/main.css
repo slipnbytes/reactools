@@ -1,11 +1,8 @@
 body {
   @apply text-white;
 
-  background-color: var(--color-background);
-}
-
-body {
   color: var(--color-black);
+  background-color: var(--color-background);
 }
 
 input,
