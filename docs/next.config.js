@@ -9,10 +9,9 @@ module.exports = composePlugins(
     [sourceMaps],
     [optimizedImages],
     [
-      mdx,
-      {
+      mdx({
         extension: /\.mdx?$/,
-      },
+      }),
     ],
     [
       bundleAnalyzer,
@@ -25,7 +24,7 @@ module.exports = composePlugins(
     distDir: '__next',
     trailingSlash: true,
     reactStrictMode: true,
-    pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
+    pageExtensions: ['tsx', 'md', 'mdx'],
     devIndicators: {
       autoPrerender: false,
     },
