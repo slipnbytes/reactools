@@ -1,0 +1,30 @@
+body {
+  @apply text-white;
+
+  background-color: var(--color-background);
+}
+
+body {
+  color: var(--color-black);
+}
+
+input,
+button,
+textarea {
+  color: currentColor;
+}
+
+body,
+input,
+button,
+textarea {
+  font-family: unset, -apple-system, sans-serif;
+}
+
+#content {
+  @apply flex-1;
+}
+
+#layout {
+  @apply flex w-full min-h-screen flex-col justify-between;
+}

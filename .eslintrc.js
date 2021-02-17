@@ -1,10 +1,18 @@
 module.exports = {
+  root: true,
   plugins: ['testing-library'],
   extends: [
     '@hitechline/eslint-config-web',
     'plugin:testing-library/react',
     'plugin:testing-library/recommended',
   ],
+  settings: {
+    'import/resolver': {
+      typescript: {
+        project: '*/tsconfig.json',
+      },
+    },
+  },
   rules: {
     'camelcase': 'off',
     'global-require': 'off',

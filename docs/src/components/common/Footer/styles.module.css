@@ -1,0 +1,9 @@
+.container {
+  color: var(--color-white);
+  background-color: var(--color-background-lighten-weak);
+}
+
+.container :global(.main-container) {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
