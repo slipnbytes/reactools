@@ -4,7 +4,7 @@ export const guides: Section = {
   title: 'Guides',
   links: [
     {
-      title: 'Title 1',
+      title: 'Disabling Logger',
       href: '#',
     },
   ],

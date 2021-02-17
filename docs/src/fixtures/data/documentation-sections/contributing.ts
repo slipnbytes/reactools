@@ -1,10 +1,10 @@
 import type { Section } from './types';
 
-export const information: Section = {
-  title: 'Information',
+export const contributing: Section = {
+  title: 'Contributing',
   links: [
     {
-      title: 'Title 1',
+      title: 'Setps',
       href: '#',
     },
   ],
