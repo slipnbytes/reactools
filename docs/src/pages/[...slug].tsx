@@ -38,3 +38,5 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export default Document;
+
+/* eslint react/no-danger: 0 */
