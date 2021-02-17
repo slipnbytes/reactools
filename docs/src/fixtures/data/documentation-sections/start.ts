@@ -7,11 +7,11 @@ export const start: Section = {
       title: 'Overview',
       href: '#',
     },
-     {
+    {
       title: 'Instalation',
       href: '#',
     },
-        {
+    {
       title: 'Quick start',
       href: '#',
     },
