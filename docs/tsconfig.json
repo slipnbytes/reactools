@@ -1,15 +1,9 @@
 {
-  "exclude": [
-    "node_modules"
-  ],
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
+  "exclude": ["node_modules"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "compilerOptions": {
     "rootDir": ".",
-    "baseUrl": "src",
+    "baseUrl": ".",
     "jsx": "preserve",
     "module": "ESNext",
     "target": "ESNext",
@@ -22,36 +16,17 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "forceConsistentCasingInFileNames": true,
-    "lib": [
-      "DOM",
-      "ESNext",
-      "DOM.Iterable"
-    ],
+    "lib": ["DOM", "ESNext", "DOM.Iterable"],
     "paths": {
-      "@/*": [
-        "*"
-      ],
-      "@utils/*": [
-        "utils/*"
-      ],
-      "@styles/*": [
-        "styles/*"
-      ],
-      "@services/*": [
-        "services/*"
-      ],
-      "@fixtures/*": [
-        "fixtures/*"
-      ],
-      "@sections/*": [
-        "sections/*"
-      ],
-      "@layout": [
-        "components/Layout"
-      ],
-      "@components/*": [
-        "components/*"
-      ]
+      "@/*": ["src/*"],
+      "@shared/*": ["shared/*"],
+      "@utils/*": ["src/utils/*"],
+      "@styles/*": ["src/styles/*"],
+      "@services/*": ["services/*"],
+      "@fixtures/*": ["src/fixtures/*"],
+      "@sections/*": ["src/sections/*"],
+      "@layout": ["src/components/Layout"],
+      "@components/*": ["src/components/*"]
     }
   }
 }
