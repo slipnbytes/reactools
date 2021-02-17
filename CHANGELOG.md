@@ -1,16 +1,9 @@
-## [1.0.8](https://github.com/hitechline/react/compare/v1.0.7...v1.0.8) (2021-02-17)
+## [1.0.9](https://github.com/hitechline/react/compare/v1.0.7...v1.0.9) (2021-02-17)
 
 
 ### Bug Fixes
 
 * strict window verification ([94618af](https://github.com/hitechline/react/commit/94618af00d922d0d5caaeebfa59fac59ca1b0890))
-
-
-### Reverts
-
-* Revert "chore(release): 1.0.8 [skip ci]" [skip ci] ([198d6a5](https://github.com/hitechline/react/commit/198d6a5e45960535feb4ebbb636d961c2f7da5ca))
-* Revert "Add .deepsource.toml" ([7fb5773](https://github.com/hitechline/react/commit/7fb5773549f0266d758a732c2c57a646d38e3e7f))
-* Revert "readme started" ([4665e6c](https://github.com/hitechline/react/commit/4665e6cd67233d7d96e19ebbbf016ed7cfa00a82))
 
 ## [1.0.7](https://github.com/hitechline/react/compare/v1.0.6...v1.0.7) (2021-02-16)
 
