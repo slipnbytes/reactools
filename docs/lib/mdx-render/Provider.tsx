@@ -19,7 +19,7 @@ export const Provider = ({ html, code, imports }: Render): JSX.Element => {
     const markdownRendered = makeMarkdownElement(code, scope);
 
     hydrate(markdownRendered, elementRef.current);
-  }, []);
+  }, [html, code, imports]);
 
   return (
     <div
