@@ -2,9 +2,9 @@ import { Provider } from '@hitechline/next-mdx/Provider';
 import { GetStaticProps, GetStaticPaths, GetStaticPathsResult } from 'next';
 import React from 'react';
 
-import { getAllDocumentFiles } from '@utils/mdx/getAllDocumentFiles';
-import { getDocument } from '@utils/mdx/getDocument';
-import type { Document as DocumentType } from '@utils/mdx/types';
+import { getAllDocumentFiles } from '@resources/utils/mdx/getAllDocumentFiles';
+import { getDocument } from '@resources/utils/mdx/getDocument';
+import type { Document as DocumentType } from '@resources/utils/mdx/types';
 
 const Document = ({ rendered }: DocumentType) => {
   return (
