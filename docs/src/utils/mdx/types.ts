@@ -1,4 +1,4 @@
-import type { Render } from '@lib/mdx-render/types';
+import type { RenderData } from '@hitechline/next-mdx';
 
 export interface DocumentFile {
   path: string;
@@ -14,7 +14,6 @@ export interface DocumentData {
 
 export interface Document {
   markdown: string;
-  rendered: Render;
-  info: DocumentFile;
   data: DocumentData;
+  rendered: RenderData;
 }
