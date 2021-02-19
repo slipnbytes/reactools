@@ -1,7 +1,5 @@
+import { mergeClassNames } from '@hitechline/react';
 import React, { HTMLAttributes } from 'react';
-
-/* eslint-disable import-helpers/order-imports */
-import { mergeClassNames } from '../../../..';
 
 interface Props extends HTMLAttributes<HTMLElement> {
   margin?: string;

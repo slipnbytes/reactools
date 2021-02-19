@@ -1,6 +1,9 @@
-const REMARK_PLUGINS = [require('remark-prism')];
+const REMARK_PLUGINS = [
+  require('remark-prism'),
+  require('remark-remove-comments'),
+];
 
-const REHYPE_PLUGINS = [require('@mapbox/rehype-prism')];
+const REHYPE_PLUGINS = [];
 
 module.exports = {
   REMARK_PLUGINS,
