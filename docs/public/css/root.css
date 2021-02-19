@@ -1,0 +1,185 @@
+blockquote {
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+blockquote p {
+  padding: 1rem;
+  border-radius: 5px;
+  background: #f2f2fa;
+  color: #6c6c80;
+  margin: 0;
+}
+
+
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0 4px;
+  margin-top: -4px;
+  margin-bottom: 16px;
+  width: 100%;
+}
+table th,
+table td {
+  margin: 0;
+  color: #6c6c80;
+  background-color: #f2f2fa;
+  border: solid 1px #f2f2fa;
+  border-style: solid none;
+  padding: 12px;
+}
+
+table th:first-of-type,
+table td:first-of-type {
+  border-left-style: solid;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+table th:first-of-type,
+table td:first-of-type {
+  border-right-style: solid;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+table tr th {
+  color: #3d3d4d;
+  text-align: left;
+  font-weight: bold;
+}
+
+iframe {
+  margin-bottom: 16px;
+}
+img {
+  max-width: 100%;
+}
+ul,
+ol {
+  color: #6c6c80;
+  padding-left: 15px;
+  margin-bottom: 16px;
+}
+
+ul li,
+ol li {
+  line-height: 28px;
+}
+
+li ul,
+li ol {
+  margin-bottom: 0;
+}
+
+pre {
+  border-radius: 8px;
+  overflow: scroll;
+  word-spacing: normal;
+  white-space: pre;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+pre[class*='language-'] {
+  position: relative;
+}
+
+pre[class*='language-'] code {
+  font-family: inherit;
+}
+pre[class*='language-']::before {
+  background: #d9d7e0;
+  border-radius: 0 0 4px 4px;
+  color: #232129;
+  font-size: 12px;
+  font-family: inherit;
+  letter-spacing: 0.075em;
+  line-height: 1;
+  padding: 0.25rem 0.5rem;
+  position: absolute;
+  right: 1rem;
+  text-align: right;
+  text-transform: uppercase;
+  top: 0;
+}
+pre[class~='language-js']::before,
+pre[class~='language-javascript']::before {
+  content: 'js';
+  background: #f7df1e;
+}
+pre[class~='language-jsx']::before {
+  content: 'jsx';
+  background: #61dafb;
+}
+pre[class~='language-typescript']::before,
+pre[class~='language-ts']::before {
+  content: 'ts';
+  background: #294e80;
+  color: #fff;
+}
+pre[class~='language-tsx']::before {
+  content: 'tsx';
+  background: #294e80;
+  color: #fff;
+}
+pre[class~='language-graphql']::before {
+  content: 'GraphQL';
+  background: #e10098;
+  color: #fff;
+}
+pre[class~='language-html']::before {
+  content: 'html';
+  background: #005a9c;
+  color: #fff;
+}
+pre[class~='language-css']::before {
+  content: 'css';
+  background: #ff9800;
+  color: #fff;
+}
+pre[class~='language-mdx']::before {
+  content: 'mdx';
+  background: #f9ac00;
+  color: #fff;
+}
+pre[class~='language-shell']::before {
+  content: 'shell';
+}
+pre[class~='language-sh']::before {
+  content: 'sh';
+}
+pre[class~='language-bash']::before {
+  content: 'bash';
+}
+pre[class~='language-yaml']::before,
+pre[class~='language-yml']::before {
+  content: 'yaml';
+  background: #ffa8df;
+}
+pre[class~='language-markdown']::before {
+  content: 'md';
+}
+pre[class~='language-json']::before,
+pre[class~='language-json5']::before {
+  content: 'json';
+  background: linen;
+}
+pre[class~='language-diff']::before {
+  content: 'diff';
+  background: #e6ffed;
+}
+pre[class~='language-text']::before {
+  content: 'text';
+  background: #fff;
+}
+pre[class~='language-flow']::before {
+  content: 'flow';
+  background: #e8bd36;
+}
