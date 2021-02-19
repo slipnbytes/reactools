@@ -28,6 +28,8 @@ class MyDocument extends Document {
           <meta name="referrer" content="no-referrer-when-downgrade" />
 
           <link rel="stylesheet" type="text/css" href="/css/style.css" />
+          <link rel="stylesheet" type="text/css" href="/css/prism.css" />
+          <link rel="stylesheet" type="text/css" href="/css/root.css" />
           <link rel="stylesheet" type="text/css" href="/css/normalize.css" />
 
           <link rel="icon" href="/img/logo.png" />
