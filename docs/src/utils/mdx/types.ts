@@ -1,3 +1,5 @@
+import type { Render } from '@lib/mdx-render/types';
+
 export interface DocumentFile {
   path: string;
   name: string;
@@ -11,7 +13,8 @@ export interface DocumentData {
 }
 
 export interface Document {
-  content: string;
+  markdown: string;
+  rendered: Render;
   info: DocumentFile;
   data: DocumentData;
 }
