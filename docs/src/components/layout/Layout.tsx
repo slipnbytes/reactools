@@ -1,13 +1,12 @@
+import { mergeClassNames } from '@hitechline/react';
 import React from 'react';
 
+import { Alpha } from '@components/common/Alpha';
 import { Documentation } from '@components/common/Documentation';
 import { Footer } from '@components/common/Footer';
 import { Sidebar } from '@components/common/Sidebar';
 
 import styles from './styles.module.css';
-
-/* eslint-disable import-helpers/order-imports */
-import { mergeClassNames } from '../../../..';
 
 export const Layout = ({ children }: PropsWithChildren) => (
   <>
@@ -17,6 +16,7 @@ export const Layout = ({ children }: PropsWithChildren) => (
       <Documentation>{children}</Documentation>
     </div>
 
+    <Alpha />
     <Footer />
   </>
 );
