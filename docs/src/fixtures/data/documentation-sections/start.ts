@@ -5,7 +5,7 @@ export const start: Section = {
   links: [
     {
       title: 'Overview',
-      href: '#',
+      href: '/overview',
     },
     {
       title: 'Instalation',

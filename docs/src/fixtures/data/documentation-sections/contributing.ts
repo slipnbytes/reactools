@@ -5,7 +5,7 @@ export const contributing: Section = {
   links: [
     {
       title: 'Setps',
-      href: '#',
+      href: '/contributing',
     },
   ],
 };
