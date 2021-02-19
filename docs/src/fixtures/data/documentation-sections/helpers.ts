@@ -9,7 +9,7 @@ export const helpers: Section = {
     },
     {
       title: 'mergeRefs',
-      href: '#',
+      href: '/api-ref',
     },
   ],
 };
