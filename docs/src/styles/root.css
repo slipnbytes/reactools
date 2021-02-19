@@ -14,7 +14,6 @@
   /* Colors */
 
   --color-background: #ffffff;
-
   --color-background-dark: #0e0d12;
 
   --color-background-lighten: #1f1e28;
@@ -28,6 +27,9 @@
 
   --color-white: #fefefe;
   --color-white-strong: #e0e0e0;
+
+  --color-papaya: #f2b48a;
+  --color-sky-blue: #61dbfb;
 }
 
 @media (min-width: 1536px) {

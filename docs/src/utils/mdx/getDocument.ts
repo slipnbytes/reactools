@@ -1,4 +1,5 @@
 import { render } from '@lib/mdx-render/render';
+import { REMARK_PLUGINS, REHYPE_PLUGINS } from '@shared/plugins';
 import { promises } from 'fs';
 import matter from 'gray-matter';
 
@@ -13,7 +14,10 @@ export async function getDocument(slug: string[]): Promise<Document> {
   const fileContent = await promises.readFile(info.fullPath, 'utf8');
   const { data, content: markdown } = matter(fileContent);
 
-  const rendered = await render(markdown);
+  const rendered = await render(markdown, {
+    remarkPlugins: REMARK_PLUGINS,
+    rehypePlugins: REHYPE_PLUGINS,
+  });
 
   return {
     info,
