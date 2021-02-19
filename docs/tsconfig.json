@@ -19,7 +19,6 @@
     "lib": ["DOM", "ESNext", "DOM.Iterable"],
     "paths": {
       "@/*": ["src/*"],
-      "@lib/*": ["lib/*"],
       "@shared/*": ["shared/*"],
       "@utils/*": ["src/utils/*"],
       "@styles/*": ["src/styles/*"],

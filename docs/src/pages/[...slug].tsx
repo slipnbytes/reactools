@@ -1,4 +1,4 @@
-import { Provider } from '@lib/mdx-render/Provider';
+import { Provider } from '@hitechline/next-mdx/Provider';
 import { GetStaticProps, GetStaticPaths, GetStaticPathsResult } from 'next';
 import React from 'react';
 
