@@ -1,3 +1,4 @@
+import { Provider } from '@lib/mdx-render/Provider';
 import { GetStaticProps, GetStaticPaths, GetStaticPathsResult } from 'next';
 import React from 'react';
 
@@ -5,11 +6,13 @@ import { getAllDocumentFiles } from '@utils/mdx/getAllDocumentFiles';
 import { getDocument } from '@utils/mdx/getDocument';
 import type { Document as DocumentType } from '@utils/mdx/types';
 
-const Document = ({ content }) => (
-  <div>
-    <div dangerouslySetInnerHTML={{ __html: content }} />
-  </div>
-);
+const Document = ({ rendered }: DocumentType) => {
+  return (
+    <div>
+      <Provider {...rendered} />
+    </div>
+  );
+};
 
 export const getStaticProps: GetStaticProps<
   DocumentType,
