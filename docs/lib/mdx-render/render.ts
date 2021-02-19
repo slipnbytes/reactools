@@ -12,7 +12,11 @@ export async function render(
   markdown: string,
   options: RenderOptions = {},
 ): Promise<Render> {
-  const { rehypePlugins, remarkPlugins, scope: defaultScope = {} } = options;
+  const {
+    rehypePlugins = [],
+    remarkPlugins = [],
+    scope: defaultScope = {},
+  } = options;
 
   const component = await mdx(
     markdown,
