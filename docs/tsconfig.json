@@ -20,11 +20,9 @@
     "paths": {
       "@/*": ["src/*"],
       "@shared/*": ["shared/*"],
-      "@utils/*": ["src/utils/*"],
       "@styles/*": ["src/styles/*"],
-      "@services/*": ["services/*"],
-      "@fixtures/*": ["src/fixtures/*"],
       "@sections/*": ["src/sections/*"],
+      "@resources/*": ["src/resources/*"],
       "@layout": ["src/components/Layout"],
       "@components/*": ["src/components/*"]
     }

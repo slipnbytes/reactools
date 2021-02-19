@@ -1,7 +1,7 @@
 import { mergeClassNames } from '@hitechline/react';
 import React from 'react';
 
-import { useUI } from '@fixtures/hooks/useUI';
+import { useUI } from '@resources/hooks/useUI';
 
 import styles from './styles.module.css';
 

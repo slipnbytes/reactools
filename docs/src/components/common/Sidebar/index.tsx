@@ -5,8 +5,8 @@ import { MdClose } from 'react-icons/md';
 
 import { Link } from '@components/forward/Link';
 
-import { documentationSections } from '@fixtures/data/documentation-sections';
-import { useUI } from '@fixtures/hooks/useUI';
+import { documentationSections } from '@resources/data/documentation-sections';
+import { useUI } from '@resources/hooks/useUI';
 
 import styles from './styles.module.css';
 
