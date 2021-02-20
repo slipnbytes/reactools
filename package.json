@@ -34,6 +34,11 @@
     "type": "git",
     "url": "git+https://github.com/hitechline/react.git"
   },
+  "workspaces": {
+    "packages": [
+      "docs"
+    ]
+  },
   "publishConfig": {
     "access": "public"
   },
