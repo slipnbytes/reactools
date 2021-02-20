@@ -7,11 +7,12 @@ module.exports = {
         alphabetize: { order: 'asc', ignoreCase: true },
         groups: [
           ['module'],
-          ['parent', 'sibling', 'index'],
+          '/^@//',
           '/^@(layout|components)/',
           '/^@sections/',
           '/^@resources/',
           '/^@shared/',
+          ['parent', 'sibling', 'index'],
           ['/.css$/', '/^@styles/'],
         ],
       },

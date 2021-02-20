@@ -11,6 +11,10 @@ body {
   font: 1.6rem -apple-system, system-ui, sans-serif;
 }
 
+img {
+  max-width: 100%;
+}
+
 a,
 button {
   color: currentColor;
