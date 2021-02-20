@@ -1,0 +1,48 @@
+---
+title: Guide - Disabling Logger
+description: Disable logger messages and errors.
+---
+
+# Disabling Logger
+
+If you are not satisfied with the noisy logs that library emit, or wish to not receive logs in production, follow the steps below.
+
+<br />
+<br />
+
+> Remember: Disabling the logs you may lose unresolved points in your application/project, that probably will cause a reproduction not expected.
+
+<br />
+
+- The library has integrated support to disable this system.
+
+## Disabling in Production
+
+<br />
+
+1. Import the object **logger**.
+2. Next, call the method **disable()** that belongs to the **logger**.
+
+```tsx
+import { logger } from '@hitechline/react';
+
+// Application main
+
+if (process.env.NODE_ENV === 'production') {
+  logger.disable();
+}
+```
+
+<br />
+
+## Disabled by default
+
+<br />
+
+```tsx
+import { logger } from '@hitechline/react';
+
+// Application main
+
+logger.disable();
+```

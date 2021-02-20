@@ -8,12 +8,13 @@ export interface DocumentFile {
   slug: string[];
 }
 
-export interface DocumentData {
+export interface DocumentInfo {
   title: string;
+  description: string;
 }
 
 export interface Document {
   markdown: string;
-  data: DocumentData;
+  info: DocumentInfo;
   rendered: RenderData;
 }

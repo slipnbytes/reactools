@@ -5,15 +5,11 @@ export const start: Section = {
   links: [
     {
       title: 'Overview',
-      href: '/overview',
+      href: '/',
     },
     {
-      title: 'Instalation',
-      href: '#',
-    },
-    {
-      title: 'Quick start',
-      href: '#',
+      title: 'Installation',
+      href: '/installation',
     },
   ],
 };

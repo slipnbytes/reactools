@@ -1,0 +1,77 @@
+---
+title: Helper - mergeRefs
+description: Use serveral references about an element.
+---
+
+# mergeRefs
+
+Use serveral references about an element.
+
+<br />
+<br />
+
+## Usage
+
+<br />
+
+#### Example 1
+
+```tsx
+import { mergeRefs, usePosition } from '@hitechline/react';
+import { useRef } from 'react';
+
+const Component = () => {
+  const myRef = useRef();
+  const { ref, ...position } = usePosition();
+
+  return <div ref={mergeRefs([ref, myRef])}>Component</div>;
+};
+```
+
+<br />
+<br />
+
+#### Example 2
+
+```tsx
+import { mergeRefs, useOutClick } from '@hitechline/react';
+import { useRef, useEffect } from 'react';
+
+const Component = ({ asRef }) => {
+  const { ref, addListener, removeListener } = useOutClick();
+
+  useEffect(() => {
+    addListener(() => {
+      //
+    });
+  }, []);
+
+  return <div ref={mergeRefs([ref, asRef])}>Component</div>;
+};
+```
+
+<br />
+<br />
+
+#### Example 3
+
+```tsx
+import { mergeRefs, useOutClick } from '@hitechline/react';
+import { useRef, forwardRef } from 'react';
+
+const Component = forwardRef((props, ref) => {
+  const { addListener, removeListener, ref: outClickRef } = useOutClick();
+
+  useEffect(() => {
+    addListener(() => {
+      //
+    });
+  }, []);
+
+  return (
+    <div ref={mergeRefs([ref, outClickRef])} {...props}>
+      Component
+    </div>
+  );
+});
+```

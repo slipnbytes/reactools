@@ -5,7 +5,7 @@ export const guides: Section = {
   links: [
     {
       title: 'Disabling Logger',
-      href: '#',
+      href: '/guides/disabling-logger',
     },
   ],
 };

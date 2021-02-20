@@ -1,0 +1,71 @@
+---
+title: Contributing Steps
+description: Contributing for project.
+---
+
+# Contributing Steps
+
+<br />
+
+> **Note**: We only accept contributions of specific fixes (bugs, linters or docs), new features will be implemented by the team of **Hitechline**
+
+<br />
+<br />
+
+## Starting
+
+1. Fork the repository
+2. Clone the respository of your machine
+
+#### Installing dependencies
+
+```shell
+$ yarn install
+```
+
+#### After that create your production branch
+
+```shell
+$ git checkout -b branch_name
+```
+
+Make the necessary updates to the code.
+
+<br />
+
+## Ending
+
+- Check that all tests pass
+
+```shell
+$ yarn test
+```
+
+- Add the changed files and create the commit
+
+```shell
+$ git add file_name
+$ git checkout -m "commit message"
+```
+
+> **Note: Use semantic commits**.
+
+- Send the updates to github
+
+```shell
+$ git push origin branch_name
+```
+
+- Pull request with changes to branch **main**
+
+## Solutions
+
+> If your fork is not up to date, do the next steps below
+
+```shell
+$ git remote add upstream git@github.com:hitechline/react.git
+$ git checkout main
+$ git fetch upstream
+$ git rebase upstream/main
+$ git push origin main
+```
