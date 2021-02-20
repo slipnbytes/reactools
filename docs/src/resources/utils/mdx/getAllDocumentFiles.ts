@@ -1,11 +1,17 @@
-import { promises } from 'fs';
+import fastGlob from 'fast-glob';
 
 import { BASE_PATH } from './constants';
 import { getFileInfo } from './getFileInfo';
 import type { DocumentFile } from './types';
 
-export async function getAllDocumentFiles(): Promise<DocumentFile[]> {
-  const files = await promises.readdir(BASE_PATH);
+const INDEX_REGEX = /^index\.mdx?$/;
 
-  return files.map(path => getFileInfo(path));
+export async function getAllDocumentFiles(): Promise<DocumentFile[]> {
+  const files = await fastGlob('**/*{md,mdx}', {
+    cwd: BASE_PATH,
+  });
+
+  return files
+    .filter(file => !INDEX_REGEX.test(file))
+    .map(path => getFileInfo(path));
 }

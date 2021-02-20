@@ -1,0 +1,27 @@
+---
+title: Hook - usePosition
+description: Have the position always the specified element to be updated.
+---
+
+# usePosition
+
+Have the [position](https://developer.mozilla.org/en-US/docs/Web/API/DOMRect) always the specified element to be updated.
+
+<br />
+<br />
+
+## Usage
+
+```tsx
+import { usePosition } from '@hitechline/react';
+
+const Component = () => {
+  const { ref, ...position } = usePosition();
+
+  return (
+    <div ref={ref}>
+      My position is <span>{JSON.stringify(position)}</span>
+    </div>
+  );
+};
+```

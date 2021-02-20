@@ -1,0 +1,34 @@
+---
+title: Hook - useForceUpdate
+description: Make a new rendering as soon as necessary.
+---
+
+# useForceUpdate
+
+Make a new rendering as soon as necessary.
+
+<br />
+<br />
+
+## Usage
+
+```tsx
+import { useForceUpdate } from '@hitechline/react';
+import { useEffect } from 'react';
+
+const Component = () => {
+  const forceUpdate = useForceUpdate();
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      forceUpdate();
+    }, 10000);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, [forceUpdate]);
+
+  return <div>Component</div>;
+};
+```

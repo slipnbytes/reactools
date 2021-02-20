@@ -1,0 +1,78 @@
+---
+title: Hook - useCurrentRef
+description: Have the same functions as **React.useState()** on reference.
+---
+
+# useCurrentRef
+
+Have the same functions as **React.useState()** on reference.
+
+<br />
+<br />
+
+## Usage
+
+#### Example 1
+
+```tsx
+import { useCurrentRef } from '@hitechline/react';
+import { useEffect } from 'react';
+
+const Component = () => {
+  const [value, ref] = useCurrentRef();
+
+  useEffect(() => {
+    value?.focus();
+  }, []);
+
+  return <div ref={ref}>Component</div>;
+};
+```
+
+<br />
+<br />
+
+#### Example 2
+
+```tsx
+import { useCurrentRef } from '@hitechline/react';
+import { useEffect, useCallback, forwardRef } from 'react';
+
+const Wrap = () => {
+  const [value, ref] = useCurrentRef({ loading: false });
+
+  useEffect(() => {
+    if (!value) {
+      return;
+    }
+  }, [useEffect]);
+
+  return (
+    <section>
+      <Component ref={ref} />
+    </section>
+  );
+};
+
+const Component = forwardRef((props, ref) => {
+  const done = useCallback(() => {
+    ref({
+      loading: false,
+    });
+  }, []);
+
+  useEffect(() => {
+    ref({
+      loading: true,
+    });
+  }, []);
+
+  return (
+    <div {...props}>
+      <button type="button" onClick={done}>
+        Click
+      </button>
+    </div>
+  );
+});
+```

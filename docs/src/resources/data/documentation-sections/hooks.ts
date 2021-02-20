@@ -5,27 +5,27 @@ export const hooks: Section = {
   links: [
     {
       title: 'useAsync',
-      href: '#',
+      href: '/hooks/use-async',
     },
     {
       title: 'useCurrentRef',
-      href: '#',
+      href: '/hooks/use-current-ref',
     },
     {
       title: 'useForceUpdate',
-      href: '#',
+      href: '/hooks/use-force-update',
     },
     {
       title: 'useManageableRef',
-      href: '#',
+      href: '/hooks/use-manageable-ref',
     },
     {
       title: 'useOutClick',
-      href: '#',
+      href: '/hooks/use-out-click',
     },
     {
       title: 'usePosition',
-      href: '#',
+      href: '/hooks/use-position',
     },
   ],
 };

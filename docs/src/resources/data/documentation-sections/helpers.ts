@@ -5,11 +5,11 @@ export const helpers: Section = {
   links: [
     {
       title: 'mergeClassNames',
-      href: '#',
+      href: '/helpers/merge-class-names',
     },
     {
       title: 'mergeRefs',
-      href: '/api-ref',
+      href: '/helpers/merge-refs',
     },
   ],
 };
