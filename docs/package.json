@@ -13,9 +13,6 @@
     "directory": "docs",
     "url": "git+https://github.com/hitechline/react.git"
   },
-  "engines": {
-    "node": ">=12"
-  },
   "dependencies": {
     "@hitechline/next-mdx": "^0.0.1-f",
     "@hitechline/react": "^1.0.9",
