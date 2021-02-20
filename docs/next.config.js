@@ -38,7 +38,7 @@ module.exports = composePlugins(
     },
     headers: () => [
       {
-        source: '/fonts/(.*)',
+        source: '/(.*).(ttf|woff|fnt|fot)',
         headers: [
           {
             key: 'Cache-Control',
@@ -48,7 +48,7 @@ module.exports = composePlugins(
         ],
       },
       {
-        source: '/(img|icons)/(.*)',
+        source: '/(.*).(jpg|jpeg|jfif|pjpeg|pjp|png|svg|webp)',
         headers: [
           {
             key: 'Cache-Control',
@@ -58,7 +58,7 @@ module.exports = composePlugins(
         ],
       },
       {
-        source: '/css/(.*)',
+        source: '/(.*).css',
         headers: [
           {
             key: 'Cache-Control',
