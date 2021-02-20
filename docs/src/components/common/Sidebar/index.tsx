@@ -6,13 +6,17 @@ import { MdClose } from 'react-icons/md';
 import { Link } from '@components/forward/Link';
 
 import { documentationSections } from '@resources/data/documentation-sections';
+import { useRouterChange } from '@resources/hooks/useRouterChange';
 import { useUI } from '@resources/hooks/useUI';
+import { generateRandomString } from '@resources/utils/generateRandomString';
 
 import styles from './styles.module.css';
 
 export const Sidebar = () => {
   const { ref, addListener, removeListener } = useOutClick<HTMLDivElement>();
   const { sidebarOpened, closeSidebar, openSidebar } = useUI();
+
+  useRouterChange(closeSidebar);
 
   useEffect(() => {
     addListener(closeSidebar);
@@ -56,12 +60,14 @@ export const Sidebar = () => {
 
         <div className={mergeClassNames('main-container-base', styles.content)}>
           {documentationSections.map(({ title, links }) => (
-            <div>
+            <div key={generateRandomString()}>
               {title && <h4>{title}</h4>}
 
               <section>
                 {links.map(({ href, title: linkTitle }) => (
-                  <Link href={href}>{linkTitle}</Link>
+                  <Link key={generateRandomString()} href={href}>
+                    {linkTitle}
+                  </Link>
                 ))}
               </section>
             </div>
@@ -71,5 +77,3 @@ export const Sidebar = () => {
     </div>
   );
 };
-
-/* eslint react/jsx-key: 0 */
