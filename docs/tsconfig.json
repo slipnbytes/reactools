@@ -18,7 +18,7 @@
     "forceConsistentCasingInFileNames": true,
     "lib": ["DOM", "ESNext", "DOM.Iterable"],
     "paths": {
-      "@/*": ["src/*"],
+      "@/*": ["*", "src/*"],
       "@shared/*": ["shared/*"],
       "@styles/*": ["src/styles/*"],
       "@sections/*": ["src/sections/*"],

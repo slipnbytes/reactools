@@ -28,7 +28,6 @@ module.exports = composePlugins(
   ],
   {
     distDir: '__next',
-    trailingSlash: true,
     reactStrictMode: true,
     pageExtensions: ['tsx', 'md', 'mdx'],
     devIndicators: {

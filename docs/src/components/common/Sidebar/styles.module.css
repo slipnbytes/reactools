@@ -100,7 +100,6 @@
 
 .container::-webkit-scrollbar-thumb {
   background-color: var(--color-papaya);
-  border-radius: 6px;
 }
 
 .container::-webkit-scrollbar-track:hover {
