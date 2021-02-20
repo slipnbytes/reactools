@@ -20,8 +20,9 @@
 
   z-index: 777;
   max-width: 280px;
-  margin-left: -100%;
+  margin-left: -280px;
 
+  transition: margin-left 300ms;
   background-color: var(--color-background);
 }
 

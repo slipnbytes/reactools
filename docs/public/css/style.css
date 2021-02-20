@@ -3,7 +3,6 @@
 }
 
 html {
-  transition: font-size 300ms;
   font-size: var(--font-size-percent);
 }
 

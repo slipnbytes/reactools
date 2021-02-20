@@ -29,7 +29,7 @@ class MyDocument extends Document {
 
           <link rel="stylesheet" type="text/css" href="/css/style.css" />
           <link rel="stylesheet" type="text/css" href="/css/prism.css" />
-          <link rel="stylesheet" type="text/css" href="/css/root.css" />
+          <link rel="stylesheet" type="text/css" href="/css/markdown.css" />
           <link rel="stylesheet" type="text/css" href="/css/normalize.css" />
 
           <link rel="icon" href="/img/logo.png" />
