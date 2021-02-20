@@ -40,6 +40,8 @@ jobs:
 
       - name: Install Dependencies
         run: yarn
+
+      - name: Install Documentation Dependencies
         run: yarn --cwd ./docs
 
       - name: Check Tests
