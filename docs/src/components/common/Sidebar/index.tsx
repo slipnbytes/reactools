@@ -1,4 +1,5 @@
 import { mergeClassNames, useOutClick } from '@hitechline/react';
+import { useRouter } from 'next/router';
 import React, { useEffect } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { MdClose } from 'react-icons/md';
@@ -13,6 +14,7 @@ import { generateRandomString } from '@resources/utils/generateRandomString';
 import styles from './styles.module.css';
 
 export const Sidebar = () => {
+  const { asPath } = useRouter();
   const { ref, addListener, removeListener } = useOutClick<HTMLDivElement>();
   const { sidebarOpened, closeSidebar, openSidebar } = useUI();
 
@@ -65,7 +67,13 @@ export const Sidebar = () => {
 
               <section>
                 {links.map(({ href, title: linkTitle }) => (
-                  <Link key={generateRandomString()} href={href}>
+                  <Link
+                    key={generateRandomString()}
+                    href={href}
+                    className={mergeClassNames({
+                      active: href === asPath,
+                    })}
+                  >
                     {linkTitle}
                   </Link>
                 ))}
