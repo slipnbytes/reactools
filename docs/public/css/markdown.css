@@ -9,7 +9,7 @@
 
 .markdown p a {
   color: #005a9c;
-  text-decoration: underline;
+  font-weight: 500;
 }
 
 .markdown li,
