@@ -26,7 +26,11 @@ function getWorkspacesPackages(getRoot = true) {
     workspacesArray.push(...workspaces.packages);
   }
 
-  return [root, ...workspacesArray.flatMap(getPackages)].filter(Boolean);
+  const packages = workspacesArray
+    .map(getPackages)
+    .reduce((array, value) => array.concat(value), []);
+
+  return [root, ...packages].filter(Boolean);
 }
 
 /**
