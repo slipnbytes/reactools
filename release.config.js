@@ -1,5 +1,3 @@
-/* eslint-disable no-template-curly-in-string */
-
 module.exports = {
   branches: ['main'],
   plugins: [
@@ -38,3 +36,5 @@ module.exports = {
     ],
   ],
 };
+
+/* eslint no-template-curly-in-string: 0 */

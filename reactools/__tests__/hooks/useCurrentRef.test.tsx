@@ -1,6 +1,5 @@
 import { render } from '@testing-library/react';
 import { renderHook } from '@testing-library/react-hooks';
-import React from 'react';
 import { act } from 'react-test-renderer';
 
 import { useCurrentRef } from '@/hooks/useCurrentRef';

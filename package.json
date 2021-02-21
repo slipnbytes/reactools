@@ -1,58 +1,34 @@
 {
-  "name": "@hitechline/react",
-  "version": "1.0.8",
+  "name": "reactools",
+  "version": "0.0.0",
   "license": "AGPL-3.0",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
-  "types": "typings/index.d.ts",
+  "private": true,
   "scripts": {
-    "fix": "yarn lint:fix && yarn prettier:fix",
-    "clean": "rimraf dist typings",
-    "release": "yarn node-env-run --exec \"semantic-release\"",
-    "prepublishOnly": "yarn build",
+    "fix": "run-s lint:fix prettier:fix",
+    "clean": "rimraf typings dist coverage",
+    "release": "yarn workspace:reactools release",
     "test": "jest --passWithNoTests",
     "test:watch": "yarn test --watchAll",
+    "workspace:docs": "yarn workspace docs",
+    "workspace:reactools": "yarn workspace @hitechline/reactools",
     "lint": "eslint ./ --ext js,jsx,ts,tsx",
     "lint:fix": "eslint ./ --ext js,jsx,ts,tsx --fix",
     "prettier": "prettier --check ./**/*.{js,jsx,ts,tsx}",
     "prettier:fix": "prettier --write ./**/*.{js,jsx,ts,tsx}",
-    "build": "run-s build:cjs build:esm build:types",
-    "prebuild": "yarn clean",
-    "postbuild": "run-p compile-paths:cjs compile-paths:esm compile-paths:types",
-    "build:watch": "tsc-watch -p build/tsconfig.watch.json --onSuccess \"npm-run-all -s build:cjs build:esm build:types -p compile-paths:cjs compile-paths:esm compile-paths:types\"",
-    "prebuild:watch": "yarn clean",
-    "build:cjs": "tsc -p build/tsconfig.cjs.json",
-    "build:esm": "tsc -p build/tsconfig.esm.json",
-    "build:types": "tsc -p build/tsconfig.types.json",
-    "build:watch:cjs": "tsc-watch -p build/tsconfig.cjs.json --onSuccess \"npm-run-all -s build:types -p compile-paths:cjs compile-paths:types\"",
-    "build:watch:esm": "tsc-watch -p build/tsconfig.esm.json --onSuccess \"npm-run-all -s build:types -p compile-paths:esm compile-paths:types\"",
-    "compile-paths:cjs": "tsc-alias -p build/tsconfig.cjs.json",
-    "compile-paths:esm": "tsc-alias -p build/tsconfig.esm.json",
-    "compile-paths:types": "tsc-alias -p build/tsconfig.types.json"
+    "build:docs": "run-s \"yarn workspace:docs build\" \"yarn workspace:docs export\"",
+    "build:reactools": "yarn workspace:reactools build",
+    "build:reactools:watch": "yarn workspace:reactools build:watch"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hitechline/react.git"
   },
-  "publishConfig": {
-    "access": "public"
+  "workspaces": {
+    "packages": [
+      "docs",
+      "reactools"
+    ]
   },
-  "directories": {
-    "lib": "src",
-    "test": "__tests__"
-  },
-  "files": [
-    "dist",
-    "typings"
-  ],
-  "keywords": [
-    "react"
-  ],
-  "peerDependencies": {
-    "react": "^16.8.0",
-    "react-dom": "^16.8.0"
-  },
-  "dependencies": {},
   "devDependencies": {
     "@hitechline/eslint-config-web": "1.1.0",
     "@semantic-release/changelog": "5.0.1",
@@ -79,8 +55,6 @@
     "rimraf": "3.0.2",
     "semantic-release": "17.3.9",
     "ts-jest": "26.4.4",
-    "tsc-alias": "1.2.6",
-    "tsc-watch": "4.2.9",
     "typescript": "4.1.5"
   }
 }

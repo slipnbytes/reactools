@@ -1,3 +1,5 @@
+const { workspaces } = require('./package.json');
+
 module.exports = {
   root: true,
   plugins: ['testing-library'],
@@ -7,9 +9,12 @@ module.exports = {
     'plugin:testing-library/recommended',
   ],
   settings: {
+    'react': {
+      version: 'detect',
+    },
     'import/resolver': {
       typescript: {
-        project: '*/tsconfig.json',
+        project: './*/tsconfig.json',
       },
     },
   },
@@ -19,6 +24,8 @@ module.exports = {
 
     'no-shadow': 'off',
     'no-use-before-define': 'off',
+
+    'react/react-in-jsx-scope': 'off',
 
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
@@ -39,6 +46,13 @@ module.exports = {
       },
     ],
 
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        packageDir: ['.', ...workspaces.packages],
+        devDependencies: true,
+      },
+    ],
     'import-helpers/order-imports': [
       'warn',
       {
