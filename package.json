@@ -17,7 +17,7 @@
     "test:watch": "yarn test --watchAll",
     "test:reactools": "yarn workspace:reactools test",
     "test:reactools:watch": "yarn workspace:reactools test",
-    "build:docs": "run-s \"yarn workspace:docs build\" \"yarn workspace:docs export\"",
+    "build:docs": "yarn workspace:docs build && yarn workspace:docs export",
     "build:reactools": "yarn workspace:reactools build",
     "build:reactools:watch": "yarn workspace:reactools build:watch"
   },
