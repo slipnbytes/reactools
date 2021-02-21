@@ -2,9 +2,9 @@ const { existsSync } = require('fs');
 const { join } = require('path');
 
 const { ROOT_PATH } = require('./shared/constants');
-const { getWorkspacesPakages } = require('./shared/getWorkspacesPakages');
+const { getWorkspacesPackages } = require('./shared/getWorkspacesPackages');
 
-const projects = getWorkspacesPakages(false)
+const projects = getWorkspacesPackages(false)
   .filter(package => existsSync(join(ROOT_PATH, package, 'jest.config.js')))
   .map(package => `<rootDir>/${package}/jest.config.js`);
 

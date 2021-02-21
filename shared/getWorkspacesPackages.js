@@ -10,7 +10,7 @@ const ROOT_PATH = resolve(__dirname, '..');
  * @return {string[]}
  * @param {boolean} getRoot
  */
-function getWorkspacesPakages(getRoot = true) {
+function getWorkspacesPackages(getRoot = true) {
   if (Array.isArray(workspaces)) {
     return workspaces.map(getPackages);
   }
@@ -74,5 +74,5 @@ function getPackages(workspace) {
 }
 
 module.exports = {
-  getWorkspacesPakages,
+  getWorkspacesPackages,
 };

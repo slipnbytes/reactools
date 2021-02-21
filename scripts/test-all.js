@@ -2,9 +2,9 @@ const { exec: defaultExec } = require('child_process');
 const { join } = require('path');
 
 const { ROOT_PATH } = require('../shared/constants');
-const { getWorkspacesPakages } = require('../shared/getWorkspacesPakages');
+const { getWorkspacesPackages } = require('../shared/getWorkspacesPackages');
 
-const packages = getWorkspacesPakages();
+const packages = getWorkspacesPackages();
 
 async function testAll() {
   for await (const package of packages) {
