@@ -47,6 +47,9 @@
     "web",
     "ui"
   ],
+  "engines": {
+    "node": ">=10"
+  },
   "peerDependencies": {
     "react": "^16.8.0",
     "react-dom": "^16.8.0"
