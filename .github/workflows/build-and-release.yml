@@ -85,6 +85,7 @@ jobs:
         with:
           parallel: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          path-to-lcov: reactools/coverage/lcov.info
           flag-name: run-${{ matrix.node-version }}-${{ matrix.os }}
 
   build-docs:
@@ -127,7 +128,6 @@ jobs:
         with:
           parallel-finished: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          path-to-lcov: reactools/coverage/lcov.info
 
   release:
     needs: build
