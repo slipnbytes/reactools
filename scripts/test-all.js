@@ -1,13 +1,14 @@
 const { exec: defaultExec } = require('child_process');
-const { join, resolve } = require('path');
+const { join } = require('path');
 
-const { workspaces } = require('../package.json');
+const { ROOT_PATH } = require('../shared/constants');
+const { getWorkspacesPakages } = require('../shared/getWorkspacesPakages');
 
-const ROOT_DIR = resolve(__dirname, '..');
+const packages = getWorkspacesPakages();
 
 async function testAll() {
-  for await (const package of workspaces.packages) {
-    const cwd = join(ROOT_DIR, package);
+  for await (const package of packages) {
+    const cwd = join(ROOT_PATH, package);
 
     await exec('yarn jest --passWithNoTests', cwd);
   }

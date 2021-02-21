@@ -1,9 +1,13 @@
-const { join, resolve } = require('path');
+const { join } = require('path');
 
 const jestConfig = require('../jest.config');
+const { ROOT_PATH } = require('../shared/constants');
 
-const ROOT_PATH = resolve(__dirname, '..');
-
+/**
+ * @param {string} basePath
+ * @param {object} config
+ * @return {object}
+ */
 function extendConfig(basePath, config) {
   delete config.rootDir;
 

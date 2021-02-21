@@ -2,6 +2,11 @@ const { join } = require('path');
 
 const SLASH_REGEX = /\/\*$/g;
 
+/**
+ * @param {{ [key: string]: string|string[] }} paths
+ * @param {string} basePath
+ * @return {{ [key: string]: string }}
+ */
 function resolvePaths(paths, basePath = '/') {
   const basePathParsed = join('<rootDir>', basePath).replace(/\\/, '/');
 
@@ -17,6 +22,11 @@ function resolvePaths(paths, basePath = '/') {
   }, {});
 }
 
+/**
+ * @param {string} value
+ * @param {string} replacer
+ * @return {string}
+ */
 function clean(value, replacer = '/') {
   return String(value).replace(SLASH_REGEX, replacer);
 }
