@@ -2,3 +2,5 @@ node_modules/
 dist/
 typings/
 coverage/
+.next/
+__next/
