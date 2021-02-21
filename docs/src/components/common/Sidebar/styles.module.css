@@ -16,18 +16,21 @@
 }
 
 .container {
-  @apply fixed top-0 h-screen overflow-y-scroll flex-shrink-0 w-full;
+  @apply fixed top-0 h-screen overflow-y-auto flex-shrink-0 w-full invisible;
 
   z-index: 777;
   max-width: 280px;
   margin-left: -280px;
 
-  transition: margin-left 300ms;
+  box-shadow: 2px 0 2px 0 rgba(0, 0, 0, 0.1);
   background-color: var(--color-background);
+  transition: margin-left 300ms, visibility 0ms linear 300ms;
 }
 
 .container:global(.opened) {
-  @apply ml-0;
+  @apply ml-0 visible;
+
+  transition: margin-left 300ms linear;
 }
 
 .content {
@@ -65,13 +68,17 @@
   padding: 8px;
   border-radius: 4px;
 
-  color: color-mod(var(--color-black) a(0.6));
+  color: color-mod(var(--color-black) alpha(0.6));
 }
 
-.content > div > section a.active,
+.content > div > section a:global(.active),
 .content > div > section a:hover {
-  color: var(--color-sky-blue);
+  color: var(--color-blue);
   background-color: var(--color-grey-weak);
+}
+
+.content > div > section a:global(.active) {
+  color: var(--color-grey);
 }
 
 @screen lg {
@@ -81,7 +88,7 @@
   }
 
   .container {
-    @apply sticky ml-0;
+    @apply sticky ml-0 visible;
   }
 
   .content {

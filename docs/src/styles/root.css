@@ -8,8 +8,8 @@
   --main-border-radius: 3px;
   --main-bigger-border-radius: 6px;
 
-  --main-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.19);
-  --main-bottom-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.19);
+  --main-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.12);
+  --main-bottom-box-shadow: 0 2px 4px 0 rgba(15, 11, 11, 0.12);
 
   /* Colors */
 
@@ -28,8 +28,8 @@
   --color-white: #fefefe;
   --color-white-strong: #e0e0e0;
 
+  --color-blue: #03a1fc;
   --color-papaya: #f2b48a;
-  --color-sky-blue: #61dbfb;
 }
 
 @media (min-width: 1536px) {
