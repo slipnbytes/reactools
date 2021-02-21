@@ -3,9 +3,11 @@ name: CI
 on:
   push:
     paths-ignore:
+      - 'docs/**'
       - '**.md'
   pull_request:
     paths-ignore:
+      - 'docs/**'
       - '**.md'
 
 jobs:
@@ -41,31 +43,25 @@ jobs:
       - name: Install Dependencies
         run: yarn
 
-      - name: Install Documentation Dependencies
-        run: yarn --cwd ./docs
-
-      - name: Install Documentation Dependencies
-        run: yarn --cwd ./docs
-
-      - name: Install Documentation Dependencies
-        run: yarn --cwd ./docs
-
-      - name: Check Tests
-        run: yarn test --coverage
-
       - name: Check Prettier
         run: yarn prettier
 
       - name: Check Linting
         run: yarn lint
 
-      - name: Check Build
-        run: yarn build
+      - name: Check Tests
+        run: yarn test:all
+
+      - name: Build
+        run: yarn build:reactools
+
+      - name: Build Docs
+        run: yarn build:docs
 
       - name: Coveralls
         uses: coverallsapp/github-action@master
         with:
-          path-to-lcov: coverage/lcov.info
+          path-to-lcov: reactools/coverage/lcov.info
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
   release:
@@ -98,11 +94,8 @@ jobs:
       - name: Install Dependencies
         run: yarn
 
-      - name: Build
-        run: yarn build
-
       - name: Release
-        run: yarn semantic-release
+        run: yarn release
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

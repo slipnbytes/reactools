@@ -6,7 +6,7 @@
   "module": "dist/esm/index.js",
   "types": "typings/index.d.ts",
   "scripts": {
-    "clean": "rimraf dist typings",
+    "clean": "rimraf dist typings coverage",
     "release": "yarn node-env-run --exec \"semantic-release\"",
     "prepublishOnly": "yarn build",
     "test": "jest --passWithNoTests",
