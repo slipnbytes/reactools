@@ -1,5 +1,6 @@
 import NextLink, { LinkProps } from 'next/link';
 import React, { HTMLAttributes } from 'react';
+import { UrlObject } from 'url';
 
 interface Props extends LinkProps, HTMLAttributes<HTMLElement> {}
 
@@ -11,7 +12,10 @@ export const Link = ({ children, ...rest }: PropsWithChildren<Props>) => {
 
   return (
     <NextLink {...nextLinkProps}>
-      <a {...rest} href={(rest.as || rest.href) as string}>
+      <a
+        {...rest}
+        href={((rest.as as UrlObject)?.href ?? rest.as ?? rest.href) as string}
+      >
         {children}
       </a>
     </NextLink>

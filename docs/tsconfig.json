@@ -1,8 +1,10 @@
 {
   "extends": "../tsconfig.json",
   "include": ["next-env.d.ts", "src/**/*"],
+  "exclude": ["node_modules", ".next", "__next"],
   "compilerOptions": {
     "baseUrl": ".",
+    "jsx": "preserve",
     "paths": {
       "@/*": ["*", "src/*"],
       "@shared/*": ["shared/*"],
