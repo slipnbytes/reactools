@@ -87,7 +87,7 @@ $ git push origin main
 
 ## License
 
-AGPL-3.0 © [Hitechline][url-organization]
+MIT © [Hitechline][url-organization]
 
 <!-- prettier-ignore-start -->
 

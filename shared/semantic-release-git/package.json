@@ -1,7 +1,7 @@
 {
   "name": "semantic-release-git",
   "version": "0.0.0",
-  "license": "AGPL-3.0",
+  "license": "MIT",
   "main": "index.js",
   "private": true,
   "repository": {

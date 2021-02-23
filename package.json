@@ -1,7 +1,7 @@
 {
   "name": "reactools",
   "version": "0.0.0",
-  "license": "AGPL-3.0",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "fix": "run-s lint:fix prettier:fix",
