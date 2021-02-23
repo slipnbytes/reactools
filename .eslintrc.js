@@ -1,3 +1,6 @@
+const { existsSync } = require('fs');
+const { join } = require('path');
+
 const { ROOT_PATH } = require('./shared/constants');
 const { getWorkspacesPackages } = require('./shared/getWorkspacesPackages');
 
@@ -54,7 +57,11 @@ module.exports = {
     'import/resolver': {
       typescript: {
         alwaysTryTypes: true,
-        project: packages.map(package => `${package}/tsconfig.json`),
+        project: packages
+          .filter(package =>
+            existsSync(join(ROOT_PATH, package, 'tsconfig.json')),
+          )
+          .map(package => `${package}/tsconfig.json`),
       },
     },
   },
@@ -88,8 +95,7 @@ module.exports = {
     'import/no-extraneous-dependencies': [
       'error',
       {
-        devDependencies: true,
-        packageDir: ['.', ...packages],
+        packageDir: [ROOT_PATH, ...packages],
       },
     ],
     'import/extensions': [

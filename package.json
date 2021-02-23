@@ -29,7 +29,8 @@
   "workspaces": {
     "packages": [
       "docs",
-      "reactools"
+      "reactools",
+      "shared/semantic-release-git"
     ]
   },
   "engines": {

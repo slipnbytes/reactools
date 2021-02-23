@@ -1,7 +1,15 @@
+const { join } = require('path');
+
+const { ROOT_PATH } = require('./shared/constants');
+
 module.exports = {
   branches: [
     'main',
-    { name: 'canary', channel: 'canary', prerelease: 'canary' },
+    {
+      name: 'canary',
+      channel: 'canary',
+      prerelease: 'canary',
+    },
   ],
   plugins: [
     '@semantic-release/commit-analyzer',
@@ -9,26 +17,22 @@ module.exports = {
     [
       '@semantic-release/changelog',
       {
-        changelogFile: 'CHANGELOG.md',
+        changelogFile: join(ROOT_PATH, 'CHANGELOG.md'),
       },
     ],
     [
       '@semantic-release/npm',
       {
+        npmPublish: false,
         tarballDir: '.tarball',
       },
     ],
     [
-      '@semantic-release/git',
+      'semantic-release-git',
       {
         message:
           'chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}',
-        assets: [
-          'CHANGELOG.md',
-          'package.json',
-          'package-lock.json',
-          'npm-shrinkwrap.json',
-        ],
+        assets: ['package.json'],
       },
     ],
     [

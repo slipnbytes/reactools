@@ -1,0 +1,22 @@
+{
+  "name": "semantic-release-git",
+  "version": "0.0.0",
+  "license": "AGPL-3.0",
+  "main": "index.js",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "directory": "shared/semantic-release-git",
+    "url": "git+https://github.com/hitechline/react.git"
+  },
+  "dependencies": {
+    "@semantic-release/error": "^2.1.0",
+    "aggregate-error": "^3.0.0",
+    "debug": "^4.0.0",
+    "dir-glob": "^3.0.0",
+    "execa": "^4.0.0",
+    "lodash": "^4.17.4",
+    "micromatch": "^4.0.0",
+    "p-reduce": "^2.0.0"
+  }
+}
