@@ -1,3 +1,10 @@
+# [1.0.0-canary.3](https://github.com/hitechline/react/compare/v1.0.0-canary.2...v1.0.0-canary.3) (2021-02-23)
+
+
+### Bug Fixes
+
+* **docs:** package name ([4e7a031](https://github.com/hitechline/react/commit/4e7a03119b722f5e0faf6435ed1336c7df5f4300))
+
 # [1.0.0-canary.2](https://github.com/hitechline/react/compare/v1.0.0-canary.1...v1.0.0-canary.2) (2021-02-23)
 
 
