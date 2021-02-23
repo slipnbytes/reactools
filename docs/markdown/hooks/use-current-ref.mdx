@@ -15,7 +15,7 @@ Have the same functions as **React.useState()** on reference.
 #### Example 1
 
 ```tsx
-import { useCurrentRef } from '@hitechline/react';
+import { useCurrentRef } from '@hitechline/reactools';
 import { useEffect } from 'react';
 
 const Component = () => {
@@ -35,21 +35,17 @@ const Component = () => {
 #### Example 2
 
 ```tsx
-import { useCurrentRef } from '@hitechline/react';
+import { useCurrentRef } from '@hitechline/reactools';
 import { useEffect, useCallback, forwardRef } from 'react';
 
 const Wrap = () => {
   const [value, ref] = useCurrentRef({ loading: false });
 
-  useEffect(() => {
-    if (!value) {
-      return;
-    }
-  }, [useEffect]);
-
   return (
     <section>
       <Component ref={ref} />
+
+      {value.loading && <h1>Loading</h1>}
     </section>
   );
 };
