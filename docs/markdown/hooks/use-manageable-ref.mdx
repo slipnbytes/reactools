@@ -1,0 +1,56 @@
+---
+title: Hook - useManageableRef
+description: Have a reference for easy adminstration and change of state.
+---
+
+# useManageableRef
+
+Have a reference for easy adminstration and change of state.
+
+<br />
+
+_One hour you will need it_.
+
+<br />
+<br />
+
+## Usage
+
+```tsx
+import { useManageableRef } from '@hitechline/react';
+import { useCallback } from 'react';
+
+const Component = () => {
+  const ref = useManageableRef(null);
+
+  const handle = useCallback(() => {
+    ref.current = {
+      foo: () => {
+        // bar
+      },
+    };
+  }, []);
+
+  return (
+    <div>
+      <button type="button" onClick={handle}>
+        Click
+      </button>
+
+      <Child asRef={ref} />
+    </div>
+  );
+};
+
+const Child = ({ asRef }) => {
+  const click = useCallback(() => {
+    asRef.current?.foo?.();
+  }, []);
+
+  return (
+    <button type="button" onClick={click}>
+      Change
+    </button>
+  );
+};
+```

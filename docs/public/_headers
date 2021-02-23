@@ -1,0 +1,20 @@
+/*.(ttf|woff|fnt|fot)
+  cache-control: public
+  cache-control: max-age=604800
+  cache-control: s-maxage=604800
+  cache-control: must-revalidate
+  cache-control: proxy-revalidate
+
+/*.(jpg|jpeg|jfif|pjpeg|pjp|png|svg|webp)
+  cache-control: public
+  cache-control: max-age=86400
+  cache-control: s-maxage=86400
+  cache-control: must-revalidate
+  cache-control: proxy-revalidate
+
+/*.css
+  cache-control: public
+  cache-control: max-age=21600
+  cache-control: s-maxage=21600
+  cache-control: must-revalidate
+  cache-control: proxy-revalidate

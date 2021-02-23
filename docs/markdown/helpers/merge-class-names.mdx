@@ -1,0 +1,70 @@
+---
+title: Helper - mergeClassNames
+description: Dynamic classes in the easiest way possible.
+---
+
+# mergeClassNames
+
+Dynamic classes in the easiest way possible.
+
+<br />
+<br />
+
+## Usage
+
+<br />
+
+#### Example 1
+
+```tsx
+import { mergeClassNames } from '@hitechline/react';
+import { useState } from 'react';
+
+const Component = () => {
+  const [active, setActive] = useState(false);
+
+  return (
+    <div
+      className={mergeClassNames('flex', {
+        active,
+        open: active,
+      })}
+    >
+      Component
+    </div>
+  );
+};
+```
+
+<br />
+<br />
+
+#### Example 2
+
+```tsx
+import { mergeClassNames } from '@hitechline/react';
+import { useState } from 'react';
+
+const Component = ({ className }) => {
+  const [active, setActive] = useState(false);
+
+  return (
+    <div
+      className={mergeClassNames(
+        'flex',
+        {
+          active,
+          open: active,
+        },
+        className,
+        {
+          foo: true,
+        },
+        'bar',
+      )}
+    >
+      Component
+    </div>
+  );
+};
+```

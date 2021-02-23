@@ -1,0 +1,119 @@
+.wrap {
+  @apply flex-shrink-0 w-full;
+
+  max-width: 280px;
+}
+
+.responsive {
+  margin-bottom: 20px;
+  padding-top: var(--box-main-padding);
+}
+
+.close__button {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: var(--box-spacing);
+}
+
+.container {
+  @apply fixed top-0 h-screen overflow-y-auto flex-shrink-0 w-full invisible;
+
+  z-index: 777;
+  max-width: 280px;
+  margin-left: -280px;
+
+  box-shadow: 2px 0 2px 0 rgba(0, 0, 0, 0.1);
+  background-color: var(--color-background);
+  transition: margin-left 300ms, visibility 0ms linear 300ms;
+}
+
+.container:global(.opened) {
+  @apply ml-0 visible;
+
+  transition: margin-left 300ms linear;
+}
+
+.content {
+  @apply flex flex-col;
+
+  padding-bottom: var(--box-main-padding);
+  padding-left: calc(var(--box-spacing) - 8px);
+}
+
+.content > div + div {
+  margin-top: 25px;
+}
+
+.content > div > h4 {
+  @apply uppercase font-bold;
+
+  padding-left: 8px;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+
+  color: var(--color-black-weak);
+}
+
+.content > div > section {
+  @apply flex flex-col;
+}
+
+.content > div > section a + a {
+  margin-top: 4px;
+}
+
+.content > div > section a {
+  @apply w-full;
+
+  padding: 8px;
+  border-radius: 4px;
+
+  color: color-mod(var(--color-black) alpha(0.6));
+}
+
+.content > div > section a:global(.active),
+.content > div > section a:hover {
+  color: var(--color-blue);
+  background-color: var(--color-grey-weak);
+}
+
+.content > div > section a:global(.active) {
+  color: var(--color-grey);
+}
+
+@screen lg {
+  .responsive,
+  .close__button {
+    @apply hidden !important;
+  }
+
+  .container {
+    @apply sticky ml-0 visible;
+  }
+
+  .content {
+    padding-top: var(--box-main-padding);
+  }
+}
+
+/* Scroll */
+
+.container::-webkit-scrollbar {
+  width: 5px;
+}
+
+.container::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.container::-webkit-scrollbar-thumb {
+  background-color: var(--color-papaya);
+}
+
+.container::-webkit-scrollbar-track:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.container:hover::-webkit-scrollbar {
+  width: 8px;
+}

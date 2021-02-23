@@ -1,0 +1,185 @@
+---
+title: Hook - useAsync
+description: Make things asynchronously and keep your layout interactive.
+---
+
+# useAsync
+
+Make things asynchronously and keep your layout interactive.
+
+<br />
+<br />
+
+## Usage
+
+<br />
+
+#### Example 1
+
+```tsx
+import { useAsync } from '@hitechline/react';
+import { Fragment } from 'react';
+
+const Component = () => {
+  const { data, loading } = useAsync(async () => {
+    const array = [1, 2];
+    const newArray = await Promise.all(array.map(val => val + 1));
+
+    return newArray;
+  });
+
+  if (loading) {
+    return <h1>Loading...</h1>;
+  }
+
+  return (
+    <div>
+      {data.map(val => (
+        <Fragment key={val}>{val}</Fragment>
+      ))}
+    </div>
+  );
+};
+```
+
+<br />
+<br />
+
+#### Example 2
+
+```tsx
+import { useAsync } from '@hitechline/react';
+import api from 'services/api';
+
+const Component = () => {
+  const { loading, error, data: posts } = useAsync(async () => {
+    const { data } = await api.get('posts');
+
+    return data;
+  });
+
+  if (loading) {
+    return <h1>Loading...</h1>;
+  }
+
+  if (error) {
+    return <h1>An error has occurred</h1>;
+  }
+
+  return (
+    <div>
+      {posts.map(({ id, title }) => (
+        <h1 key={id}>{title}</h1>
+      ))}
+    </div>
+  );
+};
+```
+
+<br />
+<br />
+
+## Cancelling Operation
+
+This hook allows the operation to be canceled, despite some limitations
+
+<br />
+
+1. **Promise** does not have this behavios by default.
+2. The developer will need to know how to deal with the best way in which his contexts fits.
+
+#### Basic Example
+
+```tsx
+import { useAsync } from '@hitechline/react';
+import { useEffect } from 'react';
+import api from 'services/api';
+
+const Component = () => {
+  const { loading, cancel } = useAsync(async () => {
+    const { data } = await api.get('posts');
+
+    return data;
+  });
+
+  useEffect(() => {
+    if (!loading) {
+      return;
+    }
+
+    const timeoutId = setTimeout(() => {
+      cancel();
+    }, 5000);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, [loading, cancel]);
+
+  if (loading) {
+    return <h1>Loading...</h1>;
+  }
+
+  return (
+    <div>
+      {posts.map(({ id, title }) => (
+        <h1 key={id}>{title}</h1>
+      ))}
+    </div>
+  );
+};
+```
+
+<br />
+<br />
+
+#### Advanced Example (Hard Usage)
+
+```tsx
+import { useAsync } from '@hitechline/react';
+import { useEffect } from 'react';
+import axios from 'axios';
+import api from 'services/api';
+
+const Component = () => {
+  const { loading, cancel } = useAsync(async ({ signal }) => {
+    const cancelToken = axios.CancelToken.source();
+
+    signal.on(() => {
+      cancelToken.cancel();
+    });
+
+    const { data } = await api.get('posts', {
+      cancelToken: cancelToken.token,
+    });
+
+    return data;
+  });
+
+  useEffect(() => {
+    if (!loading) {
+      return;
+    }
+
+    const timeoutId = setTimeout(() => {
+      cancel();
+    }, 5000);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, [loading, cancel]);
+
+  if (loading) {
+    return <h1>Loading...</h1>;
+  }
+
+  return (
+    <div>
+      {posts.map(({ id, title }) => (
+        <h1 key={id}>{title}</h1>
+      ))}
+    </div>
+  );
+};
+```

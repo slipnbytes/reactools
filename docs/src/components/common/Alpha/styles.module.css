@@ -1,0 +1,11 @@
+.container {
+  @apply hidden fixed h-screen w-screen top-0 left-0;
+
+  z-index: 555;
+  backdrop-filter: saturate(180%);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.container:global(.active) {
+  @apply block;
+}

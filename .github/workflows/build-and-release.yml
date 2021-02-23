@@ -3,11 +3,9 @@ name: CI
 on:
   push:
     paths-ignore:
-      - 'docs/**'
       - '**.md'
   pull_request:
     paths-ignore:
-      - 'docs/**'
       - '**.md'
 
 jobs:
@@ -42,6 +40,9 @@ jobs:
 
       - name: Install Dependencies
         run: yarn
+
+      - name: Install Documentation Dependencies
+        run: yarn --cwd ./docs
 
       - name: Check Tests
         run: yarn test --coverage

@@ -1,0 +1,9 @@
+.content {
+  @apply flex items-stretch flex-col;
+}
+
+@screen lg {
+  .content {
+    @apply flex-row;
+  }
+}

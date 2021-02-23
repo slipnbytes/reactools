@@ -1,0 +1,51 @@
+:root {
+  --font-size-percent: 62.5%;
+}
+
+html {
+  font-size: var(--font-size-percent);
+}
+
+body {
+  font: 1.6rem -apple-system, system-ui, sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+a,
+button {
+  color: currentColor;
+}
+
+body,
+input,
+button,
+textarea {
+  font-size: 1.6rem;
+}
+
+@media (max-width: 1280px) {
+  :root {
+    --font-size-percent: 61%;
+  }
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --font-size-percent: 59.5%;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --font-size-percent: 58%;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --font-size-percent: 56.5%;
+  }
+}

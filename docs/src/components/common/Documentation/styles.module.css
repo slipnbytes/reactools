@@ -1,0 +1,10 @@
+.container {
+  padding-top: var(--box-main-padding);
+  padding-bottom: var(--box-main-padding);
+}
+
+@screen lg {
+  .container {
+    max-width: calc(100% - 280px);
+  }
+}

@@ -1,0 +1,192 @@
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  margin-bottom: 15px;
+}
+
+.markdown p a {
+  color: #005a9c;
+  font-weight: 500;
+}
+
+.markdown li,
+.markdown ul {
+  text-decoration: inherit;
+  list-style-type: inherit;
+}
+
+.markdown blockquote {
+  padding: 10px;
+  border-radius: 5px;
+  color: #6c6c80;
+  background: #f2f2fa;
+}
+
+.markdown hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.markdown table {
+  border-collapse: separate;
+  border-spacing: 0 4px;
+  margin-top: -4px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.markdown table th,
+.markdown table td {
+  margin: 0;
+  color: #6c6c80;
+  background-color: #f2f2fa;
+  border: solid 1px #f2f2fa;
+  border-style: solid none;
+  padding: 12px;
+}
+
+.markdown table th:first-of-type,
+.markdown table td:first-of-type {
+  border-left-style: solid;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.markdown table th:first-of-type,
+table td:first-of-type {
+  border-right-style: solid;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.markdown table tr th {
+  color: #3d3d4d;
+  text-align: left;
+  font-weight: bold;
+}
+
+.markdown ul,
+.markdown ol {
+  color: #6c6c80;
+  padding-left: 15px;
+  margin-bottom: 15px;
+}
+
+.markdown ul li,
+.markdown ol li {
+  line-height: 28px;
+}
+
+.markdown li ul,
+.markdown li ol {
+  margin-bottom: 0;
+}
+
+.markdown pre {
+  border-radius: 8px;
+  overflow: auto;
+  word-spacing: normal;
+  white-space: pre;
+  word-break: normal;
+  overflow-wrap: break-word;
+  padding: 20px 10px;
+  margin: 10px 0;
+}
+
+.markdown pre[class*='language-'] {
+  position: relative;
+}
+
+.markdown pre[class*='language-'] code {
+  font-family: inherit;
+}
+
+.markdown pre[class*='language-']::before {
+  background: #d9d7e0;
+  border-radius: 0 0 4px 4px;
+  color: #232129;
+  font-size: 12px;
+  font-family: inherit;
+  letter-spacing: 1px;
+  line-height: 1;
+  padding: 3px 6px;
+  position: absolute;
+  right: 10px;
+  text-align: right;
+  text-transform: uppercase;
+  top: 0;
+}
+
+.markdown pre[class~='language-js']::before,
+.markdown pre[class~='language-javascript']::before {
+  content: 'js';
+  background: #f7df1e;
+}
+
+.markdown pre[class~='language-jsx']::before {
+  content: 'jsx';
+  background: #61dafb;
+}
+
+.markdown pre[class~='language-typescript']::before,
+pre[class~='language-ts']::before {
+  content: 'ts';
+  background: #294e80;
+  color: #fff;
+}
+
+.markdown pre[class~='language-tsx']::before {
+  content: 'tsx';
+  background: #294e80;
+  color: #fff;
+}
+
+.markdown pre[class~='language-html']::before {
+  content: 'html';
+  background: #005a9c;
+  color: #fff;
+}
+
+.markdown pre[class~='language-css']::before {
+  content: 'css';
+  background: #ff9800;
+  color: #fff;
+}
+
+.markdown pre[class~='language-mdx']::before {
+  content: 'mdx';
+  background: #f9ac00;
+  color: #fff;
+}
+
+.markdown pre[class~='language-shell']::before {
+  content: 'shell';
+}
+
+.markdown pre[class~='language-sh']::before {
+  content: 'sh';
+}
+
+.markdown pre[class~='language-bash']::before {
+  content: 'bash';
+}
+
+.markdown pre[class~='language-markdown']::before {
+  content: 'md';
+}
+
+.markdown pre[class~='language-json']::before,
+.markdown pre[class~='language-json5']::before {
+  content: 'json';
+  background: linen;
+}
+
+.markdown pre[class~='language-diff']::before {
+  content: 'diff';
+  background: #e6ffed;
+}

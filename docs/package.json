@@ -1,0 +1,52 @@
+{
+  "name": "docs",
+  "version": "0.0.0",
+  "license": "AGPL-3.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "start": "next start",
+    "build": "next build"
+  },
+  "repository": {
+    "type": "git",
+    "directory": "docs",
+    "url": "git+https://github.com/hitechline/react.git"
+  },
+  "dependencies": {
+    "@hitechline/next-mdx": "^0.0.1-f",
+    "@hitechline/react": "^1.0.9",
+    "@mapbox/rehype-prism": "^0.5.0",
+    "@mdx-js/react": "^1.6.22",
+    "@tailwindcss/ui": "0.7.2",
+    "axios": "0.21.1",
+    "fast-glob": "^3.2.5",
+    "gray-matter": "^4.0.2",
+    "next": "10.0.3",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-icons": "^4.1.0",
+    "remark-prism": "^1.3.4",
+    "remark-remove-comments": "^0.1.3",
+    "tailwindcss": "1.9.6",
+    "url-join": "4.0.1"
+  },
+  "devDependencies": {
+    "@mdx-js/loader": "^1.6.22",
+    "@next/bundle-analyzer": "10.0.3",
+    "@next/mdx": "^10.0.7",
+    "@types/url-join": "4.0.0",
+    "@zeit/next-source-maps": "0.0.3",
+    "imagemin-mozjpeg": "9.0.0",
+    "imagemin-optipng": "8.0.0",
+    "next-compose-plugins": "2.2.1",
+    "next-optimized-images": "2.6.2",
+    "postcss-color-converter": "^1.0.1",
+    "postcss-color-hsl": "^2.0.0",
+    "postcss-color-mod-function": "^3.0.3",
+    "postcss-custom-properties": "^11.0.0",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-nesting": "^7.0.1",
+    "postcss-preset-env": "^6.7.0"
+  }
+}

@@ -1,0 +1,49 @@
+---
+title: Hook - useOutClick
+description: Listen whenever a click has been outside the specified element.
+---
+
+# useOutClick
+
+Listen whenever a click has been outside the specified element.
+
+<br />
+<br />
+
+## Usage
+
+```tsx
+import { useOutClick } from '@hitechline/react';
+import { useState, useCallback, useEffect } from 'react';
+
+const Component = () => {
+  const [navbarOpened, setOpened] = useState(false);
+  const { ref, addListener, removeListener } = useOutClick();
+
+  const open = useCallback(() => {
+    setOpened(true);
+  }, []);
+
+  const close = useCallback(() => {
+    setOpened(false);
+  }, []);
+
+  useEffect(() => {
+    addListener(close);
+
+    return () => {
+      removeListener(close);
+    };
+  }, [close, addListener, removeListener]);
+
+  return (
+    <div>
+      <button type="button" onClick={open}>
+        Open
+      </button>
+
+      {navbarOpened && <nav>...</nav>}
+    </div>
+  );
+};
+```
