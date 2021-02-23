@@ -23,7 +23,7 @@
     "axios": "0.21.1",
     "fast-glob": "^3.2.5",
     "gray-matter": "^4.0.2",
-    "next": "10.0.3",
+    "next": "10.0.7",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-icons": "^4.1.0",
