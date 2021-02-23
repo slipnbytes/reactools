@@ -1,3 +1,10 @@
+# [1.0.0-canary.2](https://github.com/hitechline/react/compare/v1.0.0-canary.1...v1.0.0-canary.2) (2021-02-23)
+
+
+### Bug Fixes
+
+* **docs:** update badges ([0ff3e41](https://github.com/hitechline/react/commit/0ff3e41b8e9078a4db7aea91022e903d240f51fa))
+
 # 1.0.0-canary.1 (2021-02-23)
 
 
