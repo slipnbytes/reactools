@@ -1,6 +1,5 @@
 import { render } from '@testing-library/react';
 import { renderHook } from '@testing-library/react-hooks';
-import React from 'react';
 
 import { usePosition, UsePositionRect } from '@/hooks/usePosition';
 

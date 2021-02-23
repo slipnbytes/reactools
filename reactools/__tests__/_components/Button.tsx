@@ -1,4 +1,4 @@
-import React, { forwardRef, Ref, HTMLAttributes } from 'react';
+import { forwardRef, Ref, HTMLAttributes } from 'react';
 
 type Props = HTMLAttributes<HTMLButtonElement>;
 

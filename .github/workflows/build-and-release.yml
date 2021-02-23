@@ -1,88 +1,17 @@
 name: CI
 
-on:
-  push:
-    paths-ignore:
-      - '**.md'
-  pull_request:
-    paths-ignore:
-      - '**.md'
+on: [push, pull_request]
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
-  build:
+  setup:
     runs-on: ubuntu-latest
-    if: "!contains(github.event.commits[0].message, '[skip ci]') && !contains(github.event.commits[0].message, '[ci skip]')"
-    strategy:
-      matrix:
-        node-version: [10.x, 12.x, 14.x]
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
-
-      - name: Get Yarn Cache
-        id: yarn-cache
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-
-      - uses: actions/cache@v2
-        with:
-          path: ${{ steps.yarn-cache.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-
-      - name: Set Up Node ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
-        with:
-          node-version: ${{ matrix.node-version }}
-
-      - name: Install Dependencies
-        run: yarn
-
-      - name: Install Documentation Dependencies
-        run: yarn --cwd ./docs
-
-      - name: Check Tests
-        run: yarn test --coverage
-
-      - name: Check Prettier
-        run: yarn prettier
-
-      - name: Check Linting
-        run: yarn lint
-
-      - name: Check Build
-        run: yarn build
-
-      - name: Coveralls
-        uses: coverallsapp/github-action@master
-        with:
-          path-to-lcov: coverage/lcov.info
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-
-  release:
-    needs: build
-    runs-on: ubuntu-latest
-    if: "github.event_name == 'push' && !contains(github.event.commits[0].message, '[skip release]') && !contains(github.event.commits[0].message, '[release skip]')"
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-
-      - name: Get Yarn Cache
-        id: yarn-cache
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-
-      - uses: actions/cache@v2
-        with:
-          path: ${{ steps.yarn-cache.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
 
       - name: Set Up Node
         uses: actions/setup-node@v2
@@ -90,13 +19,117 @@ jobs:
           node-version: 14
 
       - name: Install Dependencies
-        run: yarn
+        uses: bahmutov/npm-install@master
+
+  test:
+    needs: setup
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [10.x, 12.x, 14.x, 15.x]
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set Up Node ${{ matrix.node }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Install Dependencies
+        uses: bahmutov/npm-install@master
+
+      - name: Check Prettier
+        run: yarn prettier
+
+      - name: Check Lint
+        run: yarn lint
+
+      - name: Check Tests
+        run: yarn test:all
+
+      - name: Coveralls Parallel
+        uses: coverallsapp/github-action@master
+        with:
+          parallel: true
+          base-path: reactools
+          flag-name: run-${{ matrix.node }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path-to-lcov: reactools/coverage/lcov.info
+
+  coverage:
+    needs: test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Coveralls Finished
+        uses: coverallsapp/github-action@master
+        with:
+          parallel-finished: true
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+  build:
+    needs: test
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [10.x, 12.x, 14.x, 15.x]
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set Up Node ${{ matrix.node }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Install Dependencies
+        uses: bahmutov/npm-install@master
 
       - name: Build
-        run: yarn build
+        run: yarn build:reactools
+
+  build-docs:
+    needs: test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set Up Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Install Dependencies
+        uses: bahmutov/npm-install@master
+
+      - name: Build
+        run: yarn build:docs
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    if: "github.event_name == 'push' && !contains(github.event.commits[0].message, '[skip release]') && !contains(github.event.commits[0].message, '[release skip]')"
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set Up Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Install Dependencies
+        uses: bahmutov/npm-install@master
 
       - name: Release
-        run: yarn semantic-release
+        run: yarn release
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

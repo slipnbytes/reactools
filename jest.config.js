@@ -1,30 +1,27 @@
-const { pathsToModuleNameMapper } = require('ts-jest/utils');
+const { existsSync } = require('fs');
+const { join } = require('path');
 
-const { compilerOptions } = require('./tsconfig.json');
+const { ROOT_PATH } = require('./shared/constants');
+const { getWorkspacesPackages } = require('./shared/getWorkspacesPackages');
+
+const projects = getWorkspacesPackages(false)
+  .filter(package => existsSync(join(ROOT_PATH, package, 'jest.config.js')))
+  .map(package => `<rootDir>/${package}/jest.config.js`);
 
 module.exports = {
+  projects,
+
   bail: true,
   clearMocks: true,
   collectCoverage: true,
-
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest',
   },
-  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
-    prefix: '<rootDir>',
-  }),
-
   coverageReporters: ['json', 'lcov'],
   testMatch: ['**/?(*.)+(spec|test).(ts|tsx)'],
   moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
-  collectCoverageFrom: [
-    '<rootDir>/src/**/*.{js,jsx,ts,tsx}',
-    '!<rootDir>/src/index.ts',
-    '!<rootDir>/src/shared/logger.ts',
-    '!<rootDir>/src/polyfills/**/*',
-  ],
   setupFilesAfterEnv: [
-    '<rootDir>/__tests__/setup.ts',
+    join(__dirname, 'jest', 'mainSetup.js'),
     '@testing-library/jest-dom/extend-expect',
   ],
 };

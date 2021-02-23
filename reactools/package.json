@@ -1,0 +1,62 @@
+{
+  "name": "@hitechline/reactools",
+  "version": "1.0.9",
+  "license": "AGPL-3.0",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "typings/index.d.ts",
+  "scripts": {
+    "clean": "rimraf dist typings coverage",
+    "release": "yarn semantic-release",
+    "prepublishOnly": "yarn build",
+    "test": "jest --passWithNoTests",
+    "test:watch": "yarn test --watchAll",
+    "build": "run-s build:cjs build:esm build:types",
+    "prebuild": "yarn clean",
+    "postbuild": "run-p compile-paths:cjs compile-paths:esm compile-paths:types",
+    "build:watch": "tsc-watch -p build/tsconfig.watch.json --onSuccess \"npm-run-all -s build:cjs build:esm build:types -p compile-paths:cjs compile-paths:esm compile-paths:types\"",
+    "prebuild:watch": "yarn clean",
+    "build:cjs": "tsc -p build/tsconfig.cjs.json",
+    "build:esm": "tsc -p build/tsconfig.esm.json",
+    "build:types": "tsc -p build/tsconfig.types.json",
+    "build:watch:cjs": "tsc-watch -p build/tsconfig.cjs.json --onSuccess \"npm-run-all -s build:types -p compile-paths:cjs compile-paths:types\"",
+    "build:watch:esm": "tsc-watch -p build/tsconfig.esm.json --onSuccess \"npm-run-all -s build:types -p compile-paths:esm compile-paths:types\"",
+    "compile-paths:cjs": "tsc-alias -p build/tsconfig.cjs.json",
+    "compile-paths:esm": "tsc-alias -p build/tsconfig.esm.json",
+    "compile-paths:types": "tsc-alias -p build/tsconfig.types.json"
+  },
+  "repository": {
+    "type": "git",
+    "directory": "reactools",
+    "url": "git+https://github.com/hitechline/react.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "directories": {
+    "lib": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "dist",
+    "typings"
+  ],
+  "keywords": [
+    "react",
+    "utilities",
+    "web",
+    "ui"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "tsc-alias": "1.2.6",
+    "tsc-watch": "4.2.9"
+  }
+}

@@ -4,7 +4,7 @@
   "exclude": ["node_modules", "dist", "typings", "__tests__"],
   "compilerOptions": {
     "baseUrl": "../src",
-    "allowJs": true,
+    "noEmit": false,
     "sourceMap": true,
     "paths": {
       "@/*": ["*"]

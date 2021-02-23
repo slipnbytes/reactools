@@ -24,7 +24,11 @@ export const getStaticProps: GetStaticProps<
     slug: string[];
   }
 > = async ({ params }) => {
-  const document = await getDocument(params.slug);
+  if (!params?.slug) {
+    throw new Error('"slug" not provided.');
+  }
+
+  const document = await getDocument(params?.slug);
 
   return {
     props: document,

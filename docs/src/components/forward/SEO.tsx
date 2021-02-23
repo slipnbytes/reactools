@@ -22,7 +22,7 @@ export const SEO = ({
   const router = useRouter();
 
   const metaImage = makeUrl(image);
-  const canonical = makeUrl(url || router.pathname);
+  const canonical = makeUrl(url ?? router.pathname);
 
   return (
     <Head>

@@ -1,13 +1,14 @@
 {
-  "include": ["src/**/*", "__tests__/**/*"],
-  "exclude": ["node_modules", "dist", "typings"],
+  "include": ["docs/**/*", "reactools/**/*"],
+  "exclude": ["node_modules", "dist", "typings", "coverage", "**/*.js"],
   "compilerOptions": {
-    "jsx": "react",
+    "jsx": "react-jsx",
     "target": "ES6",
-    "baseUrl": ".",
+    "module": "ESNext",
     "moduleResolution": "Node",
+    "noEmit": true,
     "strict": true,
-    "allowJs": false,
+    "allowJs": true,
     "skipLibCheck": true,
     "noImplicitAny": true,
     "noUnusedLocals": true,
@@ -22,9 +23,6 @@
     "suppressImplicitAnyIndexErrors": true,
     "forceConsistentCasingInFileNames": true,
     "typeRoots": ["src/@types", "node_modules/@types"],
-    "lib": ["ES6", "DOM", "ES2016", "ES2019", "ES2020", "ESNext"],
-    "paths": {
-      "@/*": ["src/*"]
-    }
+    "lib": ["ES6", "DOM", "ES2016", "ES2020", "ESNext"]
   }
 }
