@@ -4,7 +4,7 @@ export const contributing: Section = {
   title: 'Contributing',
   links: [
     {
-      title: 'Setps',
+      title: 'Steps',
       href: '/contributing',
     },
   ],
