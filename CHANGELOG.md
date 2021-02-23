@@ -1,3 +1,10 @@
+# [1.0.0-canary.4](https://github.com/hitechline/react/compare/v1.0.0-canary.3...v1.0.0-canary.4) (2021-02-23)
+
+
+### Bug Fixes
+
+* active publish to npm ([e9ff366](https://github.com/hitechline/react/commit/e9ff366f2ad4c691808696871e7988544673da4f))
+
 # [1.0.0-canary.3](https://github.com/hitechline/react/compare/v1.0.0-canary.2...v1.0.0-canary.3) (2021-02-23)
 
 
