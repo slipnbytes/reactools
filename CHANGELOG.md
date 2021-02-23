@@ -1,6 +1,6 @@
 <details>
   <summary>
-    Old package name
+    Old package
   </summary>
 
   ## [1.0.9](https://github.com/hitechline/react/compare/v1.0.7...v1.0.9) (2021-02-17)
