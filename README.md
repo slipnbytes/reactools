@@ -10,14 +10,14 @@
 
 ![CodeFactor][badge-code-factor]
 ![Test Coverage][badge-test-coverage]
-![Workflow Status][badge-workflow-status]
-![Current Published Version][badge-current-published-version]
+![CI Workflow Status][badge-ci-workflow-status]
+![NPM Latest Version][badge-latest-npm-version]
 
 </div>
 
 ## Overview
 
-`@hitechline/react` is a library focused in facilitate a build interfaces with react.
+`@hitechline/reactools` is a library focused in facilitate a build interfaces with react.
 
 Our proposal is to have a set of tools that are easy to use and
 implement that help the developer create applications with hight
@@ -95,12 +95,12 @@ MIT © [Hitechline][url-organization]
 
 [logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png
 
-[badge-code-factor]: https://img.shields.io/codefactor/grade/github/hitechline/react?label=CodeFactor&style=flat-square
+[badge-code-factor]: https://img.shields.io/codefactor/grade/github/hitechline/reactools
 
-[badge-test-coverage]: https://img.shields.io/coveralls/github/hitechline/react?label=Test%20Coverage&style=flat-square
+[badge-test-coverage]: https://img.shields.io/coveralls/github/hitechline/reactools
 
-[badge-workflow-status]: https://img.shields.io/github/workflow/status/hitechline/react/CI?label=CI&style=flat-square
+[badge-ci-workflow-status]: https://img.shields.io/github/workflow/status/hitechline/reactools/CI?label=ci
 
-[badge-current-published-version]: https://img.shields.io/npm/v/@hitechline/react?label=NPM&style=flat-square
+[badge-latest-npm-version]: https://img.shields.io/npm/v/@hitechline/reactools/latest
 
 <!-- prettier-ignore-end -->
