@@ -1,6 +1,6 @@
 {
   "name": "@hitechline/reactools",
-  "version": "1.0.0-canary.4",
+  "version": "1.0.0-canary.5",
   "license": "MIT",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",

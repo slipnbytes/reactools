@@ -1,3 +1,10 @@
+# [1.0.0-canary.5](https://github.com/hitechline/react/compare/v1.0.0-canary.4...v1.0.0-canary.5) (2021-02-24)
+
+
+### Bug Fixes
+
+* ineffective regex ([6325f6c](https://github.com/hitechline/react/commit/6325f6c8af9a78540d29323e50a00fc5e0dd41db))
+
 # [1.0.0-canary.4](https://github.com/hitechline/react/compare/v1.0.0-canary.3...v1.0.0-canary.4) (2021-02-23)
 
 
