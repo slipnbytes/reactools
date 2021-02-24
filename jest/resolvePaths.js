@@ -1,5 +1,3 @@
-const { join } = require('path');
-
 const SLASH_REGEX = /\/\*$/g;
 
 /**
@@ -8,13 +6,13 @@ const SLASH_REGEX = /\/\*$/g;
  * @return {{ [key: string]: string }}
  */
 function resolvePaths(paths, basePath = '/') {
-  const basePathParsed = join('<rootDir>', basePath).replace(/\\/, '/');
+  const basePathWithRoot = `<rootDir>/${basePath}`;
 
   return Object.entries(paths).reduce((currentPathsObject, [name, path]) => {
     const nameParsed = `^${clean(name, '/')}(.*)$`;
     const pathParsed = []
       .concat(path)
-      .map(value => `${basePathParsed}/${clean(value, '')}/$1`);
+      .map(value => `${basePathWithRoot}/${clean(value, '')}/$1`);
 
     return Object.assign(currentPathsObject, {
       [nameParsed]: pathParsed,
