@@ -1,3 +1,10 @@
+# [1.0.0-canary.6](https://github.com/hitechline/react/compare/v1.0.0-canary.5...v1.0.0-canary.6) (2021-02-25)
+
+
+### Bug Fixes
+
+* **deps:** update react monorepo to v17 ([ab1cd8d](https://github.com/hitechline/react/commit/ab1cd8d35c0ba03823762a0a72f2758a1fea863f))
+
 # [1.0.0-canary.5](https://github.com/hitechline/react/compare/v1.0.0-canary.4...v1.0.0-canary.5) (2021-02-24)
 
 
