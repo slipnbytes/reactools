@@ -1,3 +1,11 @@
+## [1.0.0-canary.7](https://github.com/hitechline/react/compare/v1.0.0-canary.6...v1.0.0-canary.7) (2021-03-07)
+
+
+### Bug Fixes
+
+* remove unnecessary React imports ([d071c80](https://github.com/hitechline/react/commit/d071c8030a7622cbac3413d28e014e3d7768bc0b))
+* **docs:** make canonical url with `asPath` ([a6d42f7](https://github.com/hitechline/react/commit/a6d42f75373b48fea838fb1841f9a8839c1216d8))
+
 # [1.0.0-canary.6](https://github.com/hitechline/react/compare/v1.0.0-canary.5...v1.0.0-canary.6) (2021-02-25)
 
 
