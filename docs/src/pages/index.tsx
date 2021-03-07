@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Overview from '@/markdown/index.mdx';
 
 import { SEO } from '@components/forward/SEO';

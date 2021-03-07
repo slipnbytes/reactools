@@ -6,7 +6,6 @@ import Document, {
   DocumentContext,
   DocumentInitialProps,
 } from 'next/document';
-import React from 'react';
 
 class MyDocument extends Document {
   static async getInitialProps(

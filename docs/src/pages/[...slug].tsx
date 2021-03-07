@@ -1,6 +1,5 @@
 import { Provider } from '@hitechline/next-mdx/Provider';
 import { GetStaticProps, GetStaticPaths, GetStaticPathsResult } from 'next';
-import React from 'react';
 
 import { SEO } from '@components/forward/SEO';
 
