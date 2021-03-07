@@ -1,4 +1,4 @@
-import { Provider } from '@hitechline/next-mdx/Provider';
+import { Provider } from '@hitechline/next-mdx/provider';
 import { GetStaticProps, GetStaticPaths, GetStaticPathsResult } from 'next';
 
 import { SEO } from '@components/forward/SEO';

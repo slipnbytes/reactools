@@ -1098,10 +1098,10 @@
   resolved "https://registry.yarnpkg.com/@hapi/hoek/-/hoek-9.1.1.tgz#9daf5745156fd84b8e9889a2dc721f0c58e894aa"
   integrity sha512-CAEbWH7OIur6jEOzaai83jq3FmKmv4PmX1JYfs9IrYcGEVI/lyL1EXJGCj7eFVJ0bg5QR8LMxBlEtA+xKiLpFw==
 
-"@hitechline/next-mdx@^0.0.1-f":
-  version "0.0.1-f"
-  resolved "https://registry.yarnpkg.com/@hitechline/next-mdx/-/next-mdx-0.0.1-f.tgz#eeaa8fb4085f0d2106fbe6d582b798914c284739"
-  integrity sha512-ap+URGoXpvoqX5HcT25VwfcEBLdE16B9rSMyLVJFnVM6vVLd2kQ8TQJv6tnkbf00oUs/vLFuY1Xt/EaxUDKsiQ==
+"@hitechline/next-mdx@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@hitechline/next-mdx/-/next-mdx-0.0.2.tgz#c3033ad8bd153acaa23ed481bdcfd02de7711d03"
+  integrity sha512-kx7COhnAcu+qiIvGBYx6sx1bJBTlE4gNqKHViBICIZavfb+7meWTRfYszcDEVIDTv5tppXPpazehcfGR9NR6MQ==
   dependencies:
     "@babel/core" "^7.12.17"
     "@babel/preset-env" "^7.12.17"
