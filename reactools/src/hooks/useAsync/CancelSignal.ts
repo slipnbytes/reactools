@@ -22,7 +22,6 @@ export class CancelSignal {
       currentListener => currentListener !== listener,
     );
 
-    this.#listeners.splice(0);
-    this.#listeners.push(...filteredListeners);
+    this.#listeners.splice(0, this.#listeners.length, ...filteredListeners);
   }
 }
