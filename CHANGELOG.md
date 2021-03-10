@@ -1,3 +1,10 @@
+## [1.0.0-canary.8](https://github.com/hitechline/react/compare/v1.0.0-canary.7...v1.0.0-canary.8) (2021-03-10)
+
+
+### Bug Fixes
+
+* remove invalid dependencies ([a2631b5](https://github.com/hitechline/react/commit/a2631b59f8d0fa3bba184d4338c9198c2ef6cc62))
+
 ## [1.0.0-canary.7](https://github.com/hitechline/react/compare/v1.0.0-canary.6...v1.0.0-canary.7) (2021-03-07)
 
 
