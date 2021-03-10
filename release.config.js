@@ -15,13 +15,26 @@ module.exports = {
     [
       '@semantic-release/commit-analyzer',
       {
-        preset: 'conventionalcommits',
+        preset: 'angular',
       },
     ],
     [
       '@semantic-release/release-notes-generator',
       {
         preset: 'conventionalcommits',
+        presetConfig: {
+          types: [
+            { type: 'feat', section: 'Features' },
+            { type: 'feature', section: 'Features' },
+            { type: 'fix', section: 'Bug Fixes' },
+            { type: 'perf', section: 'Performance Improvements' },
+            { type: 'refactor', section: 'Code Refactoring' },
+            { type: 'chore', section: 'Miscellaneous Chores' },
+            { type: 'revert', section: 'Reverts' },
+            { type: 'test', section: 'Tests' },
+            { type: 'build', section: 'Build System' },
+          ],
+        },
       },
     ],
     [
