@@ -6,14 +6,35 @@
   <p>Utilities to facilitate the build user interfaces with React.</p>
 </div>
 
-<div align="center">
+<p align="center">
+  <a href="https://www.codefactor.io/repository/github/hitechline/reactools">
+    <img
+      alt="CodeFactor"
+      src="https://img.shields.io/codefactor/grade/github/hitechline/reactools"
+    />
+  </a>
 
-![CodeFactor][badge-code-factor]
-![Test Coverage][badge-test-coverage]
-![CI Workflow Status][badge-ci-workflow-status]
-![NPM Latest Version][badge-latest-npm-version]
+  <a href="https://coveralls.io/github/hitechline/reactools">
+    <img
+      alt="Test Coverage"
+      src="https://img.shields.io/coveralls/github/hitechline/reactools"
+    />
+  </a>
 
-</div>
+  <a href="https://github.com/hitechline/reactools/actions/workflows/build-and-release.yml">
+    <img
+      alt="CI Workflow Status"
+      src="https://img.shields.io/github/workflow/status/hitechline/reactools/CI?label=ci"
+    />
+  </a>
+
+  <a href="https://www.npmjs.com/package/@hitechline/reactools">
+    <img
+      alt="NPM Latest Version"
+      src="https://img.shields.io/npm/v/@hitechline/reactools/latest"
+    />
+  </a>
+</p>
 
 ## Overview
 
@@ -94,13 +115,5 @@ MIT © [Hitechline][url-organization]
 [url-organization]: https://github.com/hitechline
 
 [logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png
-
-[badge-code-factor]: https://img.shields.io/codefactor/grade/github/hitechline/reactools
-
-[badge-test-coverage]: https://img.shields.io/coveralls/github/hitechline/reactools
-
-[badge-ci-workflow-status]: https://img.shields.io/github/workflow/status/hitechline/reactools/CI?label=ci
-
-[badge-latest-npm-version]: https://img.shields.io/npm/v/@hitechline/reactools/latest
 
 <!-- prettier-ignore-end -->
