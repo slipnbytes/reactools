@@ -1,4 +1,4 @@
-import { mergeClassNames } from '@hitechline/react';
+import { mergeClassNames } from '@hitechline/reactools';
 import { HTMLAttributes } from 'react';
 
 interface Props extends HTMLAttributes<HTMLElement> {
