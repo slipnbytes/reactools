@@ -1,3 +1,10 @@
+## [1.0.0-canary.10](https://github.com/hitechline/reactools/compare/v1.0.0-canary.9...v1.0.0-canary.10) (2021-03-11)
+
+
+### Bug Fixes
+
+* **build:** configure globals and fixes ([9444aa4](https://github.com/hitechline/reactools/commit/9444aa4c530746eb5eb6bd9ecea8a750545b9a92))
+
 ## [1.0.0-canary.9](https://github.com/hitechline/reactools/compare/v1.0.0-canary.8...v1.0.0-canary.9) (2021-03-11)
 
 
