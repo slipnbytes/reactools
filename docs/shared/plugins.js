@@ -1,4 +1,17 @@
 const REMARK_PLUGINS = [
+  require('remark-slug'),
+  [
+    require('remark-autolink-headings'),
+    {
+      linkProperties: {},
+      content: {
+        type: 'element',
+        tagName: 'span',
+        properties: { className: ['heading-link'] },
+        children: [{ type: 'text', value: '#' }],
+      },
+    },
+  ],
   require('remark-prism'),
   require('remark-remove-comments'),
 ];
