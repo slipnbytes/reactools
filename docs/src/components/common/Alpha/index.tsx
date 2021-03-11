@@ -1,4 +1,4 @@
-import { mergeClassNames } from '@hitechline/react';
+import { mergeClassNames } from '@hitechline/reactools';
 
 import { useUI } from '@resources/hooks/useUI';
 

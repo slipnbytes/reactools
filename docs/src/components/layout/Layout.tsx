@@ -1,4 +1,4 @@
-import { mergeClassNames } from '@hitechline/react';
+import { mergeClassNames } from '@hitechline/reactools';
 
 import { Alpha } from '@components/common/Alpha';
 import { Documentation } from '@components/common/Documentation';

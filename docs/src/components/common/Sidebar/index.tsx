@@ -1,4 +1,4 @@
-import { mergeClassNames, useOutClick } from '@hitechline/react';
+import { mergeClassNames, useOutClick } from '@hitechline/reactools';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';

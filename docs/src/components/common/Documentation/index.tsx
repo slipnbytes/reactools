@@ -1,4 +1,4 @@
-import { mergeClassNames } from '@hitechline/react';
+import { mergeClassNames } from '@hitechline/reactools';
 
 import styles from './styles.module.css';
 
