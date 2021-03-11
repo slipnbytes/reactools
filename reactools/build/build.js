@@ -1,12 +1,15 @@
 const { build: ESBuild } = require('esbuild');
 const { resolve } = require('path');
 
+const pkg = require('../package.json');
+
 const BASE_PATH = resolve(__dirname, '..');
 
 /**
  * @type {import('esbuild').BuildOptions}
  */
 const BASE_CONFIG = {
+  target: 'es2015',
   logLevel: 'info',
   tsconfig: 'tsconfig.json',
   absWorkingDir: BASE_PATH,
@@ -16,6 +19,15 @@ const BASE_CONFIG = {
   sourcemap: true,
 
   external: ['react', 'react-dom'],
+
+  banner: {
+    js: `/** 
+ * @version ${pkg.version}
+ *
+ * @license MIT
+ * @copyright Hitechline
+ */`,
+  },
 };
 
 /**
