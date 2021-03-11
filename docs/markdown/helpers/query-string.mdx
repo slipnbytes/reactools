@@ -19,7 +19,7 @@ import { parseQueryString } from '@hitechline/reactools';
 const query = '?search=javascript medium';
 
 const path = `/${query}`;
-const url = 'https://google.com${query}';
+const url = `https://google.com${query}`;
 
 console.log(parseQueryString(path));
 // '?search=javascript medium'
@@ -46,7 +46,7 @@ import { removeQueryString } from '@hitechline/reactools';
 const query = '?search=javascript medium';
 
 const path = `/${query}`;
-const url = 'https://google.com${query}';
+const url = `https://google.com${query}`;
 
 console.log(removeQueryString(path));
 // '/'
@@ -73,7 +73,7 @@ import { getQueryString } from '@hitechline/reactools';
 const query = '?search=javascript medium';
 
 const path = `/${query}`;
-const url = 'https://google.com${query}';
+const url = `https://google.com${query}`;
 
 console.log(getQueryString(path));
 // {
