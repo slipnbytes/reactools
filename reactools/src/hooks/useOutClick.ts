@@ -25,30 +25,26 @@ export function useOutClick<T extends HTMLElement>(): UseOutClickManager<T> {
       currentListener => currentListener !== listener,
     );
 
-    listeners.current.splice(0);
-    listeners.current.push(...listenersFiltered);
+    listeners.current.splice(0, listeners.current.length, ...listenersFiltered);
   }, []);
 
-  const handleClick = useCallback(
-    (event: MouseEvent): void => {
-      const content = ref.current;
-      const targetNode = event.target as Node;
+  const handleClick = useCallback((event: MouseEvent): void => {
+    const content = ref.current;
+    const targetNode = event.target as Node;
 
-      if (!isElement(content)) {
-        logger.error('The referenced element is not valid.');
-        return;
-      }
+    if (!isElement(content)) {
+      logger.error('The referenced element is not valid.');
+      return;
+    }
 
-      if (!hasNodeInDOM(targetNode) || content.contains(targetNode)) {
-        return;
-      }
+    if (!hasNodeInDOM(targetNode) || content.contains(targetNode)) {
+      return;
+    }
 
-      listeners.current.forEach(listener => {
-        listener();
-      });
-    },
-    [ref, listeners],
-  );
+    listeners.current.forEach(listener => {
+      listener();
+    });
+  }, []);
 
   useEffect(() => {
     window.addEventListener('click', handleClick);

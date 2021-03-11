@@ -12,8 +12,31 @@ module.exports = {
     },
   ],
   plugins: [
-    '@semantic-release/commit-analyzer',
-    '@semantic-release/release-notes-generator',
+    [
+      '@semantic-release/commit-analyzer',
+      {
+        preset: 'angular',
+      },
+    ],
+    [
+      '@semantic-release/release-notes-generator',
+      {
+        preset: 'conventionalcommits',
+        presetConfig: {
+          types: [
+            { type: 'feat', section: 'Features' },
+            { type: 'feature', section: 'Features' },
+            { type: 'fix', section: 'Bug Fixes' },
+            { type: 'perf', section: 'Performance Improvements' },
+            { type: 'refactor', section: 'Code Refactoring' },
+            { type: 'chore', section: 'Miscellaneous Chores' },
+            { type: 'revert', section: 'Reverts' },
+            { type: 'test', section: 'Tests' },
+            { type: 'build', section: 'Build System' },
+          ],
+        },
+      },
+    ],
     [
       '@semantic-release/changelog',
       {

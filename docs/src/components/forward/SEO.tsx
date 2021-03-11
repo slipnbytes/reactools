@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import React from 'react';
 
 import { APP_URL } from '@resources/utils/constants';
 import { makeUrl } from '@resources/utils/makeUrl';
@@ -22,7 +21,7 @@ export const SEO = ({
   const router = useRouter();
 
   const metaImage = makeUrl(image);
-  const canonical = makeUrl(url ?? router.pathname);
+  const canonical = makeUrl(url ?? router.asPath);
 
   return (
     <Head>

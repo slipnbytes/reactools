@@ -1,4 +1,5 @@
 # 1.0.0 (2021-02-23)
+## [1.0.0-canary.11](https://github.com/hitechline/reactools/compare/v1.0.0-canary.10...v1.0.0-canary.11) (2021-03-11)
 
 
 ### Bug Fixes
@@ -57,6 +58,16 @@
 * types nomenclature [skip ci] ([1e7a5b2](https://github.com/hitechline/react/commit/1e7a5b2418500876c7a725c30f35008f7440830d))
 * **logger:** apply error log ([779f477](https://github.com/hitechline/react/commit/779f477460600427afdc23ea536ca76ca0447ad7))
 * **refactor:** cohesive class concatenation ([41ffc4d](https://github.com/hitechline/react/commit/41ffc4d5ffe506905fde98e0976eca68bc11b348))
+* strict value checking ([aa48bb5](https://github.com/hitechline/reactools/commit/aa48bb54af325e4b5bb2aa0f39bde6cfede1947b))
+
+## [1.0.0-canary.10](https://github.com/hitechline/reactools/compare/v1.0.0-canary.9...v1.0.0-canary.10) (2021-03-11)
+
+
+### Bug Fixes
+
+* **build:** configure globals and fixes ([9444aa4](https://github.com/hitechline/reactools/commit/9444aa4c530746eb5eb6bd9ecea8a750545b9a92))
+
+## [1.0.0-canary.9](https://github.com/hitechline/reactools/compare/v1.0.0-canary.8...v1.0.0-canary.9) (2021-03-11)
 
 
 ### Features
@@ -81,6 +92,48 @@
 * Revert "chore(docs): add logo" ([d98310f](https://github.com/hitechline/react/commit/d98310f5a65531f748ca6ed3005be2c891f79b1d))
 * Revert "Add .deepsource.toml" ([7fb5773](https://github.com/hitechline/react/commit/7fb5773549f0266d758a732c2c57a646d38e3e7f))
 * Revert "readme started" ([4665e6c](https://github.com/hitechline/react/commit/4665e6cd67233d7d96e19ebbbf016ed7cfa00a82))
+* **build:** rework build system ([b3d4cbd](https://github.com/hitechline/reactools/commit/b3d4cbdbf6105f8d7ef7a68359cdb4341376e74e))
+
+
+### Miscellaneous Chores
+
+* change semantic release config ([a0754bf](https://github.com/hitechline/reactools/commit/a0754bf4415a4e4deb4c811ca5bf1c2996b5c14c))
+
+## [1.0.0-canary.8](https://github.com/hitechline/react/compare/v1.0.0-canary.7...v1.0.0-canary.8) (2021-03-10)
+
+
+### Bug Fixes
+
+* remove invalid dependencies ([a2631b5](https://github.com/hitechline/react/commit/a2631b59f8d0fa3bba184d4338c9198c2ef6cc62))
+
+## [1.0.0-canary.7](https://github.com/hitechline/react/compare/v1.0.0-canary.6...v1.0.0-canary.7) (2021-03-07)
+
+
+### Bug Fixes
+
+* remove unnecessary React imports ([d071c80](https://github.com/hitechline/react/commit/d071c8030a7622cbac3413d28e014e3d7768bc0b))
+* **docs:** make canonical url with `asPath` ([a6d42f7](https://github.com/hitechline/react/commit/a6d42f75373b48fea838fb1841f9a8839c1216d8))
+
+# [1.0.0-canary.6](https://github.com/hitechline/react/compare/v1.0.0-canary.5...v1.0.0-canary.6) (2021-02-25)
+
+
+### Bug Fixes
+
+* **deps:** update react monorepo to v17 ([ab1cd8d](https://github.com/hitechline/react/commit/ab1cd8d35c0ba03823762a0a72f2758a1fea863f))
+
+# [1.0.0-canary.5](https://github.com/hitechline/react/compare/v1.0.0-canary.4...v1.0.0-canary.5) (2021-02-24)
+
+
+### Bug Fixes
+
+* ineffective regex ([6325f6c](https://github.com/hitechline/react/commit/6325f6c8af9a78540d29323e50a00fc5e0dd41db))
+
+# [1.0.0-canary.4](https://github.com/hitechline/react/compare/v1.0.0-canary.3...v1.0.0-canary.4) (2021-02-23)
+
+
+### Bug Fixes
+
+* active publish to npm ([e9ff366](https://github.com/hitechline/react/commit/e9ff366f2ad4c691808696871e7988544673da4f))
 
 # [1.0.0-canary.3](https://github.com/hitechline/react/compare/v1.0.0-canary.2...v1.0.0-canary.3) (2021-02-23)
 

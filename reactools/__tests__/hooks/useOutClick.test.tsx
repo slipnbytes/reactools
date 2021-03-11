@@ -1,6 +1,6 @@
 import { render, fireEvent } from '@testing-library/react';
 import { renderHook } from '@testing-library/react-hooks';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { act } from 'react-test-renderer';
 
 import { useOutClick } from '@/hooks/useOutClick';

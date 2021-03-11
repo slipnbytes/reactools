@@ -46,19 +46,20 @@ export function useAsync<T = any>(
   const executePromise = useCallback(
     (): Promise<T | typeof CANCEL_SYMBOL> =>
       new Promise((resolve, reject) => {
+        cancelController.current.signal.on(() => {
+          resolve(CANCEL_SYMBOL);
+        });
+
         const callbackCalled = myCallback.current(context);
 
         if (callbackCalled instanceof Promise) {
           callbackCalled
             .then(data => resolve(data))
             .catch(error => reject(error));
-        } else {
-          resolve(callbackCalled);
+          return;
         }
 
-        cancelController.current.signal.on(() => {
-          resolve(CANCEL_SYMBOL);
-        });
+        resolve(callbackCalled);
       }),
     [],
   );

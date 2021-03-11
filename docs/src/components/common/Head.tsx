@@ -1,5 +1,4 @@
 import NextHead from 'next/head';
-import React from 'react';
 
 export const Head = () => (
   <NextHead>

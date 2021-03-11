@@ -22,4 +22,5 @@ export * from './utilities/hasNodeInDOM';
 // Resources
 
 export * from './resources/mergeRefs';
+export * from './resources/queryString';
 export * from './resources/mergeClassNames';

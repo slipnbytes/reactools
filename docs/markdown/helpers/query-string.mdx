@@ -1,0 +1,87 @@
+---
+title: Helper - Query String
+description: A simple API to work with query string.
+---
+
+# parseQueryString
+
+Have your query string cleaned.  
+This process is separate to provide flexbility in your code.
+
+<br />
+<br />
+
+## Usage
+
+```ts
+import { parseQueryString } from '@hitechline/reactools';
+
+const query = '?search=javascript medium';
+
+const path = `/${query}`;
+const url = `https://google.com${query}`;
+
+console.log(parseQueryString(path));
+// '?search=javascript medium'
+
+console.log(parseQueryString(url));
+// '?search=javascript medium'
+```
+
+<br />
+<br />
+
+# removeQueryString
+
+Remove the query string.
+
+<br />
+<br />
+
+## Usage
+
+```ts
+import { removeQueryString } from '@hitechline/reactools';
+
+const query = '?search=javascript medium';
+
+const path = `/${query}`;
+const url = `https://google.com${query}`;
+
+console.log(removeQueryString(path));
+// '/'
+
+console.log(removeQueryString(url));
+// 'https://google.com/'
+```
+
+<br />
+<br />
+
+# getQueryString
+
+Have an object for the query string inserted.
+
+<br />
+<br />
+
+## Usage
+
+```ts
+import { getQueryString } from '@hitechline/reactools';
+
+const query = '?search=javascript medium';
+
+const path = `/${query}`;
+const url = `https://google.com${query}`;
+
+console.log(getQueryString(path));
+// {
+//   search: 'javascript medium'
+// }
+
+console.log(getQueryString(url));
+// {
+//   search: 'javascript medium'
+// }
+```

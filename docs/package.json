@@ -12,30 +12,30 @@
   "repository": {
     "type": "git",
     "directory": "docs",
-    "url": "git+https://github.com/hitechline/react.git"
+    "url": "git+https://github.com/hitechline/reactools.git"
   },
   "dependencies": {
-    "@hitechline/next-mdx": "^0.0.1-f",
+    "@hitechline/next-mdx": "^0.0.2",
     "@hitechline/react": "^1.0.9",
-    "@mapbox/rehype-prism": "^0.5.0",
     "@mdx-js/react": "^1.6.22",
     "@tailwindcss/ui": "0.7.2",
     "axios": "0.21.1",
-    "fast-glob": "^3.2.5",
     "gray-matter": "^4.0.2",
-    "next": "10.0.7",
+    "next": "10.0.8",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-icons": "^4.1.0",
+    "remark-autolink-headings": "^6.0.1",
     "remark-prism": "^1.3.4",
     "remark-remove-comments": "^0.1.3",
+    "remark-slug": "^6.0.0",
     "tailwindcss": "1.9.6",
     "url-join": "4.0.1"
   },
   "devDependencies": {
     "@mdx-js/loader": "^1.6.22",
-    "@next/bundle-analyzer": "10.0.7",
-    "@next/mdx": "^10.0.7",
+    "@next/bundle-analyzer": "10.0.8",
+    "@next/mdx": "10.0.8",
     "@types/url-join": "4.0.0",
     "@zeit/next-source-maps": "0.0.3",
     "imagemin-mozjpeg": "9.0.0",
