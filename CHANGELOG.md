@@ -1,3 +1,51 @@
+## [1.1.0](https://github.com/hitechline/reactools/compare/v1.0.0...v1.1.0) (2021-03-11)
+
+
+### Features
+
+* **build:** rework build system ([b3d4cbd](https://github.com/hitechline/reactools/commit/b3d4cbdbf6105f8d7ef7a68359cdb4341376e74e))
+
+
+### Bug Fixes
+
+* strict value checking ([aa48bb5](https://github.com/hitechline/reactools/commit/aa48bb54af325e4b5bb2aa0f39bde6cfede1947b))
+* **build:** configure globals and fixes ([9444aa4](https://github.com/hitechline/reactools/commit/9444aa4c530746eb5eb6bd9ecea8a750545b9a92))
+* active publish to npm ([e9ff366](https://github.com/hitechline/reactools/commit/e9ff366f2ad4c691808696871e7988544673da4f))
+* ineffective regex ([6325f6c](https://github.com/hitechline/reactools/commit/6325f6c8af9a78540d29323e50a00fc5e0dd41db))
+* remove invalid dependencies ([a2631b5](https://github.com/hitechline/reactools/commit/a2631b59f8d0fa3bba184d4338c9198c2ef6cc62))
+* remove unnecessary React imports ([d071c80](https://github.com/hitechline/reactools/commit/d071c8030a7622cbac3413d28e014e3d7768bc0b))
+* **deps:** update react monorepo to v17 ([ab1cd8d](https://github.com/hitechline/reactools/commit/ab1cd8d35c0ba03823762a0a72f2758a1fea863f))
+* **docs:** make canonical url with `asPath` ([a6d42f7](https://github.com/hitechline/reactools/commit/a6d42f75373b48fea838fb1841f9a8839c1216d8))
+
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([9476d19](https://github.com/hitechline/reactools/commit/9476d1986792a4cc3bb48fe9a7df9d5c16b171b3))
+* **deps:** update @hitechline/next-mdx to v0.0.2 ([7cb0114](https://github.com/hitechline/reactools/commit/7cb01144a198a4aa33c73716357aec265db9a38a))
+* **deps:** update dependency @semantic-release/release-notes-generator to v9.0.2 ([944c98e](https://github.com/hitechline/reactools/commit/944c98e8a5bb0febbe8114f22d41d254364c5c66))
+* **deps:** update dependency @testing-library/react-hooks to v5.1.0 ([bf922bd](https://github.com/hitechline/reactools/commit/bf922bd1d630085d0234895c3fe5a52180020612))
+* **deps:** update dependency @types/react to v17.0.3 ([7b1293f](https://github.com/hitechline/reactools/commit/7b1293fa8de2188bea7b558f8654ec1f3d21b749))
+* **deps:** update dependency @types/react-dom to v17.0.2 ([d1537f6](https://github.com/hitechline/reactools/commit/d1537f6d0231effd2af81c3844cb9e9eb6ecc915))
+* **deps:** update dependency semantic-release to v17.4.0 ([1921f2a](https://github.com/hitechline/reactools/commit/1921f2a50d0b1a368dc32044424d76465eb87d44))
+* **deps:** update dependency semantic-release to v17.4.1 ([b6b298b](https://github.com/hitechline/reactools/commit/b6b298b82b000cb37234d987721665647309c0c8))
+* **deps:** update dependency ts-jest to v26.5.3 ([57bca6b](https://github.com/hitechline/reactools/commit/57bca6b6c334b798781dc3631624afd877abc29e))
+* **deps:** update dependency typescript to v4.2.3 ([caa5da5](https://github.com/hitechline/reactools/commit/caa5da5ed51bcd12b4a98f82826722416a788f51))
+* **deps:** update eslint and prettier ([e9a36f4](https://github.com/hitechline/reactools/commit/e9a36f495a98bd3f5374956bfb8a732d11a3bcca))
+* **deps:** update nextjs monorepo to v10.0.8 ([3c51897](https://github.com/hitechline/reactools/commit/3c51897673751c33de3e7a90af539aedee0a600e))
+* **docs:** add referring links in badges ([4e630c3](https://github.com/hitechline/reactools/commit/4e630c3b6637d394f39de8b4552711fed5548540))
+* **release:** 1.0.0-canary.10 [skip ci] ([5f1cee9](https://github.com/hitechline/reactools/commit/5f1cee9c957a4d05bded67b8f2304b3806adc859))
+* **release:** 1.0.0-canary.11 [skip ci] ([059dd01](https://github.com/hitechline/reactools/commit/059dd0135959b5e9877022ec839abb75f70cea77))
+* **release:** 1.0.0-canary.4 [skip ci] ([b74a4c3](https://github.com/hitechline/reactools/commit/b74a4c33659508695644ef1f4c33e0beeef51562))
+* **release:** 1.0.0-canary.5 [skip ci] ([39e318d](https://github.com/hitechline/reactools/commit/39e318dbd6ea72bb4427e416e576068608cc8977))
+* **release:** 1.0.0-canary.6 [skip ci] ([4fd0862](https://github.com/hitechline/reactools/commit/4fd086269e1279370fd2fd70282989cc7d4f3f89))
+* **release:** 1.0.0-canary.7 [skip ci] ([da1014b](https://github.com/hitechline/reactools/commit/da1014b87b637c07f7e6a0c74b30a7ed80352059))
+* **release:** 1.0.0-canary.8 [skip ci] ([39e7a14](https://github.com/hitechline/reactools/commit/39e7a14f55a000f0ffd2412f0eafdfefaf86cffb))
+* **release:** 1.0.0-canary.9 [skip ci] ([bf8aa71](https://github.com/hitechline/reactools/commit/bf8aa71caaf36c784bc757414aa20a8d8bcd7975))
+* change semantic release config ([a0754bf](https://github.com/hitechline/reactools/commit/a0754bf4415a4e4deb4c811ca5bf1c2996b5c14c))
+* create symlink to root readme ([8291a68](https://github.com/hitechline/reactools/commit/8291a680aa9ab0da98d464e5cd65256f6ba06387))
+* **release-config:** add `conventionalcommits` preset ([2446018](https://github.com/hitechline/reactools/commit/2446018a723e9e8290db0ee8b11a59f41a1420f6))
+* **resources:** create query string helpers ([bff637c](https://github.com/hitechline/reactools/commit/bff637c9ae156118b107cc49cb01de6347052ade))
+
 # 1.0.0 (2021-02-23)
 ## [1.0.0-canary.11](https://github.com/hitechline/reactools/compare/v1.0.0-canary.10...v1.0.0-canary.11) (2021-03-11)
 
