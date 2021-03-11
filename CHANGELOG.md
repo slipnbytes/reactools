@@ -1,3 +1,10 @@
+## [1.0.0-canary.12](https://github.com/hitechline/reactools/compare/v1.0.0-canary.11...v1.0.0-canary.12) (2021-03-11)
+
+
+### Bug Fixes
+
+* **deps:** pin dependencies ([98aba3a](https://github.com/hitechline/reactools/commit/98aba3a98e90cc4f6abbbc209df357e6e1accc20))
+
 ## [1.1.0](https://github.com/hitechline/reactools/compare/v1.0.0...v1.1.0) (2021-03-11)
 
 
