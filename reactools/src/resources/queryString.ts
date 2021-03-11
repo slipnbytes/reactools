@@ -4,7 +4,11 @@ import { AnyObject } from '@/shared/types';
 
 const QUERY_REGEX = /(\?([\w-]+(=[^=?&]*)(&[\w-]+(=[^=?&]*)?)*)?)/g;
 
-function clean(value: any): string {
+function clean(value: string): string {
+  if (typeof value !== 'string') {
+    return '';
+  }
+
   return String(value)
     .trim()
     .replace(/^[?#&]/, '');
@@ -15,7 +19,7 @@ export function parseQueryString(query: string): string {
     return new URL(query).search;
   }
 
-  return clean(query.replace(/^\/+/, ''));
+  return clean(query).replace(/^\/+/, '');
 }
 
 export function removeQueryString(value: string): string {
