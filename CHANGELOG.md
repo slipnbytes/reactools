@@ -1,3 +1,15 @@
+## [1.0.0-canary.9](https://github.com/hitechline/reactools/compare/v1.0.0-canary.8...v1.0.0-canary.9) (2021-03-11)
+
+
+### Features
+
+* **build:** rework build system ([b3d4cbd](https://github.com/hitechline/reactools/commit/b3d4cbdbf6105f8d7ef7a68359cdb4341376e74e))
+
+
+### Miscellaneous Chores
+
+* change semantic release config ([a0754bf](https://github.com/hitechline/reactools/commit/a0754bf4415a4e4deb4c811ca5bf1c2996b5c14c))
+
 ## [1.0.0-canary.8](https://github.com/hitechline/react/compare/v1.0.0-canary.7...v1.0.0-canary.8) (2021-03-10)
 
 
