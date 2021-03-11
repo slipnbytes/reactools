@@ -1,3 +1,10 @@
+## [1.0.0-canary.11](https://github.com/hitechline/reactools/compare/v1.0.0-canary.10...v1.0.0-canary.11) (2021-03-11)
+
+
+### Bug Fixes
+
+* strict value checking ([aa48bb5](https://github.com/hitechline/reactools/commit/aa48bb54af325e4b5bb2aa0f39bde6cfede1947b))
+
 ## [1.0.0-canary.10](https://github.com/hitechline/reactools/compare/v1.0.0-canary.9...v1.0.0-canary.10) (2021-03-11)
 
 
