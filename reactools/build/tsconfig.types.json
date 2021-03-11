@@ -4,7 +4,6 @@
     "outDir": "../typings",
     "declarationDir": "../typings",
     "declaration": true,
-    "declarationMap": true,
     "emitDeclarationOnly": true
   }
 }
