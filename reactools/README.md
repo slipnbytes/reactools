@@ -1,40 +1,24 @@
 <div align="center">
-  <a href="">
-    <img src="https://github.com/hitechline/react/raw/main/.github/logo.png" height="150" width="150" />
-  </a>
+  <img src="https://github.com/hitechline/react/raw/main/.github/logo.png" height="150" width="150" />
 
   <p>Utilities to facilitate the build user interfaces with React.</p>
 </div>
 
-<p align="center">
-  <a href="https://www.codefactor.io/repository/github/hitechline/reactools">
-    <img
-      alt="CodeFactor"
-      src="https://img.shields.io/codefactor/grade/github/hitechline/reactools"
-    />
-  </a>
+<div align="center">
 
-  <a href="https://coveralls.io/github/hitechline/reactools">
-    <img
-      alt="Test Coverage"
-      src="https://img.shields.io/coveralls/github/hitechline/reactools"
-    />
-  </a>
+[![CodeFactor][badge-code-factor]][url-code-factor]
+[![Test Coverage][badge-test-coverage]][url-test-coverage]
+[![CI Workflow Status][badge-ci-workflow-status]][url-ci-workflow-status]
+[![NPM Latest Version][badge-latest-npm-version]][url-latest-npm-version]
+[![Netlify Status][badge-netlify-status]][url-netlify-status]
 
-  <a href="https://github.com/hitechline/reactools/actions/workflows/build-and-release.yml">
-    <img
-      alt="CI Workflow Status"
-      src="https://img.shields.io/github/workflow/status/hitechline/reactools/CI?label=ci"
-    />
-  </a>
+</div>
 
-  <a href="https://www.npmjs.com/package/@hitechline/reactools">
-    <img
-      alt="NPM Latest Version"
-      src="https://img.shields.io/npm/v/@hitechline/reactools/latest"
-    />
-  </a>
-</p>
+<div align="center">
+
+[Documentation][url-documentation]
+
+</div>
 
 ## Overview
 
@@ -112,8 +96,30 @@ MIT © [Hitechline][url-organization]
 
 <!-- prettier-ignore-start -->
 
+[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png
+
 [url-organization]: https://github.com/hitechline
 
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png
+[url-documentation]: https://reactools.hitechline.com.br
+
+[url-code-factor]: https://www.codefactor.io/repository/github/hitechline/reactools
+
+[url-test-coverage]: https://coveralls.io/github/hitechline/reactools
+
+[url-netlify-status]: https://app.netlify.com/sites/reactools/deploys
+
+[url-ci-workflow-status]: https://github.com/hitechline/reactools/actions/workflows/build-and-release.yml
+
+[url-latest-npm-version]: https://www.npmjs.com/package/@hitechline/reactools
+
+[badge-code-factor]: https://img.shields.io/codefactor/grade/github/hitechline/reactools
+
+[badge-test-coverage]: https://img.shields.io/coveralls/github/hitechline/reactools
+
+[badge-netlify-status]: https://api.netlify.com/api/v1/badges/48ed6dd4-2857-4197-b1d4-723707b9025b/deploy-status
+
+[badge-ci-workflow-status]: https://img.shields.io/github/workflow/status/hitechline/reactools/CI?label=ci
+
+[badge-latest-npm-version]: https://img.shields.io/npm/v/@hitechline/reactools/latest
 
 <!-- prettier-ignore-end -->
