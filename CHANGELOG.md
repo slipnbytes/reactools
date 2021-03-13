@@ -1,3 +1,22 @@
+## [1.0.0-canary.13](https://github.com/hitechline/reactools/compare/v1.0.0-canary.12...v1.0.0-canary.13) (2021-03-13)
+
+
+### Bug Fixes
+
+* **deps:** update dependency execa to v5 ([791a254](https://github.com/hitechline/reactools/commit/791a254720ad2a77a36c7593ae3c473fbfa3af2b))
+
+
+### Miscellaneous Chores
+
+* **deps:** update dependency @typescript-eslint/eslint-plugin to v4.17.0 ([0aad821](https://github.com/hitechline/reactools/commit/0aad8212f4e0a895b621b2f803e50c91c02d1b1a))
+* **deps:** update dependency @typescript-eslint/parser to v4.17.0 ([2a5e8b9](https://github.com/hitechline/reactools/commit/2a5e8b9f854e8416e8eba66471fc8b0797fdc520))
+* **deps:** update dependency esbuild to v0.9.1 ([5632fc6](https://github.com/hitechline/reactools/commit/5632fc6ddc764d94a1471680ee33a220666ab29f))
+* **deps:** update dependency esbuild to v0.9.2 ([4c0fa5a](https://github.com/hitechline/reactools/commit/4c0fa5abc5d49a6438f2c65ab9ba8140db58e4e3))
+* **deps:** update dependency eslint to v7.22.0 ([581fce1](https://github.com/hitechline/reactools/commit/581fce198c55be473fd98c00e2b4417253d8b661))
+* **deps:** update dependency lerna to v4 ([2e6ae27](https://github.com/hitechline/reactools/commit/2e6ae279668465e0df7a2a8b4f025f15365775a1))
+* **deps:** update dependency semantic-release to v17.4.2 ([1ddec88](https://github.com/hitechline/reactools/commit/1ddec88b485407558fc9dda7fa46a79c83b042da))
+* **deps:** update dependency tsc-alias to v1.2.7 ([d267cef](https://github.com/hitechline/reactools/commit/d267cefc8f45f30d957e52ea1e0c3d29690d8081))
+
 ## [1.0.0-canary.12](https://github.com/hitechline/reactools/compare/v1.0.0-canary.11...v1.0.0-canary.12) (2021-03-11)
 
 
