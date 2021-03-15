@@ -7,8 +7,8 @@ const { getWorkspacesPackages } = require('../shared/getWorkspacesPackages');
 const packages = getWorkspacesPackages();
 
 async function testAll() {
-  for await (const package of packages) {
-    const cwd = join(ROOT_PATH, package);
+  for await (const packageName of packages) {
+    const cwd = join(ROOT_PATH, packageName);
 
     await exec('yarn jest --passWithNoTests', cwd);
   }

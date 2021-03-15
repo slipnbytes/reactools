@@ -5,8 +5,10 @@ const { ROOT_PATH } = require('./shared/constants');
 const { getWorkspacesPackages } = require('./shared/getWorkspacesPackages');
 
 const projects = getWorkspacesPackages(false)
-  .filter(package => existsSync(join(ROOT_PATH, package, 'jest.config.js')))
-  .map(package => `<rootDir>/${package}/jest.config.js`);
+  .filter(packageName =>
+    existsSync(join(ROOT_PATH, packageName, 'jest.config.js')),
+  )
+  .map(packageName => `<rootDir>/${packageName}/jest.config.js`);
 
 module.exports = {
   projects,

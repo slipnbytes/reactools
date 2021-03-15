@@ -43,15 +43,15 @@ function isDirectory(path) {
 
 /**
  * @param {string} workspace
- * @param {string} package
+ * @param {string} packageName
  * @return {string}
  */
-function makePackagePath(workspace, package) {
+function makePackagePath(workspace, packageName) {
   if (['', '/'].includes(workspace)) {
-    return package;
+    return packageName;
   }
 
-  return `${workspace}/${package}`;
+  return `${workspace}/${packageName}`;
 }
 
 /**
@@ -73,8 +73,8 @@ function getPackages(workspace) {
   const mappedPackages = readdirSync(path);
 
   return mappedPackages
-    .filter(package => isDirectory(join(path, package)))
-    .map(package => makePackagePath(workspaceCleaned, package));
+    .filter(packageName => isDirectory(join(path, packageName)))
+    .map(packageName => makePackagePath(workspaceCleaned, packageName));
 }
 
 module.exports = {
