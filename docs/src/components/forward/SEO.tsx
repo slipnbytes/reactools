@@ -17,7 +17,7 @@ export const SEO = ({
   title = 'Reactools',
   image = '/img/meta.png',
   description = 'React utilities to facilitate development.',
-}: PropsWithChildren<Props>) => {
+}: PropsWithChildren<Props>): JSX.Element => {
   const router = useRouter();
 
   const metaImage = makeUrl(image);

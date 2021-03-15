@@ -7,7 +7,7 @@ import { getAllDocumentFiles } from '@resources/utils/mdx/getAllDocumentFiles';
 import { getDocument } from '@resources/utils/mdx/getDocument';
 import type { Document as DocumentType } from '@resources/utils/mdx/types';
 
-const Document = ({ info, rendered }: DocumentType) => (
+const Document = ({ info, rendered }: DocumentType): JSX.Element => (
   <>
     <SEO description={info.description} title={info.title} />
 

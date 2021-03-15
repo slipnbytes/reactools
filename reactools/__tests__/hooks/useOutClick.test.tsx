@@ -101,7 +101,7 @@ describe('useOutClick', () => {
     );
 
     act(() => {
-      const listener = () => {
+      const listener = (): void => {
         state.current[1](true);
       };
 

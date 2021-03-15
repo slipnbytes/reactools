@@ -35,7 +35,7 @@ describe('mergeRefs', () => {
     const { result: ref } = renderHook(
       () => createRef<Data>() as MutableRefObject<Data>,
     );
-    const fnRef = (value: Data) => {
+    const fnRef = (value: Data): void => {
       ref.current.current = value;
     };
 

@@ -1,6 +1,6 @@
 import NextHead from 'next/head';
 
-export const Head = () => (
+export const Head = (): JSX.Element => (
   <NextHead>
     <meta charSet="utf-8" />
     <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />

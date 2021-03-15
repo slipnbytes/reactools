@@ -4,7 +4,10 @@ import { UrlObject } from 'url';
 
 interface Props extends LinkProps, HTMLAttributes<HTMLElement> {}
 
-export const Link = ({ children, ...rest }: PropsWithChildren<Props>) => {
+export const Link = ({
+  children,
+  ...rest
+}: PropsWithChildren<Props>): JSX.Element => {
   const nextLinkProps = DEFAULT_PROPS.reduce(
     (obj, prop) => Object.assign(obj, { [prop]: rest[prop] }),
     {},

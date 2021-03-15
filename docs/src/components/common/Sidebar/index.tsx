@@ -13,7 +13,7 @@ import { generateRandomString } from '@resources/utils/generateRandomString';
 
 import styles from './styles.module.css';
 
-export const Sidebar = () => {
+export const Sidebar = (): JSX.Element => {
   const { asPath } = useRouter();
   const { ref, addListener, removeListener } = useOutClick<HTMLDivElement>();
   const { sidebarOpened, closeSidebar, openSidebar } = useUI();

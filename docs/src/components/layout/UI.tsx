@@ -8,7 +8,7 @@ export interface ContextData {
 
 export const Context = createContext({} as ContextData);
 
-export const Provider = ({ children }: PropsWithChildren) => {
+export const Provider = ({ children }: PropsWithChildren): JSX.Element => {
   const [sidebarOpened, setSidebarOpened] = useState(false);
 
   const openSidebar = useCallback(() => {

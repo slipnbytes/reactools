@@ -46,6 +46,9 @@ export function usePosition<T extends HTMLElement>(): UsePositionManager<T> {
 
   useEffect(() => {
     getAndSetRect();
+
+    // Prevent that not run more than once
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {

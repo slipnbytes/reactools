@@ -15,7 +15,7 @@ export const Divider = ({
   opacity = '0.05',
   background = '#fff',
   ...rest
-}: Props) => (
+}: Props): JSX.Element => (
   <div {...rest} className={mergeClassNames('divider', 'w-full', className)}>
     <style jsx>
       {`

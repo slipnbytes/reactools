@@ -10,5 +10,5 @@ export function useRouterChange(listener: () => any): void {
     return () => {
       events.off('routeChangeComplete', listener);
     };
-  }, [listener]);
+  }, [events, listener]);
 }

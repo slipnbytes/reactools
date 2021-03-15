@@ -7,7 +7,7 @@ import { Sidebar } from '@components/common/Sidebar';
 
 import styles from './styles.module.css';
 
-export const Layout = ({ children }: PropsWithChildren) => (
+export const Layout = ({ children }: PropsWithChildren): JSX.Element => (
   <>
     <div className={mergeClassNames('main-container-loose', styles.content)}>
       <Sidebar />

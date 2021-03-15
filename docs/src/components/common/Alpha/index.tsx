@@ -4,7 +4,7 @@ import { useUI } from '@resources/hooks/useUI';
 
 import styles from './styles.module.css';
 
-export const Alpha = () => {
+export const Alpha = (): JSX.Element => {
   const { sidebarOpened } = useUI();
 
   return (
