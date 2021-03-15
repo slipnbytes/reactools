@@ -1,3 +1,28 @@
+### [1.1.2-canary.1](https://github.com/hitechline/reactools/compare/v1.1.1...v1.1.2-canary.1) (2021-03-15)
+
+
+### Bug Fixes
+
+* hooks dependencies ([514df97](https://github.com/hitechline/reactools/commit/514df970cc1c9cd7076bffa0bd7f8269db138263))
+
+
+### Performance Improvements
+
+* do not use internal polyfills ([8c3979c](https://github.com/hitechline/reactools/commit/8c3979ca4265063e12f9da7428e2515e840f019c))
+
+
+### Code Refactoring
+
+* not use reserved keyword `package` ([0fc902f](https://github.com/hitechline/reactools/commit/0fc902f06b6a612f80c4c57bb53637bfe741d560))
+
+
+### Miscellaneous Chores
+
+* disable `global-require` rule in the file ([8c7f3c6](https://github.com/hitechline/reactools/commit/8c7f3c6c9f2bb5cc04c2625be7ab2912cdd85dee))
+* refactor eslint config using `[@hitechline](https://github.com/hitechline)` configuration ([0252067](https://github.com/hitechline/reactools/commit/02520671ec89f354340abc963ab67e5596ed82c3))
+* resolves `@hitechline/reactools` package in docs ([67a34c8](https://github.com/hitechline/reactools/commit/67a34c8203c4e95ea47260c21c743d6cc4a9c7f8))
+* strict typing ([b5af7e8](https://github.com/hitechline/reactools/commit/b5af7e8de8dfa8f7178b9046646c3327484b7f6e))
+
 ### [1.1.1](https://github.com/hitechline/reactools/compare/v1.1.0...v1.1.1) (2021-03-13)
 
 
