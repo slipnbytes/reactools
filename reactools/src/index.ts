@@ -1,5 +1,3 @@
-import './polyfills/index.js';
-
 // Shared
 
 export * from './shared/types';
