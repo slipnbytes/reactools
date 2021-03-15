@@ -15,7 +15,7 @@
     "url": "git+https://github.com/hitechline/reactools.git"
   },
   "dependencies": {
-    "@hitechline/next-mdx": "0.0.2",
+    "@hitechline/next-mdx": "0.0.3",
     "@hitechline/reactools": "npm:@hitechline/reactools@1.1.1",
     "@mdx-js/react": "1.6.22",
     "@tailwindcss/ui": "0.7.2",
