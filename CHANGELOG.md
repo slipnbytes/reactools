@@ -1,3 +1,16 @@
+### [1.1.2-canary.2](https://github.com/hitechline/reactools/compare/v1.1.2-canary.1...v1.1.2-canary.2) (2021-03-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @hitechline/next-mdx to v0.0.3 ([7e96bd5](https://github.com/hitechline/reactools/commit/7e96bd5efb6204864256f05f4362d1b0b385ae99))
+
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([5027173](https://github.com/hitechline/reactools/commit/5027173cbc9bbe78596a90d04a6b55d911eda94e))
+* **deps:** pin dependencies ([92faa73](https://github.com/hitechline/reactools/commit/92faa737fc9ea91e40199daf9a82bbb86eb3830d))
+
 ### [1.1.2-canary.1](https://github.com/hitechline/reactools/compare/v1.1.1...v1.1.2-canary.1) (2021-03-15)
 
 
