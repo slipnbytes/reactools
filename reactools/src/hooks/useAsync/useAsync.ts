@@ -61,7 +61,7 @@ export function useAsync<T = any>(
 
         resolve(callbackCalled);
       }),
-    [],
+    [context],
   );
 
   const handleCallback = useCallback(async (): Promise<void> => {
@@ -91,10 +91,13 @@ export function useAsync<T = any>(
         payload: { error },
       });
     }
-  }, []);
+  }, [cancel, executePromise]);
 
   useEffect(() => {
     handleCallback();
+
+    // Prevent that not run more than once
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return {
