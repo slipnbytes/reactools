@@ -23,4 +23,5 @@ module.exports = {
   REHYPE_PLUGINS,
 };
 
+/* eslint global-require: 0 */
 /* eslint import-helpers/order-imports: 0 */
