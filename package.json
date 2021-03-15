@@ -37,6 +37,7 @@
     "fast-glob": "3.2.5"
   },
   "devDependencies": {
+    "@hitechline/eslint-config": "^2.0.0",
     "@semantic-release/changelog": "5.0.1",
     "@semantic-release/commit-analyzer": "8.0.1",
     "@semantic-release/git": "9.0.0",
@@ -62,7 +63,8 @@
     "eslint-plugin-import-helpers": "1.1.0",
     "eslint-plugin-jsx-a11y": "6.4.1",
     "eslint-plugin-prettier": "3.3.1",
-    "eslint-plugin-react": "7.22.0",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-testing-library": "3.10.1",
     "jest": "26.6.3",
     "lerna": "4.0.0",
