@@ -5,7 +5,6 @@
   "types": "typings/index.d.ts",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
-  "browser": "dist/index.browser.js",
   "scripts": {
     "clean": "rimraf dist typings coverage .tarball",
     "release": "yarn semantic-release",
