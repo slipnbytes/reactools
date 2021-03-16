@@ -1,3 +1,16 @@
+### [1.1.2-canary.3](https://github.com/hitechline/reactools/compare/v1.1.2-canary.2...v1.1.2-canary.3) (2021-03-16)
+
+
+### Bug Fixes
+
+* **browser:** incompatibility with create-react-app ([3f1f51f](https://github.com/hitechline/reactools/commit/3f1f51f27411efa991cb2e3a9515a525fd5a3c9f))
+
+
+### Miscellaneous Chores
+
+* **deps:** update nextjs monorepo to v10.0.9 ([0416419](https://github.com/hitechline/reactools/commit/0416419847a435a9f9558aed4c151c8eaba69228))
+* **deps:** update typescript-eslint monorepo to v4.18.0 ([fa68267](https://github.com/hitechline/reactools/commit/fa682679857cb9a8402d8e43691e53da5edf2bab))
+
 ### [1.1.2-canary.2](https://github.com/hitechline/reactools/compare/v1.1.2-canary.1...v1.1.2-canary.2) (2021-03-15)
 
 
