@@ -1,3 +1,39 @@
+### [1.1.2](https://github.com/hitechline/reactools/compare/v1.1.1...v1.1.2) (2021-03-17)
+
+
+### Bug Fixes
+
+* **browser:** incompatibility with create-react-app ([3f1f51f](https://github.com/hitechline/reactools/commit/3f1f51f27411efa991cb2e3a9515a525fd5a3c9f))
+* **deps:** update dependency @hitechline/next-mdx to v0.0.3 ([7e96bd5](https://github.com/hitechline/reactools/commit/7e96bd5efb6204864256f05f4362d1b0b385ae99))
+* hooks dependencies ([514df97](https://github.com/hitechline/reactools/commit/514df970cc1c9cd7076bffa0bd7f8269db138263))
+
+
+### Performance Improvements
+
+* do not use internal polyfills ([8c3979c](https://github.com/hitechline/reactools/commit/8c3979ca4265063e12f9da7428e2515e840f019c))
+
+
+### Code Refactoring
+
+* not use reserved keyword `package` ([0fc902f](https://github.com/hitechline/reactools/commit/0fc902f06b6a612f80c4c57bb53637bfe741d560))
+
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([5027173](https://github.com/hitechline/reactools/commit/5027173cbc9bbe78596a90d04a6b55d911eda94e))
+* **deps:** pin dependencies ([92faa73](https://github.com/hitechline/reactools/commit/92faa737fc9ea91e40199daf9a82bbb86eb3830d))
+* **deps:** update dependency @types/jest to v26.0.21 ([3ebea43](https://github.com/hitechline/reactools/commit/3ebea43972e64f9c5295a03c8c244227927cf096))
+* **deps:** update dependency esbuild to v0.9.3 ([36f6757](https://github.com/hitechline/reactools/commit/36f6757084cb1d7e59f7b81d0150fb5c81fe5fdd))
+* **deps:** update dependency ts-jest to v26.5.4 ([d100db9](https://github.com/hitechline/reactools/commit/d100db99f473b36e54041ad7599be5956b210304))
+* **deps:** update dependency tsc-alias to v1.2.8 ([75b512e](https://github.com/hitechline/reactools/commit/75b512ec56a21e985c4f6efc2a0ec95a2c12a0c9))
+* **deps:** update nextjs monorepo to v10.0.9 ([0416419](https://github.com/hitechline/reactools/commit/0416419847a435a9f9558aed4c151c8eaba69228))
+* **deps:** update typescript-eslint monorepo to v4.18.0 ([fa68267](https://github.com/hitechline/reactools/commit/fa682679857cb9a8402d8e43691e53da5edf2bab))
+* **release-config:** ignore commits with scope `release` in notes ([ec96efd](https://github.com/hitechline/reactools/commit/ec96efddfdc1fa8385433d74c50006a4d830b666))
+* disable `global-require` rule in the file ([8c7f3c6](https://github.com/hitechline/reactools/commit/8c7f3c6c9f2bb5cc04c2625be7ab2912cdd85dee))
+* refactor eslint config using `[@hitechline](https://github.com/hitechline)` configuration ([0252067](https://github.com/hitechline/reactools/commit/02520671ec89f354340abc963ab67e5596ed82c3))
+* resolves `@hitechline/reactools` package in docs ([67a34c8](https://github.com/hitechline/reactools/commit/67a34c8203c4e95ea47260c21c743d6cc4a9c7f8))
+* strict typing ([b5af7e8](https://github.com/hitechline/reactools/commit/b5af7e8de8dfa8f7178b9046646c3327484b7f6e))
+
 ### [1.1.2-canary.3](https://github.com/hitechline/reactools/compare/v1.1.2-canary.2...v1.1.2-canary.3) (2021-03-16)
 
 
