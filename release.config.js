@@ -29,6 +29,7 @@ module.exports = {
             { type: 'fix', section: 'Bug Fixes' },
             { type: 'perf', section: 'Performance Improvements' },
             { type: 'refactor', section: 'Code Refactoring' },
+            { type: 'chore', scope: 'release', hidden: true },
             { type: 'chore', section: 'Miscellaneous Chores' },
             { type: 'revert', section: 'Reverts' },
             { type: 'test', section: 'Tests' },
