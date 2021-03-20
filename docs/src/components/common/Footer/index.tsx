@@ -9,7 +9,7 @@ export const Footer = (): JSX.Element => (
         <p className="my-3">Copyright © Hitechline</p>
 
         <p className="my-3">
-          <a href="https://github.com/hitechline/react">
+          <a href="https://github.com/hitechline/reactools">
             <FiGithub size="2rem" />
           </a>
         </p>
