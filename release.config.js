@@ -2,6 +2,19 @@ const { join } = require('path');
 
 const { ROOT_PATH } = require('./shared/constants');
 
+const COMMIT_GROUP_ORDER = [
+  'Features',
+  'Bug Fixes',
+  'Performance Improvements',
+  'Code Refactoring',
+  'Miscellaneous Chores',
+  'Documentation Changes',
+  'Tests',
+  'Build System',
+  'Reverts',
+  'Dependency Updates',
+];
+
 module.exports = {
   branches: [
     'main',
@@ -22,18 +35,30 @@ module.exports = {
       '@semantic-release/release-notes-generator',
       {
         preset: 'conventionalcommits',
+        writerOpts: {
+          commitGroupsSort: (a, b) => {
+            const rankA = COMMIT_GROUP_ORDER.indexOf(a.title);
+            const rankB = COMMIT_GROUP_ORDER.indexOf(b.title);
+
+            if (rankA >= rankB) return 1;
+            return -1;
+          },
+        },
         presetConfig: {
           types: [
-            { type: 'feat', section: 'Features' },
-            { type: 'feature', section: 'Features' },
-            { type: 'fix', section: 'Bug Fixes' },
             { type: 'perf', section: 'Performance Improvements' },
             { type: 'refactor', section: 'Code Refactoring' },
-            { type: 'chore', scope: 'release', hidden: true },
-            { type: 'chore', section: 'Miscellaneous Chores' },
-            { type: 'revert', section: 'Reverts' },
             { type: 'test', section: 'Tests' },
+            { type: 'docs', section: 'Documentation Changes' },
             { type: 'build', section: 'Build System' },
+            { type: 'revert', section: 'Reverts' },
+            { type: 'fix', scope: 'deps', section: 'Dependency Updates' },
+            { type: 'fix', section: 'Bug Fixes' },
+            { type: 'feat', section: 'Features' },
+            { type: 'feature', section: 'Features' },
+            { type: 'chore', scope: 'release', hidden: true },
+            { type: 'chore', scope: 'deps', section: 'Dependency Updates' },
+            { type: 'chore', section: 'Miscellaneous Chores' },
           ],
         },
       },
