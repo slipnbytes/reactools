@@ -1,0 +1,6 @@
+* @pablo1v
+
+docs/**/*.md docs/**/*.mdx @pablo1v @devhijazi
+
+**/yarn.lock @pablo1v @devhijazi
+**/package.json @pablo1v @devhijazi
