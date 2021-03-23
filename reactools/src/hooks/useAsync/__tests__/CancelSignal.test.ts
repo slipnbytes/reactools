@@ -1,6 +1,6 @@
 import { CancelSignal } from '../CancelSignal';
 
-import type { Listener } from '@/shared/types'; // eslint-disable-line import/order
+import type { Listener } from '@/shared/types';
 
 describe('CancelSignal', () => {
   test('"on" and "off" methods', () => {

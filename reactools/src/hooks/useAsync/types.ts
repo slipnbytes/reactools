@@ -1,6 +1,6 @@
 import type { CancelSignal } from './CancelSignal';
 
-import type { AnyThing } from '@/shared/types'; // eslint-disable-line import/order
+import type { AnyThing } from '@/shared/types';
 
 export type UseAsyncCallback<T> = (
   context: UseAsyncCallbackContext,

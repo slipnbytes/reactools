@@ -1,7 +1,7 @@
 import { isObject } from './isObject';
 import { isUndefined } from './isUndefined';
 
-import type { AnyObject } from '@/shared/types'; // eslint-disable-line import/order
+import type { AnyObject } from '@/shared/types';
 
 export function getKeys(object: AnyObject): string[] {
   return Object.keys(object);
