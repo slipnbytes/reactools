@@ -1,4 +1,10 @@
-import { ComponentType, ComponentClass, FunctionComponent } from 'react';
+import type {
+  ValidationMap,
+  WeakValidationMap,
+  ComponentType,
+  ComponentClass,
+  FunctionComponent,
+} from 'react';
 
 export type Listener = () => void;
 
@@ -23,3 +29,10 @@ export type GetComponentReturnType<
   : T extends ComponentClass<any>
   ? ReturnType<InstanceType<T>['render']>
   : any;
+
+export interface ComponentBase<P> {
+  displayName?: string;
+  defaultProps?: Partial<P>;
+  propTypes?: WeakValidationMap<P>;
+  contextTypes?: ValidationMap<any>;
+}
