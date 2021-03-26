@@ -1024,10 +1024,10 @@
   resolved "https://registry.yarnpkg.com/@hapi/hoek/-/hoek-9.1.1.tgz#9daf5745156fd84b8e9889a2dc721f0c58e894aa"
   integrity sha512-CAEbWH7OIur6jEOzaai83jq3FmKmv4PmX1JYfs9IrYcGEVI/lyL1EXJGCj7eFVJ0bg5QR8LMxBlEtA+xKiLpFw==
 
-"@hitechline/eslint-config@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@hitechline/eslint-config/-/eslint-config-2.0.0.tgz#bfb753f5446b041621589c86b6b03dde2196a95e"
-  integrity sha512-RiVvcoHmfPr+9v/t/YEKcaQVNujUJQjgo4gPgr3EanTqJJ9DWGkDSIIvcwK6UmKjCaTDdrhCSbrR0mx+X1eXDg==
+"@hitechline/eslint-config@2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@hitechline/eslint-config/-/eslint-config-2.0.1.tgz#c624c3ba746156c287021ea0a9dd4572a3741041"
+  integrity sha512-L2N0WVwKYthBWn8IFmtCzqIb4mTxTfSzOqf3issNDr+dK3o2q+qMeMpPReIKuQSPtukBblM9WYxnS+0YD1yTjA==
 
 "@hitechline/next-mdx@0.0.3":
   version "0.0.3"
