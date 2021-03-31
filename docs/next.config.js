@@ -30,6 +30,9 @@ module.exports = composePlugins(
     distDir: '__next',
     reactStrictMode: true,
     pageExtensions: ['tsx', 'md', 'mdx'],
+    future: {
+      webpack5: true,
+    },
     devIndicators: {
       autoPrerender: false,
     },
