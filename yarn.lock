@@ -1053,10 +1053,10 @@
     react-is "^17.0.1"
     unified "^9.2.0"
 
-"@hitechline/reactools@npm:@hitechline/reactools@1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@hitechline/reactools/-/reactools-1.1.1.tgz#57106375cce1194a615b34b208a5941f961757bb"
-  integrity sha512-KDq7s0xAwT4P21GhwQ6BFmmv3P1x1CZmUvqfYiD5osiRujSIZcfREyRmdPqDbqOR9oVEB5cU3Lb4ZGqpCriB5A==
+"@hitechline/reactools@npm:@hitechline/reactools@1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@hitechline/reactools/-/reactools-1.1.2.tgz#865dbb62a1c56002170cc1c1f228009fb3712370"
+  integrity sha512-w3H6M+QDE0cWHTD3h9WEOktGkFMCJfYnWOW8phTiNOGRu+Yi0tp4zvRlfaN1KOrzdi0YJB8cAr4Z65zkzaHFBQ==
 
 "@iarna/cli@^1.2.0":
   version "1.2.0"
@@ -10216,7 +10216,6 @@ npm@^6.14.9:
     cmd-shim "^3.0.3"
     columnify "~1.5.4"
     config-chain "^1.1.12"
-    debuglog "*"
     detect-indent "~5.0.0"
     detect-newline "^2.1.0"
     dezalgo "~1.0.3"
@@ -10231,7 +10230,6 @@ npm@^6.14.9:
     has-unicode "~2.0.1"
     hosted-git-info "^2.8.8"
     iferr "^1.0.2"
-    imurmurhash "*"
     infer-owner "^1.0.4"
     inflight "~1.0.6"
     inherits "^2.0.4"
@@ -10250,14 +10248,8 @@ npm@^6.14.9:
     libnpx "^10.2.4"
     lock-verify "^2.1.0"
     lockfile "^1.0.4"
-    lodash._baseindexof "*"
     lodash._baseuniq "~4.6.0"
-    lodash._bindcallback "*"
-    lodash._cacheindexof "*"
-    lodash._createcache "*"
-    lodash._getnative "*"
     lodash.clonedeep "~4.5.0"
-    lodash.restparam "*"
     lodash.union "~4.6.0"
     lodash.uniq "~4.5.0"
     lodash.without "~4.4.0"
