@@ -1,3 +1,45 @@
+### [1.1.3-canary.1](https://github.com/hitechline/reactools/compare/v1.1.2...v1.1.3-canary.1) (2021-03-31)
+
+
+### Miscellaneous Chores
+
+* **semantic-release:** add custom sort function that sort notes sections ([c43aae7](https://github.com/hitechline/reactools/commit/c43aae7c1d927794adaad356462dc2d25bdd4745))
+
+
+### Documentation Changes
+
+* change href ([c0dd090](https://github.com/hitechline/reactools/commit/c0dd090b357dd46102e0c92e0a29e6a1a508f5f2))
+
+
+### Dependency Updates
+
+* **deps:** lock file maintenance ([58855c2](https://github.com/hitechline/reactools/commit/58855c23ed966278de28c5069c901527840566a7))
+* **deps:** lock file maintenance ([a37c927](https://github.com/hitechline/reactools/commit/a37c9276336b4f0d4423d24b9adc756965adbe53))
+* **deps:** update dependency @hitechline/eslint-config to v2.0.1 ([d692611](https://github.com/hitechline/reactools/commit/d692611de8f2901944bc8cf5f122e51f994de839))
+* **deps:** update dependency @testing-library/jest-dom to v5.11.10 ([9a4a889](https://github.com/hitechline/reactools/commit/9a4a8891705331f9467ccf231f061a42c151d39f))
+* **deps:** update dependency @testing-library/react to v11.2.6 ([92fd97f](https://github.com/hitechline/reactools/commit/92fd97f1acd60dcfa8868d649df0c0dbaa7debb4))
+* **deps:** update dependency @testing-library/react-hooks to v5.1.1 ([3e3e424](https://github.com/hitechline/reactools/commit/3e3e4248e7edc47b0c9fdebdac680bf8f2fdd21c))
+* **deps:** update dependency @types/jest to v26.0.22 ([06082ac](https://github.com/hitechline/reactools/commit/06082ac27370ea0201c1b35daa04bba9ea48f84b))
+* **deps:** update dependency @types/react-dom to v17.0.3 ([9bfdfa3](https://github.com/hitechline/reactools/commit/9bfdfa3d69c87253610f3c1be957edc54ccb7a22))
+* **deps:** update dependency esbuild to v0.10.2 ([fc975a7](https://github.com/hitechline/reactools/commit/fc975a726593a26785d767c81aec1da356484a31))
+* **deps:** update dependency esbuild to v0.11.0 ([7fac446](https://github.com/hitechline/reactools/commit/7fac4464f7574c2371ec5eba33a6a23a40d0973d))
+* **deps:** update dependency esbuild to v0.11.2 ([0a75316](https://github.com/hitechline/reactools/commit/0a7531648f9e98da32da117a2d9ec86e32e1765d))
+* **deps:** update dependency esbuild to v0.9.4 ([fa3d69a](https://github.com/hitechline/reactools/commit/fa3d69a789b87d1b74cb249157242b18cef87333))
+* **deps:** update dependency esbuild to v0.9.5 ([fc2ebf3](https://github.com/hitechline/reactools/commit/fc2ebf3e8e518aa89e9d953018ea2e4aa119578e))
+* **deps:** update dependency esbuild to v0.9.6 ([7f937dd](https://github.com/hitechline/reactools/commit/7f937dd5f548dfdbc5b6a5e275760c6bbf12573d))
+* **deps:** update dependency esbuild to v0.9.7 ([9d43f72](https://github.com/hitechline/reactools/commit/9d43f72852fd517760c97a521cf7cdb05aef8ac6))
+* **deps:** update dependency eslint to v7.23.0 ([9d7bc11](https://github.com/hitechline/reactools/commit/9d7bc111ce5593170540706875a29292769a495c))
+* **deps:** update dependency eslint-plugin-react to v7.23.0 ([e14ef9f](https://github.com/hitechline/reactools/commit/e14ef9f07f1606dc23fe06b413f9edb3a76b0db1))
+* **deps:** update dependency eslint-plugin-react to v7.23.1 ([6fe3d68](https://github.com/hitechline/reactools/commit/6fe3d68d53562aae4293124e6d6c5ab5da853880))
+* **deps:** update dependency eslint-plugin-testing-library to v3.10.2 ([a14f8d3](https://github.com/hitechline/reactools/commit/a14f8d3681d3515d36b1d5eb6472627a6649f35a))
+* **deps:** update dependency remark-prism to v1.3.5 ([a9c8312](https://github.com/hitechline/reactools/commit/a9c83124754b14abbf22682e94be39de7f894072))
+* **deps:** update dependency tsc-alias to v1.2.9 ([7afbb56](https://github.com/hitechline/reactools/commit/7afbb568d554815142f94e8c78966fe8d5c1cdc1))
+* **deps:** update nextjs monorepo to v10.1.1 ([43fa226](https://github.com/hitechline/reactools/commit/43fa226d6424081c3103cde078f6b97ec40fc9c7))
+* **deps:** update nextjs monorepo to v10.1.2 ([f5650ab](https://github.com/hitechline/reactools/commit/f5650ab5a512914f713d9ce7e521861c930a7d62))
+* **deps:** update react monorepo to v17.0.2 ([aa0b971](https://github.com/hitechline/reactools/commit/aa0b971c6f9340e3358f08c2b74bf10d29d9e38e))
+* **deps:** update typescript-eslint monorepo to v4.19.0 ([2d42ea3](https://github.com/hitechline/reactools/commit/2d42ea3cc17a8e0fa55807c143e31bbddc5cfc5e))
+* **deps:** update typescript-eslint monorepo to v4.20.0 ([8157671](https://github.com/hitechline/reactools/commit/81576712db993be0fe2887b79bb0e1e02277b169))
+
 ### [1.1.2](https://github.com/hitechline/reactools/compare/v1.1.1...v1.1.2) (2021-03-17)
 
 
