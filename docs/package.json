@@ -29,7 +29,7 @@
     "remark-prism": "1.3.5",
     "remark-remove-comments": "0.1.3",
     "remark-slug": "6.0.0",
-    "tailwindcss": "1.9.6",
+    "tailwindcss": "2.0.0",
     "url-join": "4.0.1"
   },
   "devDependencies": {
