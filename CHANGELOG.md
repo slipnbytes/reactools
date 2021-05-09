@@ -1,3 +1,36 @@
+### [1.1.3-canary.2](https://github.com/hitechline/reactools/compare/v1.1.3-canary.1...v1.1.3-canary.2) (2021-05-09)
+
+
+### Bug Fixes
+
+* docs/package.json to reduce vulnerabilities ([7579be2](https://github.com/hitechline/reactools/commit/7579be29f5f6a3940f98a965628fdd84e230e693))
+
+
+### Miscellaneous Chores
+
+* **docs:** update @hitechline/reactools to v1.1.2 ([06675eb](https://github.com/hitechline/reactools/commit/06675eb2562b4f05a5de57e0cbda1d704073d592))
+* **docs:** use webpack 5 ([be687c3](https://github.com/hitechline/reactools/commit/be687c336872d097f4a2056c3f21ebbfecb501aa))
+
+
+### Dependency Updates
+
+* **deps:** lock file maintenance ([8d54774](https://github.com/hitechline/reactools/commit/8d5477478dee1b06eaba1ce2926085d13651e666))
+* **deps:** lock file maintenance ([6e26037](https://github.com/hitechline/reactools/commit/6e26037a24a2a8d42e86ac0e11844ac3a320cdf6))
+* **deps:** lock file maintenance ([5bfabfa](https://github.com/hitechline/reactools/commit/5bfabfa58b83f823e79e2141b329a24ee5bfe098))
+* **deps:** lock file maintenance ([d0d0a18](https://github.com/hitechline/reactools/commit/d0d0a18e447b0ec58e5595e69bb3b611146d0f27))
+* **deps:** update definitelytyped ([a97f9ac](https://github.com/hitechline/reactools/commit/a97f9ac40bb1d8497e63ced5ecce62f1f9268ace))
+* **deps:** update dependency @hitechline/eslint-config to v2.0.2 ([d0a9dc9](https://github.com/hitechline/reactools/commit/d0a9dc9e2cbbdc780fe2c5c7f4ff20cacf27db9a))
+* **deps:** update dependency @semantic-release/github to v7.2.1 ([b313af9](https://github.com/hitechline/reactools/commit/b313af99afb6629ed0bccb6431fa27bda083f1db))
+* **deps:** update dependency esbuild to v0.11.10 ([1a16a27](https://github.com/hitechline/reactools/commit/1a16a27f5dcd322dfc4fd08602ffd4c23f36d598))
+* **deps:** update dependency esbuild to v0.11.5 ([b901646](https://github.com/hitechline/reactools/commit/b9016468435e9cb86b5841e5e6a11feca8b54104))
+* **deps:** update dependency eslint to v7.24.0 ([c4e68f0](https://github.com/hitechline/reactools/commit/c4e68f01c61cb1fd76012d90db88c8886c7b8ab4))
+* **deps:** update dependency eslint-config-prettier to v8.2.0 ([731ec24](https://github.com/hitechline/reactools/commit/731ec247df3cc30e9a17f093924de5bc422ea6c3))
+* **deps:** update dependency eslint-plugin-react to v7.23.2 ([9550f6f](https://github.com/hitechline/reactools/commit/9550f6fe2527bdc88bba8caa1ebf8875336a3ae6))
+* **deps:** update dependency postcss-color-converter to v1.0.2 ([3313415](https://github.com/hitechline/reactools/commit/3313415bfc3ad80641c7abc334b7044078244472))
+* **deps:** update dependency typescript to v4.2.4 ([3fbb3ac](https://github.com/hitechline/reactools/commit/3fbb3ac0f52bc9825450f11d688e37dfc0306f32))
+* **deps:** update nextjs monorepo to v10.1.3 ([7c95e02](https://github.com/hitechline/reactools/commit/7c95e02ad8b2c77c5cd663f8edb3bac4b54bc14a))
+* **deps:** update typescript-eslint monorepo to v4.22.0 ([0b7a794](https://github.com/hitechline/reactools/commit/0b7a79412f5bb3d463744d87a6f5ce72772cc027))
+
 ### [1.1.3-canary.1](https://github.com/hitechline/reactools/compare/v1.1.2...v1.1.3-canary.1) (2021-03-31)
 
 
