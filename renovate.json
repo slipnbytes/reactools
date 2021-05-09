@@ -1,3 +1,4 @@
 {
-  "extends": ["@hitechline"]
+  "extends": ["@hitechline"],
+  "automerge" false
 }
