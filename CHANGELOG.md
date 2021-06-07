@@ -1,3 +1,14 @@
+## [2.0.0-canary.1](https://github.com/hitechline/reactools/compare/v1.1.3-canary.2...v2.0.0-canary.1) (2021-06-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* Node is only supported from version 12 onwards
+
+### Miscellaneous Chores
+
+* change minimum Node version supported ([0b13374](https://github.com/hitechline/reactools/commit/0b1337499476a3a90b4f800e75b3ff3afcf8cfe4))
+
 ### [1.1.3](https://github.com/hitechline/reactools/compare/v1.1.2...v1.1.3) (2021-06-07)
 
 
