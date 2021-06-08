@@ -1,3 +1,20 @@
+## [2.0.0-canary.2](https://github.com/hitechline/reactools/compare/v2.0.0-canary.1...v2.0.0-canary.2) (2021-06-08)
+
+
+### Bug Fixes
+
+* docs/package.json to reduce vulnerabilities ([d4531df](https://github.com/hitechline/reactools/commit/d4531df0f16850cdac0e37e8468da26ee09aca7d))
+
+
+### Dependency Updates
+
+* **deps:** bump ws from 7.4.5 to 7.4.6 ([859dd15](https://github.com/hitechline/reactools/commit/859dd15278587d2182bd6976751abe92ee51024e))
+* **deps:** update definitelytyped ([b932bca](https://github.com/hitechline/reactools/commit/b932bcae103bdcec82e0a4d1bc3851f71d6288e1))
+* **deps:** update dependency @testing-library/react to v11.2.7 ([a240704](https://github.com/hitechline/reactools/commit/a2407040df379fc75fff3d38e41d518102e1088b))
+* **deps:** update dependency @testing-library/react-hooks to v5.1.3 ([469699f](https://github.com/hitechline/reactools/commit/469699ffcb8199ef7d778ffe3656a8c1d9946d64))
+* **deps:** update dependency esbuild to v0.11.23 ([f0cfea9](https://github.com/hitechline/reactools/commit/f0cfea919f9277599fdc4abeb6d1dd5ab0b997c0))
+* **deps:** update semantic-release monorepo ([73295b8](https://github.com/hitechline/reactools/commit/73295b8fc2cba47fa2c95169898ef4c5c47a7090))
+
 ## [2.0.0-canary.1](https://github.com/hitechline/reactools/compare/v1.1.3-canary.2...v2.0.0-canary.1) (2021-06-07)
 
 
