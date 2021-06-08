@@ -16,6 +16,8 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: Set Up Node ${{ matrix.node }}
         uses: actions/setup-node@v2
@@ -68,6 +70,8 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: Set Up Node ${{ matrix.node }}
         uses: actions/setup-node@v2
@@ -90,6 +94,8 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: Set Up Node
         uses: actions/setup-node@v2
@@ -113,6 +119,8 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: Set Up Node
         uses: actions/setup-node@v2
