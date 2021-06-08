@@ -23,7 +23,10 @@ jobs:
           node-version: ${{ matrix.node }}
 
       - name: Install Dependencies
-        uses: bahmutov/npm-install@master
+        uses: bahmutov/npm-install@v1
+        with:
+          useLockFile: false
+          install-command: yarn --frozen-lockfile --silent
 
       - name: Check Prettier
         run: yarn prettier
@@ -72,7 +75,10 @@ jobs:
           node-version: ${{ matrix.node }}
 
       - name: Install Dependencies
-        uses: bahmutov/npm-install@master
+        uses: bahmutov/npm-install@v1
+        with:
+          useLockFile: false
+          install-command: yarn --frozen-lockfile --silent
 
       - name: Build
         run: yarn build:reactools
@@ -91,7 +97,10 @@ jobs:
           node-version: 14
 
       - name: Install Dependencies
-        uses: bahmutov/npm-install@master
+        uses: bahmutov/npm-install@v1
+        with:
+          useLockFile: false
+          install-command: yarn --frozen-lockfile --silent
 
       - name: Build
         run: yarn build:docs
@@ -111,7 +120,10 @@ jobs:
           node-version: 14
 
       - name: Install Dependencies
-        uses: bahmutov/npm-install@master
+        uses: bahmutov/npm-install@v1
+        with:
+          useLockFile: false
+          install-command: yarn --frozen-lockfile --silent
 
       - name: Release
         run: yarn release
