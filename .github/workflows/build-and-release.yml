@@ -11,11 +11,13 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node: [10.x, 12.x, 14.x, 15.x]
+        node: [12.x, 14.x, 15.x, 16.x]
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: Set Up Node ${{ matrix.node }}
         uses: actions/setup-node@v2
@@ -23,7 +25,10 @@ jobs:
           node-version: ${{ matrix.node }}
 
       - name: Install Dependencies
-        uses: bahmutov/npm-install@master
+        uses: bahmutov/npm-install@v1
+        with:
+          useLockFile: false
+          install-command: yarn --frozen-lockfile --silent
 
       - name: Check Prettier
         run: yarn prettier
@@ -60,11 +65,13 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node: [10.x, 12.x, 14.x, 15.x]
+        node: [12.x, 14.x, 15.x, 16.x]
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: Set Up Node ${{ matrix.node }}
         uses: actions/setup-node@v2
@@ -72,7 +79,10 @@ jobs:
           node-version: ${{ matrix.node }}
 
       - name: Install Dependencies
-        uses: bahmutov/npm-install@master
+        uses: bahmutov/npm-install@v1
+        with:
+          useLockFile: false
+          install-command: yarn --frozen-lockfile --silent
 
       - name: Build
         run: yarn build:reactools
@@ -84,6 +94,8 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: Set Up Node
         uses: actions/setup-node@v2
@@ -91,7 +103,10 @@ jobs:
           node-version: 14
 
       - name: Install Dependencies
-        uses: bahmutov/npm-install@master
+        uses: bahmutov/npm-install@v1
+        with:
+          useLockFile: false
+          install-command: yarn --frozen-lockfile --silent
 
       - name: Build
         run: yarn build:docs
@@ -104,6 +119,8 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: Set Up Node
         uses: actions/setup-node@v2
@@ -111,7 +128,10 @@ jobs:
           node-version: 14
 
       - name: Install Dependencies
-        uses: bahmutov/npm-install@master
+        uses: bahmutov/npm-install@v1
+        with:
+          useLockFile: false
+          install-command: yarn --frozen-lockfile --silent
 
       - name: Release
         run: yarn release

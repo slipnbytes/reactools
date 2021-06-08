@@ -1,5 +1,4 @@
 module.exports = {
-  plugins: [require('@tailwindcss/ui')], // eslint-disable-line global-require
   future: {
     applyComplexClasses: true,
     purgeLayersByDefault: true,
