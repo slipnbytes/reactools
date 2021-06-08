@@ -18,8 +18,6 @@
     "@hitechline/next-mdx": "0.0.3",
     "@hitechline/reactools": "npm:@hitechline/reactools@1.1.2",
     "@mdx-js/react": "1.6.22",
-    "@tailwindcss/ui": "0.7.2",
-    "axios": "0.21.1",
     "gray-matter": "4.0.2",
     "next": "10.2.1",
     "react": "17.0.2",
@@ -29,7 +27,6 @@
     "remark-prism": "1.3.6",
     "remark-remove-comments": "0.1.3",
     "remark-slug": "6.0.0",
-    "tailwindcss": "2.0.0",
     "url-join": "4.0.1"
   },
   "devDependencies": {
@@ -38,16 +35,19 @@
     "@next/mdx": "10.1.3",
     "@types/url-join": "4.0.0",
     "@zeit/next-source-maps": "0.0.3",
+    "autoprefixer": "^10.2.6",
     "imagemin-mozjpeg": "9.0.0",
     "imagemin-optipng": "8.0.0",
     "next-compose-plugins": "2.2.1",
     "next-optimized-images": "2.6.2",
-    "postcss-color-converter": "1.0.2",
-    "postcss-color-hsl": "2.0.0",
-    "postcss-color-mod-function": "3.0.3",
-    "postcss-custom-properties": "11.0.0",
-    "postcss-flexbugs-fixes": "5.0.2",
-    "postcss-nesting": "7.0.1",
-    "postcss-preset-env": "6.7.0"
+    "postcss": "^8.3.0",
+    "postcss-color-converter": "^1.0.3",
+    "postcss-color-hsl": "^2.0.0",
+    "postcss-color-mod-function": "^3.0.3",
+    "postcss-custom-properties": "^11.0.0",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-nesting": "^8.0.1",
+    "postcss-preset-env": "^6.7.0",
+    "tailwindcss": "^2.1.4"
   }
 }
