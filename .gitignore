@@ -104,4 +104,5 @@ dist
 # TernJS port file
 .tern-port
 
-development/
+# Next.js exported files
+docs/out
