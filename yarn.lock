@@ -12770,10 +12770,10 @@ remark-prism@1.3.6:
     prismjs "^1.23.0"
     unist-util-map "^2.0.1"
 
-remark-remove-comments@0.1.3:
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/remark-remove-comments/-/remark-remove-comments-0.1.3.tgz#d06190329bc9584690d8774738850fab53b5cee1"
-  integrity sha512-hfJ1YaY9/fkZ8FPf/ay0t6LD52HylzUBmZbPrYi0UGdvW5Lo4vOB6EOaOCF7ZuOpHhnXLPArIgTGl5yP/2nJlw==
+remark-remove-comments@0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/remark-remove-comments/-/remark-remove-comments-0.2.0.tgz#3aeda48b860123417b081c303707b852cc764a35"
+  integrity sha512-faGaTeqp0bvDgE0uTofa90EBHD4HXeHN+EUaPDR9datgFvaPkYcLxakaJud9LnomFPkOhx0A9NMYFk/lln/etQ==
   dependencies:
     html-comment-regex "^1.1.2"
     unist-util-visit "^2.0.3"
