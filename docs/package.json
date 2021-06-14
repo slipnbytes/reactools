@@ -25,7 +25,7 @@
     "react-icons": "4.2.0",
     "remark-autolink-headings": "6.0.1",
     "remark-prism": "1.3.6",
-    "remark-remove-comments": "0.1.3",
+    "remark-remove-comments": "0.2.0",
     "remark-slug": "6.0.0",
     "url-join": "4.0.1"
   },
