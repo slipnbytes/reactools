@@ -9,7 +9,7 @@ const packages = getWorkspacesPackages(false);
 module.exports = {
   plugins: ['import-helpers', 'testing-library'],
   extends: [
-    'plugin:testing-library/recommended',
+    'plugin:testing-library/dom',
     'plugin:testing-library/react',
     '@hitechline/eslint-config/web',
     '@hitechline/eslint-config/typescript',
@@ -30,7 +30,6 @@ module.exports = {
       },
     },
   },
-
   rules: {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
 
