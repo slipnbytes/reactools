@@ -9,8 +9,6 @@ const packages = getWorkspacesPackages(false);
 module.exports = {
   plugins: ['import-helpers', 'testing-library'],
   extends: [
-    'plugin:testing-library/recommended',
-    'plugin:testing-library/react',
     '@hitechline/eslint-config/web',
     '@hitechline/eslint-config/typescript',
   ],
@@ -30,7 +28,12 @@ module.exports = {
       },
     },
   },
-
+  overrides: [
+    {
+      files: ['**/*.test.ts', '**/*.spec.ts', '**/*.test.tsx', '**/*.spec.tsx'],
+      extends: ['plugin:testing-library/dom', 'plugin:testing-library/react'],
+    },
+  ],
   rules: {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
 

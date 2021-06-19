@@ -65,7 +65,7 @@
     "eslint-plugin-prettier": "3.3.1",
     "eslint-plugin-react": "7.23.2",
     "eslint-plugin-react-hooks": "4.2.0",
-    "eslint-plugin-testing-library": "3.10.2",
+    "eslint-plugin-testing-library": "4.6.0",
     "jest": "26.6.3",
     "lerna": "4.0.0",
     "node-env-run": "4.0.2",

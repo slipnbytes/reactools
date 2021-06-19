@@ -1,4 +1,4 @@
-import { render, fireEvent } from '@testing-library/react';
+import { render, fireEvent, screen } from '@testing-library/react';
 import { renderHook } from '@testing-library/react-hooks';
 import { useState } from 'react';
 import { act } from 'react-test-renderer';
@@ -17,11 +17,11 @@ describe('useOutClick', () => {
       useOutClick<HTMLButtonElement>(),
     );
 
-    const { container } = render(
+    render(
       <div>
         <Button ref={outClick.current.ref} />
 
-        <section id="content">Content</section>
+        <section>Content</section>
       </div>,
     );
 
@@ -30,7 +30,7 @@ describe('useOutClick', () => {
         state.current[1](true);
       });
 
-      fireEvent.click(container.querySelector('#content') as Node);
+      fireEvent.click(screen.getByText('Content'));
     });
 
     expect(state.current[0]).toBe(true);
@@ -42,11 +42,11 @@ describe('useOutClick', () => {
       useOutClick<HTMLButtonElement>(),
     );
 
-    const { container } = render(
+    render(
       <div>
-        <Button id="button" ref={outClick.current.ref} />
+        <Button ref={outClick.current.ref} />
 
-        <section id="content">Content</section>
+        <section>Content</section>
       </div>,
     );
 
@@ -55,7 +55,7 @@ describe('useOutClick', () => {
         state.current[1](true);
       });
 
-      fireEvent.click(container.querySelector('#button') as Node);
+      fireEvent.click(screen.getByText('Button'));
     });
 
     expect(state.current[0]).toBe(false);
@@ -67,11 +67,11 @@ describe('useOutClick', () => {
       useOutClick<HTMLButtonElement>(),
     );
 
-    const { container } = render(
+    render(
       <div>
         <Button />
 
-        <section id="content">Content</section>
+        <section>Content</section>
       </div>,
     );
 
@@ -80,7 +80,7 @@ describe('useOutClick', () => {
         state.current[1](true);
       });
 
-      fireEvent.click(container.querySelector('#content') as Node);
+      fireEvent.click(screen.getByText('Content'));
     });
 
     expect(state.current[0]).toBe(false);
@@ -92,11 +92,11 @@ describe('useOutClick', () => {
       useOutClick<HTMLButtonElement>(),
     );
 
-    const { container } = render(
+    render(
       <div>
         <Button ref={outClick.current.ref} />
 
-        <section id="content">Content</section>
+        <section>Content</section>
       </div>,
     );
 
@@ -108,7 +108,7 @@ describe('useOutClick', () => {
       outClick.current.addListener(listener);
       outClick.current.removeListener(listener);
 
-      fireEvent.click(container.querySelector('#content') as Node);
+      fireEvent.click(screen.getByText('Content'));
     });
 
     expect(state.current[0]).toBe(false);
