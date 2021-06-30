@@ -4,7 +4,7 @@ const sourceMaps = require('@zeit/next-source-maps');
 const composePlugins = require('next-compose-plugins');
 const optimizedImages = require('next-optimized-images');
 
-const { REHYPE_PLUGINS, REMARK_PLUGINS } = require('./shared/plugins');
+const { REHYPE_PLUGINS, REMARK_PLUGINS } = require('./shared/plugins.js');
 
 module.exports = composePlugins(
   [
