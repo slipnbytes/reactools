@@ -70,7 +70,7 @@ describe('object', () => {
     expect(newObject.user.username).toBe('username');
 
     newObject = update(object, {
-      user: (null as unknown) as undefined,
+      user: null as unknown as undefined,
     });
 
     expect(newObject.user).toEqual(object.user);

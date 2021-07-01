@@ -20,7 +20,7 @@ describe('CancelSignal', () => {
     expect(signal.listeners).toEqual([listener, listener2]);
 
     expect(() => {
-      signal.on(({} as unknown) as Listener);
+      signal.on({} as unknown as Listener);
     }).toThrow(TypeError);
 
     signal.off(listener2);
