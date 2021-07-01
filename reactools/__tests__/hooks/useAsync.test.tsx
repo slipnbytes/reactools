@@ -17,8 +17,9 @@ const data = {
 
 describe('useAsync', () => {
   it('should not receive data and error because the inserted callback is invalid', () => {
+    const emptyObject = {};
     const { result: async } = renderHook(() =>
-      useAsync(({} as any) as () => unknown),
+      useAsync(emptyObject as any as () => unknown),
     );
 
     expect(async.current.loading).toBe(false);
