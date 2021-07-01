@@ -4,10 +4,12 @@ import { act } from 'react-test-renderer';
 import { useForceUpdate } from '@/hooks/useForceUpdate';
 
 describe('useForceUpdate', () => {
-  it('should value must always be updated', async done => {
+  it('should value must always be updated', async () => {
     const { result: forceUpdate, waitForNextUpdate } = renderHook(() =>
       useForceUpdate(),
     );
+
+    await expect(waitForNextUpdate()).rejects.toEqual(expect.anything());
 
     act(() => {
       setTimeout(() => {
@@ -15,7 +17,6 @@ describe('useForceUpdate', () => {
       }, 500);
     });
 
-    await waitForNextUpdate();
-    done();
+    await expect(waitForNextUpdate()).resolves.toBe(undefined);
   });
 });

@@ -16,6 +16,7 @@ module.exports = {
   bail: true,
   clearMocks: true,
   collectCoverage: true,
+  testEnvironment: 'jsdom',
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest',
   },
