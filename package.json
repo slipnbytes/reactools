@@ -34,7 +34,7 @@
     "node": ">=12"
   },
   "dependencies": {
-    "fast-glob": "3.2.5"
+    "fast-glob": "3.2.6"
   },
   "devDependencies": {
     "@hitechline/eslint-config": "2.0.2",
