@@ -11,7 +11,7 @@ export function createFactory<P extends AnyObject>(
     );
 
     WithPropsComponent.displayName =
-      Component.displayName || 'WithPropsComponent';
+      Component.displayName || Component.name || 'WithPropsComponent';
 
     return WithPropsComponent as T;
   };
