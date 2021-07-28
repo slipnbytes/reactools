@@ -10,7 +10,7 @@ import type {
 } from '@/shared/types';
 
 type RemovePropsParameterAndGetRestParameters<
-  T extends (...args: any[]) => any
+  T extends (...args: any[]) => any,
 > = T extends (props: any, ...restParameters: infer P) => any ? [...P] : [];
 
 type MergeProps<Default extends AnyObject, Provided extends AnyObject> = Pick<
@@ -21,14 +21,14 @@ type MergeProps<Default extends AnyObject, Provided extends AnyObject> = Pick<
 
 export interface WithPropsOtherComponent<
   T extends ComponentType<any>,
-  P extends AnyObject
+  P extends AnyObject,
 > extends ComponentBase<GetComponentProps<T>> {
   (props: MergeProps<GetComponentProps<T>, P>): GetComponentReturnType<T>;
 }
 
 export interface WithPropsFunctionComponent<
   T extends FunctionComponent<any>,
-  P extends AnyObject
+  P extends AnyObject,
 > extends ComponentBase<GetComponentProps<T>> {
   (
     props: MergeProps<GetComponentProps<T>, P>,

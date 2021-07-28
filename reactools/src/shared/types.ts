@@ -18,17 +18,15 @@ export type AnyThing<T> = T | Promise<T>;
 
 export type PromiseType<T> = T extends Promise<infer R> ? R : T;
 
-export type GetComponentProps<
-  T extends ComponentType<any>
-> = T extends ComponentType<infer P> ? P : never;
+export type GetComponentProps<T extends ComponentType<any>> =
+  T extends ComponentType<infer P> ? P : never;
 
-export type GetComponentReturnType<
-  T extends ComponentType<any>
-> = T extends FunctionComponent<any>
-  ? ReturnType<T>
-  : T extends ComponentClass<any>
-  ? ReturnType<InstanceType<T>['render']>
-  : any;
+export type GetComponentReturnType<T extends ComponentType<any>> =
+  T extends FunctionComponent<any>
+    ? ReturnType<T>
+    : T extends ComponentClass<any>
+    ? ReturnType<InstanceType<T>['render']>
+    : any;
 
 export interface ComponentBase<P> {
   displayName?: string;
