@@ -1,4 +1,5 @@
 import { render } from '@testing-library/react';
+import { PureComponent } from 'react';
 
 import { withProps } from '@/resources/withProps';
 
@@ -8,18 +9,26 @@ interface ComponentMockType extends jest.Mock {
 
 const ComponentMock: ComponentMockType = jest.fn(() => null);
 
+ComponentMock.displayName = 'ComponentMock';
+
 const getLastComponentMockCall = (): unknown =>
   (ComponentMock.mock.calls.slice(-1)[0] as any[])[0];
 
 describe('withProps', () => {
   beforeEach(() => {
     ComponentMock.mockClear();
-    ComponentMock.displayName = undefined;
+  });
+
+  it('should set correct displayName', () => {
+    const Header = (): JSX.Element => <header />;
+    class Footer extends PureComponent {}
+
+    expect(withProps({})(Header).displayName).toBe('Header');
+    expect(withProps({})(Footer).displayName).toBe('Footer');
+    expect(withProps({})(() => null).displayName).toBe('WithPropsComponent');
   });
 
   it('should receive default defined props', () => {
-    ComponentMock.displayName = 'ComponentMock';
-
     const ComponentWithProps = withProps({ title: 'Title' })(ComponentMock);
 
     expect(ComponentWithProps.displayName).toBe('ComponentMock');
