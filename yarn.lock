@@ -2985,10 +2985,10 @@
     "@types/scheduler" "*"
     csstype "^3.0.2"
 
-"@types/react@17.0.15":
-  version "17.0.15"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.15.tgz#c7533dc38025677e312606502df7656a6ea626d0"
-  integrity sha512-uTKHDK9STXFHLaKv6IMnwp52fm0hwU+N89w/p9grdUqcFA6WuqDyPhaWopbNyE1k/VhgzmHl8pu1L4wITtmlLw==
+"@types/react@17.0.17":
+  version "17.0.17"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.17.tgz#1772d3d5425128e0635a716f49ef57c2955df055"
+  integrity sha512-nrfi7I13cAmrd0wje8czYpf5SFbryczCtPzFc6ijqvdjKcyA3tCvGxwchOUlxb2ucBPuJ9Y3oUqKrRqZvrz0lw==
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
@@ -5965,10 +5965,10 @@ es6-promisify@^5.0.0:
   dependencies:
     es6-promise "^4.0.3"
 
-esbuild@0.12.16:
-  version "0.12.16"
-  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.12.16.tgz#c397144ce13b445a6ead9c1f747da11f79ec5e67"
-  integrity sha512-XqI9cXP2bmQ6MREIqrYBb13KfYFSERsV1+e5jSVWps8dNlLZK+hln7d0mznzDIpfISsg/AgQW0DW3kSInXWhrg==
+esbuild@0.12.19:
+  version "0.12.19"
+  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.12.19.tgz#ab849766705a5093df5acd8ec2f6ba2159a38a6c"
+  integrity sha512-5NuT1G6THW7l3fsSCDkcPepn24R0XtyPjKoqKHD8LfhqMXzCdz0mrS9HgO6hIhzVT7zt0T+JGbzCqF5AH8hS9w==
 
 escalade@^3.1.1:
   version "3.1.1"
@@ -14795,10 +14795,10 @@ ts-pnp@^1.1.6:
   resolved "https://registry.yarnpkg.com/ts-pnp/-/ts-pnp-1.2.0.tgz#a500ad084b0798f1c3071af391e65912c86bca92"
   integrity sha512-csd+vJOb/gkzvcCHgTGSChYpy5f1/XKNsmvBGO4JXS+z1v2HobugDz4s1IeFXM3wZB44uczs+eazB5Q/ccdhQw==
 
-tsc-alias@1.3.7:
-  version "1.3.7"
-  resolved "https://registry.yarnpkg.com/tsc-alias/-/tsc-alias-1.3.7.tgz#b088a35d30fad9b34b5c4f1efaf59fcd2982dc0a"
-  integrity sha512-Q/WcSjhbehLB2pTKuK6QC+R0m/bLXwhXoITec5zb4PEkaLv1X2GHdLb0HagLJVa3QWPKNsbp7NZex8WE0EbX3A==
+tsc-alias@1.3.8:
+  version "1.3.8"
+  resolved "https://registry.yarnpkg.com/tsc-alias/-/tsc-alias-1.3.8.tgz#8dc670cf217b04a4f3f9e1c56def9cfda1f7759d"
+  integrity sha512-Ss0jjDjq5inr6ZJEw0IAS3/UxWMLgq4/tsH/yAbXJQHL5yccX+uaU5e2jSYy4VUsxWdZjKXFsUwcslk/4BWfgA==
   dependencies:
     "@jfonx/console-utils" "^1.0.3"
     "@jfonx/file-utils" "^3.0.1"
