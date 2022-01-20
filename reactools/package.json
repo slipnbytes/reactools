@@ -11,7 +11,7 @@
     "prepublishOnly": "yarn build",
     "test": "jest --passWithNoTests",
     "test:watch": "yarn test --watchAll",
-    "build": "run-s build:{types,cjs,esm,browser}",
+    "build": "run-s \"build:{types,cjs,esm,browser}\"",
     "prebuild": "yarn clean",
     "build:types": "tsc -p build/tsconfig.types.json && tsc-alias -p build/tsconfig.types.json",
     "build:cjs": "node build/cjs",
