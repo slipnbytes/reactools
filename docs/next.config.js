@@ -33,6 +33,10 @@ module.exports = composePlugins(
     future: {
       webpack5: true,
     },
+    experimental: {
+      esmExternals: true,
+      externalDir: true,
+    },
     devIndicators: {
       autoPrerender: false,
     },
