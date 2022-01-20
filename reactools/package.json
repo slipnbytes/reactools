@@ -7,7 +7,7 @@
   "module": "dist/index.esm.js",
   "scripts": {
     "clean": "rimraf dist typings coverage .tarball",
-    "release": "yarn semantic-release",
+    "release": "yarn run -T semantic-release",
     "prepublishOnly": "yarn build",
     "test": "jest --passWithNoTests",
     "test:watch": "yarn test --watchAll",
