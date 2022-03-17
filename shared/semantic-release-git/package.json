@@ -12,7 +12,7 @@
   "dependencies": {
     "@semantic-release/error": "2.2.0",
     "aggregate-error": "3.1.0",
-    "debug": "4.3.3",
+    "debug": "4.3.4",
     "dir-glob": "3.0.1",
     "execa": "5.1.1",
     "lodash": "4.17.21",
