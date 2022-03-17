@@ -1698,9 +1698,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@hitechline/eslint-config@npm:2.0.2":
-  version: 2.0.2
-  resolution: "@hitechline/eslint-config@npm:2.0.2"
+"@hitechline/eslint-config@npm:2.0.3":
+  version: 2.0.3
+  resolution: "@hitechline/eslint-config@npm:2.0.3"
   peerDependencies:
     "@typescript-eslint/eslint-plugin": ">=4.3.0"
     "@typescript-eslint/parser": ">=4.3.0"
@@ -1714,7 +1714,7 @@ __metadata:
     eslint-plugin-prettier: ">=3.1.3"
     eslint-plugin-react: ">=7.21.0"
     eslint-plugin-react-hooks: ">=4.1.0"
-  checksum: a0d201c03712502ab7f68a55092f6894527e7667cecc93afa420612721e672c0e971406346e4bf5aecd3fd831afc7eaf72ee95ff81e91a9311f4ea6f78797306
+  checksum: 7165dd8eb6c5d911b0f0888e95260f52f2de16102a46113591f5769400ceff9401b9569b1e56c882e3fbdeafec86a260e8fcf1664428373a2d45915ca7d1802c
   languageName: node
   linkType: hard
 
@@ -6749,15 +6749,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:4.3.3":
-  version: 4.3.3
-  resolution: "debug@npm:4.3.3"
+"debug@npm:4.3.4":
+  version: 4.3.4
+  resolution: "debug@npm:4.3.4"
   dependencies:
     ms: 2.1.2
   peerDependenciesMeta:
     supports-color:
       optional: true
-  checksum: 14472d56fe4a94dbcfaa6dbed2dd3849f1d72ba78104a1a328047bb564643ca49df0224c3a17fa63533fd11dd3d4c8636cd861191232a2c6735af00cc2d4de16
+  checksum: 3dbad3f94ea64f34431a9cbf0bafb61853eda57bff2880036153438f50fb5a84f27683ba0d8e5426bf41a8c6ff03879488120cf5b3a761e77953169c0600a708
   languageName: node
   linkType: hard
 
@@ -16107,7 +16107,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "reactools@workspace:."
   dependencies:
-    "@hitechline/eslint-config": 2.0.2
+    "@hitechline/eslint-config": 2.0.3
     "@semantic-release/changelog": 5.0.1
     "@semantic-release/commit-analyzer": 8.0.1
     "@semantic-release/git": 9.0.1
@@ -17087,7 +17087,7 @@ __metadata:
   dependencies:
     "@semantic-release/error": 2.2.0
     aggregate-error: 3.1.0
-    debug: 4.3.3
+    debug: 4.3.4
     dir-glob: 3.0.1
     execa: 5.1.1
     lodash: 4.17.21
