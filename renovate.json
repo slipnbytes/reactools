@@ -1,3 +1,5 @@
 {
-  "extends": ["@hitechline", "group:all", ":preserveSemverRanges"]
+  "extends": ["@hitechline"],
+  "dependencyDashboard": true,
+  "dependencyDashboardApproval": true
 }
