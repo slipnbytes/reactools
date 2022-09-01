@@ -1712,9 +1712,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@hitechline/eslint-config@npm:2.0.3":
-  version: 2.0.3
-  resolution: "@hitechline/eslint-config@npm:2.0.3"
+"@hitechline/eslint-config@npm:2.0.4":
+  version: 2.0.4
+  resolution: "@hitechline/eslint-config@npm:2.0.4"
   peerDependencies:
     "@typescript-eslint/eslint-plugin": ">=4.3.0"
     "@typescript-eslint/parser": ">=4.3.0"
@@ -1728,7 +1728,7 @@ __metadata:
     eslint-plugin-prettier: ">=3.1.3"
     eslint-plugin-react: ">=7.21.0"
     eslint-plugin-react-hooks: ">=4.1.0"
-  checksum: 7165dd8eb6c5d911b0f0888e95260f52f2de16102a46113591f5769400ceff9401b9569b1e56c882e3fbdeafec86a260e8fcf1664428373a2d45915ca7d1802c
+  checksum: 999243cbcfd5dddcf1cc6e10284ce5f324e559bcf953b6b8a64f1dc33fd97df3f0b7e3027f7eb21e25f3989074daf56a6471fc80a7bc1e55db409cfa2848e874
   languageName: node
   linkType: hard
 
@@ -5392,7 +5392,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"braces@npm:^3.0.1, braces@npm:~3.0.2":
+"braces@npm:^3.0.1, braces@npm:^3.0.2, braces@npm:~3.0.2":
   version: 3.0.2
   resolution: "braces@npm:3.0.2"
   dependencies:
@@ -13211,13 +13211,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"micromatch@npm:4.0.4, micromatch@npm:^4.0.0, micromatch@npm:^4.0.2, micromatch@npm:^4.0.4":
-  version: 4.0.4
-  resolution: "micromatch@npm:4.0.4"
+"micromatch@npm:4.0.5":
+  version: 4.0.5
+  resolution: "micromatch@npm:4.0.5"
   dependencies:
-    braces: ^3.0.1
-    picomatch: ^2.2.3
-  checksum: ef3d1c88e79e0a68b0e94a03137676f3324ac18a908c245a9e5936f838079fcc108ac7170a5fadc265a9c2596963462e402841406bda1a4bb7b68805601d631c
+    braces: ^3.0.2
+    picomatch: ^2.3.1
+  checksum: 02a17b671c06e8fefeeb6ef996119c1e597c942e632a21ef589154f23898c9c6a9858526246abb14f8bca6e77734aa9dcf65476fca47cedfb80d9577d52843fc
   languageName: node
   linkType: hard
 
@@ -13239,6 +13239,16 @@ __metadata:
     snapdragon: ^0.8.1
     to-regex: ^3.0.2
   checksum: ad226cba4daa95b4eaf47b2ca331c8d2e038d7b41ae7ed0697cde27f3f1d6142881ab03d4da51b65d9d315eceb5e4cdddb3fbb55f5f72cfa19cf3ea469d054dc
+  languageName: node
+  linkType: hard
+
+"micromatch@npm:^4.0.0, micromatch@npm:^4.0.2, micromatch@npm:^4.0.4":
+  version: 4.0.4
+  resolution: "micromatch@npm:4.0.4"
+  dependencies:
+    braces: ^3.0.1
+    picomatch: ^2.2.3
+  checksum: ef3d1c88e79e0a68b0e94a03137676f3324ac18a908c245a9e5936f838079fcc108ac7170a5fadc265a9c2596963462e402841406bda1a4bb7b68805601d631c
   languageName: node
   linkType: hard
 
@@ -15554,6 +15564,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"picomatch@npm:^2.3.1":
+  version: 2.3.1
+  resolution: "picomatch@npm:2.3.1"
+  checksum: 050c865ce81119c4822c45d3c84f1ced46f93a0126febae20737bd05ca20589c564d6e9226977df859ed5e03dc73f02584a2b0faad36e896936238238b0446cf
+  languageName: node
+  linkType: hard
+
 "pidtree@npm:^0.3.0":
   version: 0.3.1
   resolution: "pidtree@npm:0.3.1"
@@ -16712,7 +16729,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "reactools@workspace:."
   dependencies:
-    "@hitechline/eslint-config": 2.0.3
+    "@hitechline/eslint-config": 2.0.4
     "@semantic-release/changelog": 5.0.1
     "@semantic-release/commit-analyzer": 8.0.1
     "@semantic-release/git": 9.0.1
@@ -16751,7 +16768,7 @@ __metadata:
     react-dom: 17.0.2
     react-test-renderer: 17.0.2
     rimraf: 3.0.2
-    semantic-release: 19.0.3
+    semantic-release: 19.0.5
     ts-jest: 27.0.7
     tsc-alias: 1.3.9
     typescript: 4.3.5
@@ -17725,14 +17742,14 @@ __metadata:
     dir-glob: 3.0.1
     execa: 5.1.1
     lodash: 4.17.21
-    micromatch: 4.0.4
+    micromatch: 4.0.5
     p-reduce: 2.1.0
   languageName: unknown
   linkType: soft
 
-"semantic-release@npm:19.0.3":
-  version: 19.0.3
-  resolution: "semantic-release@npm:19.0.3"
+"semantic-release@npm:19.0.5":
+  version: 19.0.5
+  resolution: "semantic-release@npm:19.0.5"
   dependencies:
     "@semantic-release/commit-analyzer": ^9.0.2
     "@semantic-release/error": ^3.0.0
@@ -17764,7 +17781,7 @@ __metadata:
     yargs: ^16.2.0
   bin:
     semantic-release: bin/semantic-release.js
-  checksum: 89afc3bba5b7addc503e92387de76274bf7f8b6c955ea4338760719f91ed730df9774ccfc58b28a0c739eb1eb3bed1f9c9bef393dda1156c4481197bb6671760
+  checksum: e72d7e039ca062a322128da185797fe4e3e23ab8b3dba1e906aaff654cd292c60bbb91776570815cac982d37550a84cfb5e3e13194ecc168ac51f866d7a07584
   languageName: node
   linkType: hard
 

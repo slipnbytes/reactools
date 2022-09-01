@@ -16,7 +16,7 @@
     "dir-glob": "3.0.1",
     "execa": "5.1.1",
     "lodash": "4.17.21",
-    "micromatch": "4.0.4",
+    "micromatch": "4.0.5",
     "p-reduce": "2.1.0"
   }
 }
