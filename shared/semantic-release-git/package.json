@@ -10,13 +10,13 @@
     "url": "git+https://github.com/hitechline/react.git"
   },
   "dependencies": {
-    "@semantic-release/error": "2.2.0",
-    "aggregate-error": "3.1.0",
+    "@semantic-release/error": "3.0.0",
+    "aggregate-error": "4.0.1",
     "debug": "4.3.4",
     "dir-glob": "3.0.1",
-    "execa": "5.1.1",
+    "execa": "6.1.0",
     "lodash": "4.17.21",
     "micromatch": "4.0.4",
-    "p-reduce": "2.1.0"
+    "p-reduce": "3.0.0"
   }
 }
